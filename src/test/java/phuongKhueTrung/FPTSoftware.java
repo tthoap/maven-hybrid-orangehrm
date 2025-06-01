@@ -10,8 +10,8 @@ public class FPTSoftware extends FPTCorporation {
         setTvColor();
         tvColor = "";
 
-        tvChannel = "";
-        setTvChannel();
+        //tvChannel = "";
+       // setTvChannel();
 
     }
 }
