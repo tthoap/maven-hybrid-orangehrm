@@ -1,11 +1,14 @@
 package core;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 public class BasePage {
@@ -39,7 +42,7 @@ public class BasePage {
     }
 
     private Alert waitForAlertPresence(WebDriver driver) {
-        return new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.alertIsPresent());
+        return new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.alertIsPresent());
     }
 
     public void acceptToAlert(WebDriver driver) {
@@ -101,5 +104,136 @@ public class BasePage {
             throw new RuntimeException(e);
         }
     }
+
+    private By getByXpath(String locator) {
+        return By.xpath(locator);
+    }
+
+    public WebElement getWebElement(WebDriver driver, String locator) {
+        return driver.findElement(By.xpath(locator));
+    }
+
+    public List<WebElement> getListElement(WebDriver driver, String locator) {
+        return driver.findElements(By.xpath(locator));
+    }
+
+    public void clickToElement(WebDriver driver, String locator) {
+        getWebElement(driver, locator).click();
+    }
+
+    public void sendkeyToElement(WebDriver driver, String locator, String keysToSend) {
+        getWebElement(driver, locator).sendKeys(keysToSend);
+    }
+
+    public void selectItemInDropdown(WebDriver driver, String locator, String valueItem) {
+        new Select(getWebElement(driver, locator)).selectByVisibleText(valueItem);
+    }
+
+    public WebElement getSelectedItemInDropdown(WebDriver driver, String locator) {
+        return new Select(getWebElement(driver, locator)).getFirstSelectedOption();
+    }
+
+    public boolean isDropdownMultiple(WebDriver driver, String locator) {
+        return new Select(getWebElement(driver, locator)).isMultiple();
+    }
+
+    public void selectItemInCustomDropdown(WebDriver driver, String parentLocator, String childItemLocator, String expectedItem) {
+        clickToElement(driver, parentLocator);
+        sleepInSeconds(2);
+
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(childItemLocator)));
+        List<WebElement> allItems = getListElement(driver, childItemLocator);
+        for (WebElement item : allItems) {
+            if (item.getText().trim().equals(expectedItem)) {
+                item.click();
+                sleepInSeconds(2);
+                break;
+            }
+        }
+    }
+
+    public String getElementDOMAttribute(WebDriver driver, String locator, String attributeValue){
+       return getWebElement(driver, locator).getDomAttribute(attributeValue);
+    }
+
+    public String getElementDOMProperties(WebDriver driver, String locator, String propertyValue){
+       return getWebElement(driver, locator).getDomProperty(propertyValue);
+    }
+
+    public String getElementText(WebDriver driver, String locator) {
+        return getWebElement(driver, locator).getText();
+    }
+
+    public String getElementCssValue(WebDriver driver, String locator, String propertyName){
+        return getWebElement(driver,locator).getCssValue(propertyName);
+    }
+
+    public String getHexaByRGBA(String rgbaColor){
+        return Color.fromString(rgbaColor).asHex().toUpperCase();
+    }
+
+    public int getListElementNumber(WebDriver driver, String locator){
+        return getListElement(driver, locator).size();
+    }
+
+    public void checkToCheckbox(WebDriver driver, String locator){
+        if(!getWebElement(driver, locator).isSelected()){
+            getWebElement(driver, locator).click();
+        }
+    }
+
+    public void uncheckToCheckbox(WebDriver driver, String locator){
+        if(getWebElement(driver, locator).isSelected()){
+            getWebElement(driver, locator).click();
+        }
+    }
+
+    public boolean isElementDisplayed(WebDriver driver, String locator){
+        return getWebElement(driver, locator).isDisplayed();
+    }
+
+    public boolean isElementSelected(WebDriver driver, String locator){
+        return getWebElement(driver, locator).isSelected();
+    }
+
+    public boolean isElementEnabled(WebDriver driver, String locator){
+        return getWebElement(driver, locator).isEnabled();
+    }
+
+    public void swichToFrame(WebDriver driver, String locator){
+        driver.switchTo().frame(getWebElement(driver, locator));
+    }
+
+    public void switchToDefaultContent(WebDriver driver){
+        driver.switchTo().defaultContent();
+    }
+
+    public void doubleClick(WebDriver driver, String locator){
+        new Actions(driver).doubleClick(getWebElement(driver, locator)).perform();
+    }
+
+    public void rightClick(WebDriver driver, String locator){
+        new Actions(driver).contextClick(getWebElement(driver, locator)).perform();
+    }
+
+    public void moveToElement(WebDriver driver, String locator){
+        new Actions(driver).moveToElement(getWebElement(driver, locator)).perform();
+    }
+
+    public void dragAndDrop(WebDriver driver, String sourceLocator, String targetLocator){
+        new Actions(driver).dragAndDrop(getWebElement(driver, sourceLocator), getWebElement(driver, targetLocator)).perform();
+    }
+
+    public void sendKeyboardtoElement(WebDriver driver, String locator, Keys keys){
+        new Actions(driver).sendKeys(getWebElement(driver, locator), keys).perform();
+    }
+
+
+
+    private final int SHORT_TIMEOUT = 10;
+    private final int LONG_TIMEOUT = 30;
+
+
+
 
 }
