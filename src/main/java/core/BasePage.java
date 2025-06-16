@@ -13,6 +13,10 @@ import java.util.Set;
 
 public class BasePage {
 
+    public static BasePage getInstance(){
+        return new BasePage();
+    }
+
     public void openPageURL(WebDriver driver, String pageUrl) {
         driver.get(pageUrl);
     }
@@ -118,10 +122,12 @@ public class BasePage {
     }
 
     public void clickToElement(WebDriver driver, String locator) {
+        waitElementVisible(driver, locator);
         getWebElement(driver, locator).click();
     }
 
     public void sendkeyToElement(WebDriver driver, String locator, String keysToSend) {
+        waitElementVisible(driver, locator);
         getWebElement(driver, locator).sendKeys(keysToSend);
     }
 
@@ -314,12 +320,12 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
     }
 
-    public void waitElementInvisible(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+    public boolean waitElementInvisible(WebDriver driver, String locator){
+        return new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
     }
 
-    public void waitListElementInvisible(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.invisibilityOfAllElements(getListElement(driver, locator)));
+    public boolean waitListElementInvisible(WebDriver driver, String locator){
+        return new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.invisibilityOfAllElements(getListElement(driver, locator)));
     }
 
     public void waitElementPresence(WebDriver driver, String locator){
