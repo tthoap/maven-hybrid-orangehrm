@@ -1,4 +1,4 @@
-package orangehrm.user;
+package orangehrm;
 
 import core.BasePage;
 import org.openqa.selenium.By;

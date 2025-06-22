@@ -1,4 +1,4 @@
-package orangehrm.user;
+package orangehrm;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
