@@ -1,7 +1,19 @@
 package pageObjects;
 
-public class DashboardPO {
+import core.BasePage;
+import org.openqa.selenium.WebDriver;
+import pageUIs.DashboardPageUI;
+
+public class DashboardPO extends BasePage {
+    private WebDriver driver;
+
+    public DashboardPO(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void clickToPIMModule() {
+        waitElementClickable(driver, DashboardPageUI.PIM_MODULE);
+        clickToElement(driver, DashboardPageUI.PIM_MODULE);
 
     }
 }

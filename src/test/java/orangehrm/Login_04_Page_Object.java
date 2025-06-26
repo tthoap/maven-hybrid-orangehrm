@@ -1,14 +1,7 @@
 package orangehrm;
 
-import core.BasePage;
 import core.BaseTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,42 +9,43 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-import java.time.Duration;
-
 public class Login_04_Page_Object extends BaseTest {
-
-
-    private static final Logger log = LoggerFactory.getLogger(Login_04_Page_Object.class);
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
     public void beforeClass(String browserName, String appURL){
         driver = getBrowserDriver(browserName, appURL);
 
-        loginPage = new LoginPO();
+        loginPage = new LoginPO(driver);
+
+        adminUsername = "Admin";
+        adminPassword = "admin123";
+        employeeFirstname = "John";
+        employeeLastname = "Terry";
     }
 
 
     @Test
     public void Login_01_Empty() {
-        loginPage.enterToUsernameTextbox("Admin");
-        loginPage.enterToPasswordTextbox("admin123");
+        loginPage.enterToUsernameTextbox(adminUsername);
+        loginPage.enterToPasswordTextbox(adminPassword);
         loginPage.clickToLoginButton();
 
-        dashboardPage = new DashboardPO();
+        dashboardPage = new DashboardPO(driver);
         dashboardPage.clickToPIMModule();
 
-        employeeListPage = new EmployeeListPO();
+        employeeListPage = new EmployeeListPO(driver);
         employeeListPage.clickToAddEmployeeButton();
 
-        addEmployeePage = new AddEmployeePO();
-        addEmployeePage.enterToFistnameTextbox("");
-        addEmployeePage.enterToLastnameTextbox("");
+        addEmployeePage = new AddEmployeePO(driver);
+        addEmployeePage.enterToFistnameTextbox(employeeFirstname);
+        addEmployeePage.enterToLastnameTextbox(employeeLastname);
         employeeID = addEmployeePage.getEmployeeID();
+        addEmployeePage.clicktoSaveButton();
 
-        personalDetailPage = new PersonalDetailPO();
-        Assert.assertEquals(personalDetailPage.getFirstnameTextboxValue(),"");
-        Assert.assertEquals(personalDetailPage.getLastnameTextboxValue(),"");
+        personalDetailPage = new PersonalDetailPO(driver);
+        Assert.assertEquals(personalDetailPage.getFirstnameTextboxValue(),employeeFirstname);
+        Assert.assertEquals(personalDetailPage.getLastnameTextboxValue(),employeeLastname);
         Assert.assertEquals(personalDetailPage.getEmployeeIDTextboxValue(),employeeID);
     }
 
@@ -71,7 +65,7 @@ public class Login_04_Page_Object extends BaseTest {
     private EmployeeListPO employeeListPage;
     private AddEmployeePO addEmployeePage;
     private PersonalDetailPO personalDetailPage;
-    private String employeeID;
+    private String employeeID, adminUsername, adminPassword, employeeFirstname, employeeLastname;
 
 
 }
