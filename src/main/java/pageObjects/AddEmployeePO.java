@@ -28,6 +28,6 @@ public class AddEmployeePO extends BasePage {
 
     public void clicktoSaveButton() {
         waitElementClickable(driver, AddEmployeePageUI.SAVE_BUTTON);
-        clicktoSaveButton(driver, AddEmployeePageUI.SAVE_BUTTON);
+        clickToElement(driver, AddEmployeePageUI.SAVE_BUTTON);
     }
 }

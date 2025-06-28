@@ -29,21 +29,29 @@ public class Login_04_Page_Object extends BaseTest {
     public void Login_01_Empty() {
         loginPage.enterToUsernameTextbox(adminUsername);
         loginPage.enterToPasswordTextbox(adminPassword);
+
         loginPage.clickToLoginButton();
-
         dashboardPage = new DashboardPO(driver);
+        Assert.assertTrue(dashboardPage.isLoadingSpinnerDisappear(driver));
+        dashboardPage.sleepInSecond(2);
+
         dashboardPage.clickToPIMModule();
-
         employeeListPage = new EmployeeListPO(driver);
-        employeeListPage.clickToAddEmployeeButton();
+        Assert.assertTrue(employeeListPage.isLoadingSpinnerDisappear(driver));
 
+        employeeListPage.clickToAddEmployeeButton();
         addEmployeePage = new AddEmployeePO(driver);
+        Assert.assertTrue(addEmployeePage.isLoadingSpinnerDisappear(driver));
+
         addEmployeePage.enterToFistnameTextbox(employeeFirstname);
         addEmployeePage.enterToLastnameTextbox(employeeLastname);
         employeeID = addEmployeePage.getEmployeeID();
-        addEmployeePage.clicktoSaveButton();
 
+        addEmployeePage.clicktoSaveButton();
         personalDetailPage = new PersonalDetailPO(driver);
+        Assert.assertTrue(personalDetailPage.isLoadingSpinnerDisappear(driver));
+
+        personalDetailPage.sleepInSecond(2);
         Assert.assertEquals(personalDetailPage.getFirstnameTextboxValue(),employeeFirstname);
         Assert.assertEquals(personalDetailPage.getLastnameTextboxValue(),employeeLastname);
         Assert.assertEquals(personalDetailPage.getEmployeeIDTextboxValue(),employeeID);
