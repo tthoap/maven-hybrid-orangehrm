@@ -7,9 +7,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageFactory.*;
 
-public class Login_04_Page_Object extends BaseTest {
+public class Login_05_Page_Facroty extends BaseTest {
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
@@ -32,16 +32,17 @@ public class Login_04_Page_Object extends BaseTest {
 
         loginPage.clickToLoginButton();
         dashboardPage = new DashboardPO(driver);
-        Assert.assertTrue(dashboardPage.isLoadingSpinnerDisappear(driver));
+        Assert.assertTrue(dashboardPage.isLoadingSpinnerDisappear());
         dashboardPage.sleepInSecond(2);
+
 
         dashboardPage.clickToPIMModule();
         employeeListPage = new EmployeeListPO(driver);
-        Assert.assertTrue(employeeListPage.isLoadingSpinnerDisappear(driver));
+        Assert.assertTrue(employeeListPage.isLoadingSpinnerDisappear());
 
         employeeListPage.clickToAddEmployeeButton();
         addEmployeePage = new AddEmployeePO(driver);
-        Assert.assertTrue(addEmployeePage.isLoadingSpinnerDisappear(driver));
+        Assert.assertTrue(addEmployeePage.isLoadingSpinnerDisappear());
 
         addEmployeePage.enterToFistnameTextbox(employeeFirstname);
         addEmployeePage.enterToLastnameTextbox(employeeLastname);
@@ -49,7 +50,7 @@ public class Login_04_Page_Object extends BaseTest {
 
         addEmployeePage.clicktoSaveButton();
         personalDetailPage = new PersonalDetailPO(driver);
-        Assert.assertTrue(personalDetailPage.isLoadingSpinnerDisappear(driver));
+        Assert.assertTrue(personalDetailPage.isLoadingSpinnerDisappear());
 
         personalDetailPage.sleepInSecond(2);
         Assert.assertEquals(personalDetailPage.getFirstnameTextboxValue(),employeeFirstname);
