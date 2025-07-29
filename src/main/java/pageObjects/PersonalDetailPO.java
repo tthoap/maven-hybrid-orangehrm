@@ -25,4 +25,10 @@ public class PersonalDetailPO extends BasePage {
         waitElementVisible(driver, PersonalDetailPageUI.EMPLOYEE_ID);
         return getElementDOMProperties(driver, PersonalDetailPageUI.EMPLOYEE_ID, "_value");
     }
+
+    public ContactDetailPO OpenContactDetailPage() {
+        //wait
+        //click
+        return new ContactDetailPO(driver);
+    }
 }

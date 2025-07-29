@@ -6,7 +6,7 @@
     <test name="Run on Firefox browser" >
         <parameter name="browser" value="Firefox"></parameter>
         <classes>
-            <class name="orangehrm.Login_05_Page_Facroty" />
+            <class name="orangehrm.Login_06_Page_Manager_I" />
         </classes>
     </test>
 

@@ -11,9 +11,10 @@ public class EmployeeListPO extends BasePage {
         this.driver = driver;
     }
 
-    public void clickToAddEmployeeButton() {
+    public AddEmployeePO clickToAddEmployeeButton() {
         waitElementClickable(driver, EmployeeListPageUI.ADD_EMPLOYEE_BUTTON);
         clickToElement(driver, EmployeeListPageUI.ADD_EMPLOYEE_BUTTON);
+        return PageGeneratorGeneric.getPage(AddEmployeePO.class, driver);
 
     }
 }
