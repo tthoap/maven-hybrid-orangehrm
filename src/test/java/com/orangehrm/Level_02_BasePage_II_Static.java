@@ -1,5 +1,6 @@
-package orangehrm;
+package com.orangehrm;
 
+import core.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,13 +14,17 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Login_01_DRY {
+public class Level_02_BasePage_II_Static {
+
     private WebDriver driver;
+    private BasePage basePage;
+    private String appUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 
     @BeforeClass
     public void beforeClass(){
         driver = new FirefoxDriver();
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        basePage = BasePage.getInstance();
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
     }
@@ -45,30 +50,31 @@ public class Login_01_DRY {
 
     @Test
     public void Login_01_Empty() {
-        driver.findElement(By.cssSelector("input[name=username]")).sendKeys("");
-        driver.findElement(By.cssSelector("input[name=password]")).sendKeys("");
-        driver.findElement(By.cssSelector("button.orangehrm-login-button")).click();
+        basePage.openPageURL(driver, appUrl);
+        basePage.sendkeyToElement(driver, "//input[@name='username']", "");
+        basePage.sendkeyToElement(driver, "//input[@name='password']", "");
+        basePage.clickToElement(driver,"//button[contains(@class,'orangehrm-login-button')]");
 
-        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='username']/parent::div/following-sibling::span")).getText(), "Required");
-        Assert.assertEquals(driver.findElement(By.xpath("//input[@name='password']/parent::div/following-sibling::span")).getText(), "Required");
+        Assert.assertEquals(basePage.getElementText(driver,"//input[@name='username']/parent::div/following-sibling::span"), "Required");
+        Assert.assertEquals(basePage.getElementText(driver,"//input[@name='password']/parent::div/following-sibling::span"), "Required");
     }
 
     @Test
     public void Login_02_Invalid_Username() {
-        driver.findElement(By.cssSelector("input[name=username]")).sendKeys("test@gmail.com");
-        driver.findElement(By.cssSelector("input[name=password]")).sendKeys("123456");
-        driver.findElement(By.cssSelector("button.orangehrm-login-button")).click();
+        basePage.sendkeyToElement(driver, "//input[@name='username']", "test@gmail.com");
+        basePage.sendkeyToElement(driver, "//input[@name='password']", "123456");
+        basePage.clickToElement(driver,"//button[contains(@class,'orangehrm-login-button')]");
 
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.oxd-alert-content--error p")).getText(), "Invalid credentials");
+        Assert.assertEquals(basePage.getElementText(driver,"//div[@class='orangehrm-login-error']//p[contains(@class,'oxd-alert-content-text')]"), "Invalid credentials");
     }
 
     @Test
     public void Login_03_Invalid_Password() {
-        driver.findElement(By.cssSelector("input[name=username]")).sendKeys("Admin");
-        driver.findElement(By.cssSelector("input[name=password]")).sendKeys("admin123@@@");
-        driver.findElement(By.cssSelector("button.orangehrm-login-button")).click();
+        basePage.sendkeyToElement(driver, "//input[@name='username']", "Admin");
+        basePage.sendkeyToElement(driver, "//input[@name='password']", "1234563232");
+        basePage.clickToElement(driver,"//button[contains(@class,'orangehrm-login-button')]");
 
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.oxd-alert-content--error p")).getText(), "Invalid credentials");
+        Assert.assertEquals(basePage.getElementText(driver,"//div[@class='orangehrm-login-error']//p[contains(@class,'oxd-alert-content-text')]"), "Invalid credentials");
     }
 
     @Test
@@ -77,7 +83,12 @@ public class Login_01_DRY {
         driver.findElement(By.cssSelector("input[name=password]")).sendKeys("admin123");
         driver.findElement(By.cssSelector("button.orangehrm-login-button")).click();
 
-        Assert.assertEquals(driver.findElement(By.cssSelector("div.oxd-topbar-header-title h6")).getText(), "Dashboard");
+        Assert.assertTrue(isSpinnerLoadedSuccess());
+        Assert.assertEquals(basePage.getElementText(driver,"//div[@class='oxd-topbar-header']//h6"), "Dashboard");
+    }
+
+    public boolean isSpinnerLoadedSuccess(){
+        return basePage.waitListElementInvisible(driver,"//div[@class='oxd-loading-spinner']");
     }
 
     @AfterClass

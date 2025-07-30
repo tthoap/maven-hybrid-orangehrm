@@ -1,4 +1,4 @@
-package orangehrm;
+package com.orangehrm;
 
 import core.BaseTest;
 import org.openqa.selenium.WebDriver;
@@ -7,16 +7,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageObjects.orangeHRM.*;
 
-public class Login_06_Page_Manager_IV extends BaseTest {
+public class Level_06_Page_Manager_II extends BaseTest {
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
     public void beforeClass(String browserName, String appURL){
         driver = getBrowserDriver(browserName, appURL);
 
-        loginPage = PageGeneratorGeneric.getPage(LoginPO.class, driver);
+        loginPage = new LoginPO(driver);
 
         adminUsername = "hoatranauto";
         adminPassword = "%Sue!ImFG@2L!$&SI#";
@@ -26,7 +26,7 @@ public class Login_06_Page_Manager_IV extends BaseTest {
 
 
     @Test
-    public void Login_01_Empty() {
+    public void Employee_01_CreateNewEmployee() {
         loginPage.enterToUsernameTextbox(adminUsername);
         loginPage.enterToPasswordTextbox(adminPassword);
 
@@ -54,10 +54,6 @@ public class Login_06_Page_Manager_IV extends BaseTest {
         Assert.assertEquals(personalDetailPage.getEmployeeIDTextboxValue(),employeeID);
     }
 
-    @Test
-    public void Login_02_Invalid_Username() {
-        ContactDetail = personalDetailPage.OpenContactDetailPage();
-    }
 
 
     @AfterClass

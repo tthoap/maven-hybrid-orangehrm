@@ -6,7 +6,8 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageUIs.BasePageUI;
+import pageObjects.orangeHRM.*;
+import pageUIs.*;
 
 import java.time.Duration;
 import java.util.List;
@@ -342,6 +343,32 @@ public class BasePage {
     public boolean isLoadingSpinnerDisappear(WebDriver driver){
         return waitListElementInvisible(driver, BasePageUI.LOADING_SPINNER);
     }
+
+    //Tại Contact Page cần define để mở ra 9 page còn lại
+    public JobPO openJobPage(WebDriver driver) {
+        waitElementClickable(driver, BasePageUI.JOB_LINK);
+        clickToElement(driver,BasePageUI.JOB_LINK);
+        return PageGeneratorGeneric.getPage(JobPO.class, driver);
+    }
+
+    public ContactDetailPO openContactDetailPage(WebDriver driver) {
+        waitElementClickable(driver,BasePageUI.CONTACT_DETAIL_LINK);
+        clickToElement(driver,BasePageUI.CONTACT_DETAIL_LINK);
+        return PageGeneratorGeneric.getPage(ContactDetailPO.class, driver);
+    }
+
+    public PersonalDetailPO openPersonalPage(WebDriver driver) {
+        waitElementClickable(driver, BasePageUI.PERSONAL_DETAIL_LINK);
+        clickToElement(driver, BasePageUI.PERSONAL_DETAIL_LINK);
+        return PageGeneratorGeneric.getPage(PersonalDetailPO.class, driver);
+    }
+
+    public DependentsPO openDependentsPage(WebDriver driver) {
+        waitElementClickable(driver, BasePageUI.DEPENDENTS_LINK);
+        clickToElement(driver, BasePageUI.DEPENDENTS_LINK);
+        return PageGeneratorGeneric.getPage(DependentsPO.class, driver);
+    }
+
 
     private final int SHORT_TIMEOUT = 10;
     private final int LONG_TIMEOUT = 30;

@@ -1,33 +1,32 @@
-package orangehrm;
+package com.orangehrm;
 
 import core.BasePage;
-import core.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Login_03_Multiple_Browser extends BaseTest {
+public class Level_02_BasePage_I_Initial {
 
     private WebDriver driver;
     private BasePage basePage;
-    private String appUrl;
+    private String appUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 
-    @Parameters({"browser", "appUrl"})
     @BeforeClass
-    public void beforeClass(String browserName, String appURL){
-        basePage = BasePage.getInstance();
-        driver = getBrowserDriver(browserName, appURL);
-        System.out.println("Driver in Testclass" + driver.toString());
-        appUrl = appURL;
+    public void beforeClass(){
+        driver = new FirefoxDriver();
+        basePage = new BasePage();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().window().maximize();
     }
 
     public boolean isPageLoadedSuccess() {

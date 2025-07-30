@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.orangeHRM;
 
 import org.openqa.selenium.WebDriver;
 

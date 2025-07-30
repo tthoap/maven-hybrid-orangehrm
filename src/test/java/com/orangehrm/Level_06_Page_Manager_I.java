@@ -1,4 +1,4 @@
-package orangehrm;
+package com.orangehrm;
 
 import core.BaseTest;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +7,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageObjects.orangeHRM.*;
 
-public class Login_06_Page_Manager_I extends BaseTest {
+public class Level_06_Page_Manager_I extends BaseTest {
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
@@ -26,7 +26,7 @@ public class Login_06_Page_Manager_I extends BaseTest {
 
 
     @Test
-    public void Login_01_Empty() {
+    public void Employee_01_CreateNewEmployee() {
         loginPage.enterToUsernameTextbox(adminUsername);
         loginPage.enterToPasswordTextbox(adminPassword);
 

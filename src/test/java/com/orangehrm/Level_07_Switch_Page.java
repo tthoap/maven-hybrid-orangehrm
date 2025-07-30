@@ -1,4 +1,4 @@
-package orangehrm;
+package com.orangehrm;
 
 import core.BaseTest;
 import org.openqa.selenium.WebDriver;
@@ -7,16 +7,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageObjects.orangeHRM.*;
 
-public class Login_06_Page_Manager_III extends BaseTest {
+public class Level_07_Switch_Page extends BaseTest {
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
     public void beforeClass(String browserName, String appURL){
         driver = getBrowserDriver(browserName, appURL);
 
-        loginPage = PageGeneratorManager.getLoginPage(driver);
+        loginPage = PageGeneratorGeneric.getPage(LoginPO.class, driver);
 
         adminUsername = "hoatranauto";
         adminPassword = "%Sue!ImFG@2L!$&SI#";
@@ -26,7 +26,7 @@ public class Login_06_Page_Manager_III extends BaseTest {
 
 
     @Test
-    public void Login_01_Empty() {
+    public void Employee_01_CreateNewEmployee() {
         loginPage.enterToUsernameTextbox(adminUsername);
         loginPage.enterToPasswordTextbox(adminPassword);
 
@@ -55,8 +55,21 @@ public class Login_06_Page_Manager_III extends BaseTest {
     }
 
     @Test
-    public void Login_02_Invalid_Username() {
-        ContactDetail = personalDetailPage.OpenContactDetailPage();
+    public void Employee_02_Switch_Page() {
+        //Từ personal  qua Contact
+        contactDetailPage = personalDetailPage.openContactDetailPage(driver);
+
+        //Từ Contact qua Job
+        jobPage = contactDetailPage.openJobPage(driver);
+
+        //Từ Job qua Dependent
+        dependentsPage = jobPage.openDependentsPage(driver);
+
+        //Từ Dependent qua Personal
+        personalDetailPage = dependentsPage.openPersonalPage(driver);
+
+        //Từ Personal qua Job
+        jobPage = personalDetailPage.openJobPage(driver);
     }
 
 
@@ -71,7 +84,9 @@ public class Login_06_Page_Manager_III extends BaseTest {
     private EmployeeListPO employeeListPage;
     private AddEmployeePO addEmployeePage;
     private PersonalDetailPO personalDetailPage;
-    private ContactDetailPO ContactDetail;
+    private ContactDetailPO contactDetailPage;
+    private JobPO jobPage;
+    private DependentsPO dependentsPage;
     private String employeeID, adminUsername, adminPassword, employeeFirstname, employeeLastname;
 
 

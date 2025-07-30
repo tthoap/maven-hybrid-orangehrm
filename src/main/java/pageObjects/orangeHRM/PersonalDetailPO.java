@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.orangeHRM;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -26,9 +26,5 @@ public class PersonalDetailPO extends BasePage {
         return getElementDOMProperties(driver, PersonalDetailPageUI.EMPLOYEE_ID, "_value");
     }
 
-    public ContactDetailPO OpenContactDetailPage() {
-        //wait
-        //click
-        return new ContactDetailPO(driver);
-    }
+
 }

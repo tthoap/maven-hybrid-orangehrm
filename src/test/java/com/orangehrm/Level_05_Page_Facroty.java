@@ -1,4 +1,4 @@
-package orangehrm;
+package com.orangehrm;
 
 import core.BaseTest;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +7,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageFactory.*;
 
-public class Login_06_Page_Manager_II extends BaseTest {
+public class Level_05_Page_Facroty extends BaseTest {
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
@@ -26,27 +26,31 @@ public class Login_06_Page_Manager_II extends BaseTest {
 
 
     @Test
-    public void Login_01_Empty() {
+    public void Employee_01_CreateNewEmployee() {
         loginPage.enterToUsernameTextbox(adminUsername);
         loginPage.enterToPasswordTextbox(adminPassword);
 
-        dashboardPage = loginPage.clickToLoginButton();
-
-        Assert.assertTrue(dashboardPage.isLoadingSpinnerDisappear(driver));
+        loginPage.clickToLoginButton();
+        dashboardPage = new DashboardPO(driver);
+        Assert.assertTrue(dashboardPage.isLoadingSpinnerDisappear());
         dashboardPage.sleepInSecond(2);
 
-        employeeListPage = dashboardPage.clickToPIMModule();
-        Assert.assertTrue(employeeListPage.isLoadingSpinnerDisappear(driver));
 
-        addEmployeePage = employeeListPage.clickToAddEmployeeButton();
-        Assert.assertTrue(addEmployeePage.isLoadingSpinnerDisappear(driver));
+        dashboardPage.clickToPIMModule();
+        employeeListPage = new EmployeeListPO(driver);
+        Assert.assertTrue(employeeListPage.isLoadingSpinnerDisappear());
+
+        employeeListPage.clickToAddEmployeeButton();
+        addEmployeePage = new AddEmployeePO(driver);
+        Assert.assertTrue(addEmployeePage.isLoadingSpinnerDisappear());
 
         addEmployeePage.enterToFistnameTextbox(employeeFirstname);
         addEmployeePage.enterToLastnameTextbox(employeeLastname);
         employeeID = addEmployeePage.getEmployeeID();
 
-        personalDetailPage = addEmployeePage.clicktoSaveButton();
-        Assert.assertTrue(personalDetailPage.isLoadingSpinnerDisappear(driver));
+        addEmployeePage.clicktoSaveButton();
+        personalDetailPage = new PersonalDetailPO(driver);
+        Assert.assertTrue(personalDetailPage.isLoadingSpinnerDisappear());
 
         personalDetailPage.sleepInSecond(2);
         Assert.assertEquals(personalDetailPage.getFirstnameTextboxValue(),employeeFirstname);
@@ -56,7 +60,6 @@ public class Login_06_Page_Manager_II extends BaseTest {
 
     @Test
     public void Login_02_Invalid_Username() {
-        ContactDetail = personalDetailPage.OpenContactDetailPage();
     }
 
 
@@ -71,7 +74,6 @@ public class Login_06_Page_Manager_II extends BaseTest {
     private EmployeeListPO employeeListPage;
     private AddEmployeePO addEmployeePage;
     private PersonalDetailPO personalDetailPage;
-    private ContactDetailPO ContactDetail;
     private String employeeID, adminUsername, adminPassword, employeeFirstname, employeeLastname;
 
 
