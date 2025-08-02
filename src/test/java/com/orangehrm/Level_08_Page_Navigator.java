@@ -9,16 +9,18 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.orangeHRM.*;
 import pageObjects.orangeHRM.editNavigation.ContactDetailPO;
+import pageObjects.orangeHRM.editNavigation.DependentsPO;
+import pageObjects.orangeHRM.editNavigation.JobPO;
 import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
 
-public class Level_06_Page_Manager_III extends BaseTest {
+public class Level_08_Page_Navigator extends BaseTest {
 
     @Parameters({"browser", "appUrl"})
     @BeforeClass
     public void beforeClass(String browserName, String appURL){
         driver = getBrowserDriver(browserName, appURL);
 
-        loginPage = PageGeneratorManager.getLoginPage(driver);
+        loginPage = PageGeneratorGeneric.getPage(LoginPO.class, driver);
 
         adminUsername = "hoatranauto";
         adminPassword = "%Sue!ImFG@2L!$&SI#";
@@ -57,8 +59,21 @@ public class Level_06_Page_Manager_III extends BaseTest {
     }
 
     @Test
-    public void Login_02_Invalid_Username() {
-        //ContactDetail = personalDetailPage.openContactDetailPage();
+    public void Employee_02_Page_Navigator() {
+        //Từ personal  qua Contact
+        contactDetailPage = personalDetailPage.openContactDetailPage();
+
+        //Từ Contact qua Job
+        jobPage = contactDetailPage.openJobPage();
+
+        //Từ Job qua Dependent
+        dependentsPage = jobPage.openDependentsPage();
+
+        //Từ Dependent qua Personal
+        personalDetailPage = dependentsPage.openPersonalPage();
+
+        //Từ Personal qua Job
+        jobPage = personalDetailPage.openJobPage();
     }
 
 
@@ -73,7 +88,9 @@ public class Level_06_Page_Manager_III extends BaseTest {
     private EmployeeListPO employeeListPage;
     private AddEmployeePO addEmployeePage;
     private PersonalDetailPO personalDetailPage;
-    private ContactDetailPO ContactDetail;
+    private ContactDetailPO contactDetailPage;
+    private JobPO jobPage;
+    private DependentsPO dependentsPage;
     private String employeeID, adminUsername, adminPassword, employeeFirstname, employeeLastname;
 
 

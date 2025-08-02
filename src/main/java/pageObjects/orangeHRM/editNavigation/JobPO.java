@@ -1,13 +1,13 @@
-package pageObjects.orangeHRM;
+package pageObjects.orangeHRM.editNavigation;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.JobPageUI;
 
-public class JobPO extends BasePage {
+public class JobPO extends EditNavigatorPO{
     private WebDriver driver;
 
     public JobPO(WebDriver driver) {
+        super(driver);
         this.driver = driver;
     }
 

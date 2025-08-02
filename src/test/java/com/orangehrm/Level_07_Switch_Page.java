@@ -8,6 +8,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.orangeHRM.*;
+import pageObjects.orangeHRM.editNavigation.ContactDetailPO;
+import pageObjects.orangeHRM.editNavigation.DependentsPO;
+import pageObjects.orangeHRM.editNavigation.JobPO;
+import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
 
 public class Level_07_Switch_Page extends BaseTest {
 
@@ -56,20 +60,20 @@ public class Level_07_Switch_Page extends BaseTest {
 
     @Test
     public void Employee_02_Switch_Page() {
-        //Từ personal  qua Contact
-        contactDetailPage = personalDetailPage.openContactDetailPage(driver);
-
-        //Từ Contact qua Job
-        jobPage = contactDetailPage.openJobPage(driver);
-
-        //Từ Job qua Dependent
-        dependentsPage = jobPage.openDependentsPage(driver);
-
-        //Từ Dependent qua Personal
-        personalDetailPage = dependentsPage.openPersonalPage(driver);
-
-        //Từ Personal qua Job
-        jobPage = personalDetailPage.openJobPage(driver);
+//        //Từ personal  qua Contact
+//        contactDetailPage = personalDetailPage.openContactDetailPage(driver);
+//
+//        //Từ Contact qua Job
+//        jobPage = contactDetailPage.openJobPage(driver);
+//
+//        //Từ Job qua Dependent
+//        dependentsPage = jobPage.openDependentsPage(driver);
+//
+//        //Từ Dependent qua Personal
+//        personalDetailPage = dependentsPage.openPersonalPage(driver);
+//
+//        //Từ Personal qua Job
+//        jobPage = personalDetailPage.openJobPage(driver);
     }
 
 

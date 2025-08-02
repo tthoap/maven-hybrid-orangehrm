@@ -2,7 +2,7 @@ package pageObjects.orangeHRM;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.LoginPageUI;
+import pageUIs.orangeHRM.LoginPageUI;
 
 public class LoginPO extends BasePage {
     private WebDriver driver;

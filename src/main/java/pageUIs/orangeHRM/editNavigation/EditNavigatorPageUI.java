@@ -1,8 +1,6 @@
-package pageUIs;
+package pageUIs.orangeHRM.editNavigation;
 
-public class BasePageUI {
-    public static final String LOADING_SPINNER = "//div[@class='oxd-loading-spinner']";
-
+public class EditNavigatorPageUI {
     public static final String JOB_LINK = "//a[text()='Job']";
     public static final String CONTACT_DETAIL_LINK = "//a[text()='Contact Details']";
     public static final String DEPENDENTS_LINK = "//a[text()='Dependents']";

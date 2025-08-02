@@ -1,14 +1,13 @@
-package pageObjects.orangeHRM;
+package pageObjects.orangeHRM.editNavigation;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.ContactDetailPageUI;
-import pageUIs.PersonalDetailPageUI;
 
-public class ContactDetailPO extends BasePage {
+public class ContactDetailPO extends EditNavigatorPO {
     private WebDriver driver;
 
     public ContactDetailPO(WebDriver driver) {
+        super(driver);
         this.driver = driver;
     }
 

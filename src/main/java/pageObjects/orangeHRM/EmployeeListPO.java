@@ -2,7 +2,7 @@ package pageObjects.orangeHRM;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.EmployeeListPageUI;
+import pageUIs.orangeHRM.EmployeeListPageUI;
 
 public class EmployeeListPO extends BasePage {
     private WebDriver driver;
