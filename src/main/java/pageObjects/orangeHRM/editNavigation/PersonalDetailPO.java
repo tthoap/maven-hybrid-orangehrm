@@ -25,6 +25,4 @@ public class PersonalDetailPO extends EditNavigatorPO {
         waitElementVisible(driver, PersonalDetailPageUI.EMPLOYEE_ID);
         return getElementDOMProperties(driver, PersonalDetailPageUI.EMPLOYEE_ID, "_value");
     }
-
-
 }
