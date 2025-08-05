@@ -1,11 +1,11 @@
-package pageObjects.orangeHRM;
+package pageObjects;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
 
 import java.lang.reflect.Constructor;
 
-public class PageGeneratorGeneric {
+public class PageGenerator {
     public static <T extends BasePage> T getPage(Class<T> pageClass, WebDriver driver){
         try {
             //Lấy contructor nhận WebDriver

@@ -2,6 +2,7 @@ package pageObjects.orangeHRM;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
+import pageObjects.PageGenerator;
 import pageUIs.orangeHRM.DashboardPageUI;
 
 public class DashboardPO extends BasePage {
@@ -14,6 +15,6 @@ public class DashboardPO extends BasePage {
     public EmployeeListPO clickToPIMModule() {
         waitElementClickable(driver, DashboardPageUI.PIM_MODULE);
         clickToElement(driver, DashboardPageUI.PIM_MODULE);
-        return PageGeneratorGeneric.getPage(EmployeeListPO.class, driver);
+        return PageGenerator.getPage(EmployeeListPO.class, driver);
     }
 }

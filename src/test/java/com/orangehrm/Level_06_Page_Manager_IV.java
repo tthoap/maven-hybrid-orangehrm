@@ -7,6 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageObjects.PageGenerator;
 import pageObjects.orangeHRM.*;
 import pageObjects.orangeHRM.editNavigation.ContactDetailPO;
 import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
@@ -18,7 +19,7 @@ public class Level_06_Page_Manager_IV extends BaseTest {
     public void beforeClass(String browserName, String appURL){
         driver = getBrowserDriver(browserName, appURL);
 
-        loginPage = PageGeneratorGeneric.getPage(LoginPO.class, driver);
+        loginPage = PageGenerator.getPage(LoginPO.class, driver);
 
         adminUsername = "hoatranauto";
         adminPassword = "%Sue!ImFG@2L!$&SI#";

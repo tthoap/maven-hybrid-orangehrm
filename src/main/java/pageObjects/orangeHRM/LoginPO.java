@@ -2,6 +2,7 @@ package pageObjects.orangeHRM;
 
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
+import pageObjects.PageGenerator;
 import pageUIs.orangeHRM.LoginPageUI;
 
 public class LoginPO extends BasePage {
@@ -24,7 +25,7 @@ public class LoginPO extends BasePage {
     public DashboardPO clickToLoginButton() {
         waitElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
         clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
-        return PageGeneratorGeneric.getPage(DashboardPO.class, driver);
+        return PageGenerator.getPage(DashboardPO.class, driver);
 
     }
 }
