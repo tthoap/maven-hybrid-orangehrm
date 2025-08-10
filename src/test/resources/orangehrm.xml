@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="OrangeHRM - UI automation Testing" verbose="1" >
-    <parameter name="appUrl" value="http://localhost:90/orangehrm5"></parameter>
+    <parameter name="appUrl" value="http://localhost:90/orangehrm"></parameter>
     
     <test name="Run on Firefox browser" >
         <parameter name="browser" value="Firefox"></parameter>

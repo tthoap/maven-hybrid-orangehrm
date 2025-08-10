@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import pageObjects.PageGenerator;
 import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
 import pageUIs.orangeHRM.AddEmployeePageUI;
-import pageUIs.orangeHRM.BasePageUI;
+import pageUIs.BasePageUI;
 
 public class AddEmployeePO extends BasePage {
     private WebDriver driver;

@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class BaseTest {
     private WebDriver driver;
@@ -35,5 +36,9 @@ public class BaseTest {
         driver.manage().window().maximize();
         System.out.println("Driver in BaseTest" + driver.toString());
         return driver;
+    }
+
+    protected int getRandomNumber(){
+        return new Random().nextInt(9999);
     }
 }

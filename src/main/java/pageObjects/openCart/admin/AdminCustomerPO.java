@@ -1,4 +1,8 @@
 package pageObjects.openCart.admin;
 
-public class AdminCustomerPO {
+import core.BasePage;
+
+public class AdminCustomerPO extends BasePage {
+
 }
+

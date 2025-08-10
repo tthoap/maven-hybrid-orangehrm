@@ -23,8 +23,8 @@ public class Level_08_Page_Navigator extends BaseTest {
 
         loginPage = PageGenerator.getPage(LoginPO.class, driver);
 
-        adminUsername = "hoatranauto";
-        adminPassword = "%Sue!ImFG@2L!$&SI#";
+        adminUsername = "hoatran";
+        adminPassword = "Beocon@123";
         employeeFirstname = "John";
         employeeLastname = "Terry";
     }

@@ -2,6 +2,7 @@ package com.opencart;
 
 import core.BaseTest;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -10,14 +11,10 @@ import pageObjects.PageGenerator;
 import pageObjects.openCart.admin.AdminCustomerPO;
 import pageObjects.openCart.admin.AdminDashboardPO;
 import pageObjects.openCart.admin.AdminLoginPO;
+import pageObjects.openCart.user.UserMyAccountPO;
 import pageObjects.openCart.user.UserHomePO;
 import pageObjects.openCart.user.UserLoginPO;
 import pageObjects.openCart.user.UserRegisterPO;
-import pageObjects.orangeHRM.*;
-import pageObjects.orangeHRM.editNavigation.ContactDetailPO;
-import pageObjects.orangeHRM.editNavigation.DependentsPO;
-import pageObjects.orangeHRM.editNavigation.JobPO;
-import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
 
 public class Level_09_Switch_Url extends BaseTest {
     private String userURL, adminURL;
@@ -28,6 +25,13 @@ public class Level_09_Switch_Url extends BaseTest {
        //Gán dữ liệu cho 2 biến userURL, adminURL ở trên
         this.userURL = userURL;
         this.adminURL = adminURL;
+        userFirstname = "Hoa";
+        userLastname = "Tran";
+        userPassword = "12345678x@X";
+        userEmailAddess = "Hoa" + getRandomNumber() + "@gmail.com";
+        telephone = "0987456785";
+        userAdmin = "hoatran";
+        passwordAdmin = "Beocon@123";
 
         //Mở browser lên sẽ là mở trang user
        driver = getBrowserDriver(browserName, userURL);
@@ -41,42 +45,51 @@ public class Level_09_Switch_Url extends BaseTest {
 
         userRegisterPage = userLoginPage.clickToContinueButton();
 
-        userRegisterPage.enterToFirstName("");
-        userRegisterPage.enterTLastName("");
-        userRegisterPage.enterToEmailAddress("");
-        userRegisterPage.enterToPassword("");
+        userRegisterPage.enterToFirstName(userFirstname);
+        userRegisterPage.enterTLastName(userLastname);
+        userRegisterPage.enterToEmailAddress(userEmailAddess);
+        userRegisterPage.enterTelephoneNumber(telephone);
+        userRegisterPage.enterToPassword(userPassword);
+        userRegisterPage.enterToConfirmPassword(userPassword);
         userRegisterPage.acceptPrivacyCheckbox();
-        userRegisterPage.clickToContinueButton();
+        Assert.assertTrue(userRegisterPage.isSuccessMessageDisplayed());
 
-        userRegisterPage.clickToLogoutButton();
-        userHomePage = userRegisterPage.clickToContinueButton();
+        userHomePage = userRegisterPage.clickToLogoutLinkAtUserSite(driver);
 
-        adminLoginPage = userRegisterPage.openAdminsite(adminURL);
+        //User => Admin
+        adminLoginPage = userRegisterPage.openAdminsite(driver, adminURL); //vì đứng ở đâu cũng mở ra trang admin, nê sẽ define trong BasePage
 
-        adminLoginPage.enterToUserName("");
-        adminLoginPage.enterToPassword("");
+        adminLoginPage.enterToAdminUserName(passwordAdmin);
+        adminLoginPage.enterToAdminPassword(passwordAdmin);
         adminDashboardPage = adminLoginPage.clickToLoginButton();
 
-        adminCustomerPage = adminDashboardPage.openCutomerPage();
+        adminCustomerPage = adminDashboardPage.openCustomerPage();
 
-        adminLoginPage = adminCustomerPage.clickToLogoutLink();
+        adminLoginPage = adminCustomerPage.clickToLogoutLinkAtAdminSite(driver);
 
-        userHomePage = adminLoginPage.openUserSite(userURL);
+        //Admin => User
+        userHomePage = adminLoginPage.openUserSite(driver,userURL);// vì ở đâu cũng mở dc trang user, nên hàm này sẽ define trong basepage.
 
+        userLoginPage = userHomePage.clickToMyAccount();
+        userLoginPage.enterToEmailAddressTextbox(userEmailAddess);
+        userLoginPage.enterToPasswordTextbox(userPassword);
+        userMyAccountPage = userLoginPage.clickToLoginButton();
 
+        Assert.assertTrue(userMyAccountPage.isMyAcountPageDisplayed());
 
+        //User => Admin
 
+        adminLoginPage = userMyAccountPage.openAdminsite(driver, adminURL);
+        adminLoginPage.enterToAdminUserName(passwordAdmin);
+        adminLoginPage.enterToAdminPassword(passwordAdmin);
+        adminDashboardPage = adminLoginPage.clickToLoginButton();
 
-        //Từ User page ==> Admin Page
-        //Login bên Admin
-        //Thao tác bên admin
-        //logout khỏi admin
+        //Admin => USer
+        userHomePage = adminDashboardPage.openUserSite(driver,userURL);
 
-        //Quay lại User
-        //Login bên User
-        //THao tác bên User
 
     }
+
 
     @Test
     public void OpenCart_02() {
@@ -96,4 +109,6 @@ public class Level_09_Switch_Url extends BaseTest {
     private UserLoginPO userLoginPage;
     private UserHomePO userHomePage;
     private UserRegisterPO userRegisterPage;
+    private UserMyAccountPO userMyAccountPage;
+    private String userFirstname, userLastname, userPassword, userEmailAddess, telephone, userAdmin, passwordAdmin;
 }

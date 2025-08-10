@@ -1,4 +1,37 @@
 package pageObjects.openCart.user;
 
-public class UserLoginPO {
+import core.BasePage;
+import org.openqa.selenium.WebDriver;
+import pageObjects.PageGenerator;
+import pageUIs.openCart.user.UserHomePageUI;
+import pageUIs.openCart.user.UserLoginPageUI;
+import pageUIs.openCart.user.UserRegisterPageUI;
+
+public class UserLoginPO extends BasePage {
+    WebDriver driver;
+
+    public UserLoginPO(WebDriver driver) {
+        this.driver = driver;
+    }
+    public UserRegisterPO clickToContinueButton() {
+        waitElementClickable(driver, UserLoginPageUI.NEW_CUSTOMER_CONTINUE_BUTTON);
+        clickToElement(driver, UserRegisterPageUI.CONTINUE_BUTTON);
+        return PageGenerator.getPage(UserRegisterPO.class, driver);
+    }
+
+    public void enterToEmailAddressTextbox(String emailAddress) {
+        waitElementVisible(driver, UserLoginPageUI.EMAIL_TEXTBOX);
+        sendkeyToElement(driver, UserLoginPageUI.EMAIL_TEXTBOX, emailAddress);
+    }
+
+    public void enterToPasswordTextbox(String password) {
+        waitElementClickable(driver, UserLoginPageUI.PASSWORD_TEXTBOX);
+        clickToElement(driver, UserLoginPageUI.PASSWORD_TEXTBOX);
+    }
+
+    public UserMyAccountPO clickToLoginButton() {
+        waitElementClickable(driver, UserLoginPageUI.LOGIN_BUTTON);
+        clickToElement(driver, UserLoginPageUI.LOGIN_BUTTON);
+        return PageGenerator.getPage(UserMyAccountPO.class, driver);
+    }
 }
