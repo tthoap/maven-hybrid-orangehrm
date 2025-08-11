@@ -52,14 +52,15 @@ public class Level_09_Switch_Url extends BaseTest {
         userRegisterPage.enterToPassword(userPassword);
         userRegisterPage.enterToConfirmPassword(userPassword);
         userRegisterPage.acceptPrivacyCheckbox();
+        userRegisterPage.clickToContinueButton();
         Assert.assertTrue(userRegisterPage.isSuccessMessageDisplayed());
 
         userHomePage = userRegisterPage.clickToLogoutLinkAtUserSite(driver);
 
         //User => Admin
         adminLoginPage = userRegisterPage.openAdminsite(driver, adminURL); //vì đứng ở đâu cũng mở ra trang admin, nê sẽ define trong BasePage
-
-        adminLoginPage.enterToAdminUserName(passwordAdmin);
+        adminLoginPage.sleepInSecond(2);
+        adminLoginPage.enterToAdminUserName(userAdmin);
         adminLoginPage.enterToAdminPassword(passwordAdmin);
         adminDashboardPage = adminLoginPage.clickToLoginButton();
 

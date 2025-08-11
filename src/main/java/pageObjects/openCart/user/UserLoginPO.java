@@ -15,7 +15,7 @@ public class UserLoginPO extends BasePage {
     }
     public UserRegisterPO clickToContinueButton() {
         waitElementClickable(driver, UserLoginPageUI.NEW_CUSTOMER_CONTINUE_BUTTON);
-        clickToElement(driver, UserRegisterPageUI.CONTINUE_BUTTON);
+        clickToElement(driver, UserLoginPageUI.NEW_CUSTOMER_CONTINUE_BUTTON);
         return PageGenerator.getPage(UserRegisterPO.class, driver);
     }
 
