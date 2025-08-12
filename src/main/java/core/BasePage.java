@@ -70,6 +70,9 @@ public class BasePage {
         return waitForAlertPresence(driver).getText();
     }
 
+    public String getWindowID(WebDriver driver){
+        return driver.getWindowHandle();
+    }
     public void switchToWindowTabByID(WebDriver driver, String expectedID) {
         Set<String> allIDs = driver.getWindowHandles();
         for (String id : allIDs) {
@@ -90,6 +93,14 @@ public class BasePage {
                 break;
             }
         }
+    }
+
+    public void openUrlByNewTAB(WebDriver driver, String url){
+        driver.switchTo().newWindow(WindowType.TAB).get(url);
+    }
+
+    public void openUrlByNewWindow(WebDriver driver, String url){
+        driver.switchTo().newWindow(WindowType.WINDOW).get(url);
     }
 
     public void closeAllWindowWithoutParent(WebDriver driver, String parentWindow) {
@@ -364,9 +375,8 @@ public class BasePage {
         return PageGenerator.getPage(AdminLoginPO.class, driver);
     }
 
-    public AdminLoginPO openAdminsite(WebDriver driver, String adminURL) {
+    public void openAdminsite(WebDriver driver, String adminURL) {
         openPageURL(driver,adminURL);
-        return PageGenerator.getPage(AdminLoginPO.class, driver);
     }
 
     public UserHomePO openUserSite(WebDriver driver, String userUrl) {
@@ -377,5 +387,10 @@ public class BasePage {
     private final int SHORT_TIMEOUT = 10;
     private final int LONG_TIMEOUT = 30;
 
+    public UserHomePO openUserHomeLogo(WebDriver driver) {
+        waitElementClickable(driver, BasePageUI.USER_HOME_LOGO);
+        clickToElement(driver, BasePageUI.USER_HOME_LOGO);
+        return PageGenerator.getPage(UserHomePO.class, driver);
+    }
 }
 
