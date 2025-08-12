@@ -26,7 +26,7 @@ public class UserLoginPO extends BasePage {
 
     public void enterToPasswordTextbox(String password) {
         waitElementClickable(driver, UserLoginPageUI.PASSWORD_TEXTBOX);
-        clickToElement(driver, UserLoginPageUI.PASSWORD_TEXTBOX);
+        sendkeyToElement(driver, UserLoginPageUI.PASSWORD_TEXTBOX, password);
     }
 
     public UserMyAccountPO clickToLoginButton() {

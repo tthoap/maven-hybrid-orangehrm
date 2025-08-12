@@ -70,19 +70,26 @@ public class Level_09_Switch_Url extends BaseTest {
 
         //Admin => User
         userHomePage = adminLoginPage.openUserSite(driver,userURL);// vì ở đâu cũng mở dc trang user, nên hàm này sẽ define trong basepage.
-
+        userHomePage.sleepInSecond(2);
         userLoginPage = userHomePage.clickToMyAccount();
+        userLoginPage.sleepInSecond(2);
         userLoginPage.enterToEmailAddressTextbox(userEmailAddess);
         userLoginPage.enterToPasswordTextbox(userPassword);
+        userLoginPage.sleepInSecond(10);
+
         userMyAccountPage = userLoginPage.clickToLoginButton();
+        userMyAccountPage.sleepInSecond(2);
 
         Assert.assertTrue(userMyAccountPage.isMyAcountPageDisplayed());
 
         //User => Admin
 
         adminLoginPage = userMyAccountPage.openAdminsite(driver, adminURL);
-        adminLoginPage.enterToAdminUserName(passwordAdmin);
+        adminLoginPage.sleepInSecond(4);
+        adminLoginPage.enterToAdminUserName(userAdmin);
         adminLoginPage.enterToAdminPassword(passwordAdmin);
+
+        adminLoginPage.sleepInSecond(10);
         adminDashboardPage = adminLoginPage.clickToLoginButton();
 
         //Admin => USer
