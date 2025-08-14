@@ -187,7 +187,7 @@ public class Level_09_Switch_Url_Role extends BaseTest {
         //Admin ko hề logout, nó vẫn ở trang customer
 
         //Admin -> User
-        adminCustomerPage.switchToWindowTabByID(driver, adminWindowID);
+        adminCustomerPage.switchToWindowTabByID(driver, userWindowID);
         adminCustomerPage.sleepInSecond(3);
 
         userRegisterPage = PageGenerator.getPage(UserRegisterPO.class, driver);
@@ -197,7 +197,7 @@ public class Level_09_Switch_Url_Role extends BaseTest {
         userMyAccountPage = PageGenerator.getPage(UserMyAccountPO.class, driver);
 
         //User -> Admin
-        userMyAccountPage.switchToWindowTabByID(driver, userWindowID);
+        userMyAccountPage.switchToWindowTabByID(driver, adminWindowID);
         adminCustomerPage =  PageGenerator.getPage(AdminCustomerPO.class, driver);
 
         Assert.assertTrue(adminCustomerPage.isCustomerHeaderDisplayed());

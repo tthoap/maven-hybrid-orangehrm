@@ -33,9 +33,20 @@ public class BaseTest {
         }
         driver.get(appUrl);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         System.out.println("Driver in BaseTest" + driver.toString());
         return driver;
+    }
+
+    protected void closeBrowser(){
+        if(!(null==driver)) {
+            driver.quit();
+        }
+    }
+    protected void closeBrowser(WebDriver driver){
+        if(!(null==driver)) {
+            driver.quit();
+        }
     }
 
     protected int getRandomNumber(){
