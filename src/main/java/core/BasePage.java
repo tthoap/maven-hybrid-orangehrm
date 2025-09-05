@@ -129,12 +129,30 @@ public class BasePage {
         return By.xpath(locator);
     }
 
+    private By getByLocator(String locatorType){
+        By by = null;
+        System.out.println("Locator Type  = " + locatorType);
+        if(locatorType.startsWith("id=")||locatorType.startsWith("ID=")||locatorType.startsWith("Id=")){
+            by = By.id(locatorType.substring(3));
+        } else if (locatorType.startsWith("Class=")||locatorType.startsWith("class=")||locatorType.startsWith("CLASS=")) {
+            by = By.className(locatorType.substring(6));
+        } else if (locatorType.startsWith("Name=")||locatorType.startsWith("name=")||locatorType.startsWith("NAME=")) {
+            by = By.name(locatorType.substring(5));
+        } else if (locatorType.startsWith("XPATH=")||locatorType.startsWith("Xpath=")||locatorType.startsWith("xpath=")) {
+            by = By.xpath(locatorType.substring(6));
+        } else if (locatorType.startsWith("css=")||locatorType.startsWith("CSS=")||locatorType.startsWith("Css=")) {
+            by = By.cssSelector(locatorType.substring(4));
+        } else
+            throw new RuntimeException("Locator type is not supported!");
+        return by;
+    }
+
     public WebElement getWebElement(WebDriver driver, String locator) {
-        return driver.findElement(By.xpath(locator));
+        return driver.findElement(getByLocator(locator));
     }
 
     public List<WebElement> getListElement(WebDriver driver, String locator) {
-        return driver.findElements(By.xpath(locator));
+        return driver.findElements(getByLocator(locator));
     }
 
     public void clickToElement(WebDriver driver, String locator) {
@@ -164,7 +182,7 @@ public class BasePage {
         clickToElement(driver, parentLocator);
         sleepInSeconds(2);
 
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(childItemLocator)));
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(childItemLocator)));
         List<WebElement> allItems = getListElement(driver, childItemLocator);
         for (WebElement item : allItems) {
             if (item.getText().trim().equals(expectedItem)) {
@@ -323,23 +341,23 @@ public class BasePage {
     }
 
     public void waitElementVisible(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }
 
     public void waitListElementVisible(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByLocator(locator)));
     }
 
     public void waitElementSelected(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.elementToBeSelected(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.elementToBeSelected(getByLocator(locator)));
     }
 
     public void waitElementClickable(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.elementToBeClickable(getByLocator(locator)));
     }
 
     public boolean waitElementInvisible(WebDriver driver, String locator){
-        return new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+        return new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locator)));
     }
 
     public boolean waitListElementInvisible(WebDriver driver, String locator){
@@ -347,11 +365,11 @@ public class BasePage {
     }
 
     public void waitElementPresence(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(getByLocator(locator)));
     }
 
     public void waitListElementPresence(WebDriver driver, String locator){
-        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(locator)));
     }
 
 
