@@ -30,7 +30,7 @@ public class Level_11_By_Locator extends BaseTest {
 
         loginPage = PageGenerator.getPage(LoginPO.class, driver);
 
-        adminUsername = "hoatran";
+        adminUsername = "automationfc";
         adminPassword = "Beocon@123";
         employeeFirstname = "John";
         employeeLastname = "Terry";

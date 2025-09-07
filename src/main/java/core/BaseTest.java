@@ -32,7 +32,7 @@ public class BaseTest {
                 throw new RuntimeException("Browser is invalid!");
         }
         driver.get(appUrl);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
         //driver.manage().window().maximize();
         System.out.println("Driver in BaseTest" + driver.toString());
         return driver;
