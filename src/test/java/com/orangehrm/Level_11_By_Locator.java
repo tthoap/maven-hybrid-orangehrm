@@ -64,8 +64,28 @@ public class Level_11_By_Locator extends BaseTest {
         Assert.assertEquals(personalDetailPage.getEmployeeIDTextboxValue(),employeeID);
     }
 
+    //Áp dụng cách 1 - mỗi page 1 hàm trong editNavigator page
     @Test
     public void Employee_02_Page_Navigator() {
+        //Từ personal  qua Contact
+        contactDetailPage = personalDetailPage.openContactDetailPage();
+
+        //Từ Contact qua Job
+        jobPage = contactDetailPage.openJobPage();
+
+        //Từ Job qua Dependent
+        dependentsPage = jobPage.openDependentsPage();
+
+        //Từ Dependent qua Personal
+        personalDetailPage = dependentsPage.openPersonalPage();
+
+        //Từ Personal qua Job
+        jobPage = personalDetailPage.openJobPage();
+    }
+
+    //Áp dụng cách 2 - dùng chung 1 hàm trong editNavigator page nhưng có switch case và trả về đối tượng + ép kiểu
+    @Test
+    public void Employee_03_Dynamic_Page() {
         //Từ personal  qua Contact
         contactDetailPage = (ContactDetailPO) personalDetailPage.openEditNavigatorByPageName("Contact Details");
 
@@ -77,6 +97,25 @@ public class Level_11_By_Locator extends BaseTest {
 
         //Từ Dependent qua Personal
         personalDetailPage = (PersonalDetailPO) dependentsPage.openEditNavigatorByPageName("Personal Details");
+
+    }
+    //Áp dụng cách 3 - dùng chung 1 hàm trong editNavigator page
+    @Test
+    public void Employee_04_Dynamic_Page() {
+        //Từ personal  qua Contact
+        personalDetailPage.openEditNavigatorByName("Contact Details");
+        // Gọi đến hàm khởi tạo ở trên testcase
+        contactDetailPage = PageGenerator.getPage(ContactDetailPO.class, driver);
+        //Từ Contact qua Job
+        contactDetailPage.openEditNavigatorByName("Job");
+        jobPage = PageGenerator.getPage(JobPO.class, driver);
+        //Từ Job qua Dependent
+        jobPage.openEditNavigatorByName("Dependents");
+        dependentsPage = PageGenerator.getPage(DependentsPO.class, driver);
+
+        //Từ Dependent qua Personal
+        dependentsPage.openEditNavigatorByName("Personal Details");
+        personalDetailPage = PageGenerator.getPage(PersonalDetailPO.class, driver);
 
     }
 

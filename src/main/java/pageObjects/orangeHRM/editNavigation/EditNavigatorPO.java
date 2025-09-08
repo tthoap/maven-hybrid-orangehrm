@@ -13,7 +13,7 @@ public class EditNavigatorPO extends BasePage {
         this.driver = driver;
     }
 
-    //9 Page nằm trong Edit employee
+    //Cách 1 - 10 hàm cho 10 pages
     public JobPO openJobPage() {
         waitElementClickable(driver, EditNavigatorPageUI.JOB_LINK);
         clickToElement(driver,EditNavigatorPageUI.JOB_LINK);
@@ -38,6 +38,7 @@ public class EditNavigatorPO extends BasePage {
         return PageGenerator.getPage(DependentsPO.class, driver);
     }
 
+    // Cách 2 - 1 hàm cho 10 pages và có switch -case và return
     public EditNavigatorPO openEditNavigatorByPageName(String pageName){
         waitElementClickable(driver, EditNavigatorPageUI.DYNAMIC_LINK_BY_PAGE_NAME, pageName);
         clickToElement(driver, EditNavigatorPageUI.DYNAMIC_LINK_BY_PAGE_NAME, pageName);
@@ -60,5 +61,11 @@ public class EditNavigatorPO extends BasePage {
                 throw new IllegalArgumentException("Page name is not valid " + pageName);
 
         }
+    }
+
+    // Cách 3 - 1 hàm cho 10 pages ko cần switch case và return
+    public void openEditNavigatorByName(String pageName){
+        waitElementClickable(driver, EditNavigatorPageUI.DYNAMIC_LINK_BY_PAGE_NAME, pageName);
+        clickToElement(driver, EditNavigatorPageUI.DYNAMIC_LINK_BY_PAGE_NAME, pageName);
     }
 }
