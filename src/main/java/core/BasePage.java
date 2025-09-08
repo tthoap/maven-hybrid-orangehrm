@@ -208,8 +208,26 @@ public class BasePage {
         return new Select(getWebElement(driver, locator)).isMultiple();
     }
 
+    public boolean isDropdownMultiple(WebDriver driver, String locator, String... restValues) {
+        return new Select(getWebElement(driver, castParameters(locator, restValues))).isMultiple();
+    }
+
     public void selectItemInCustomDropdown(WebDriver driver, String parentLocator, String childItemLocator, String expectedItem) {
         clickToElement(driver, parentLocator);
+        sleepInSeconds(2);
+
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(childItemLocator)));
+        List<WebElement> allItems = getListElement(driver, childItemLocator);
+        for (WebElement item : allItems) {
+            if (item.getText().trim().equals(expectedItem)) {
+                item.click();
+                sleepInSeconds(2);
+                break;
+            }
+        }
+    }
+    public void selectItemInCustomDropdown(WebDriver driver, String parentLocator, String childItemLocator, String expectedItem, String... restValues) {
+        clickToElement(driver, castParameters(parentLocator, restValues));
         sleepInSeconds(2);
 
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(childItemLocator)));
@@ -316,6 +334,10 @@ public class BasePage {
         driver.switchTo().frame(getWebElement(driver, locator));
     }
 
+    public void swichToFrame(WebDriver driver, String locator, String... restValues){
+        driver.switchTo().frame(getWebElement(driver, castParameters(locator, restValues)));
+    }
+
     public void switchToDefaultContent(WebDriver driver){
         driver.switchTo().defaultContent();
     }
@@ -388,6 +410,11 @@ public class BasePage {
 
     public void scrollToElementOnTop(WebDriver driver, String locator) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getWebElement(driver, locator));
+        sleepInSecond(1);
+    }
+
+    public void scrollToElementOnTop(WebDriver driver, String locator, String... restValues) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getWebElement(driver, castParameters(locator, restValues)));
         sleepInSecond(1);
     }
 

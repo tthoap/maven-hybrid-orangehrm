@@ -14,10 +14,7 @@ import pageObjects.orangeHRM.AddEmployeePO;
 import pageObjects.orangeHRM.DashboardPO;
 import pageObjects.orangeHRM.EmployeeListPO;
 import pageObjects.orangeHRM.LoginPO;
-import pageObjects.orangeHRM.editNavigation.ContactDetailPO;
-import pageObjects.orangeHRM.editNavigation.DependentsPO;
-import pageObjects.orangeHRM.editNavigation.JobPO;
-import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
+import pageObjects.orangeHRM.editNavigation.*;
 
 public class Level_11_By_Locator extends BaseTest {
 
@@ -70,19 +67,17 @@ public class Level_11_By_Locator extends BaseTest {
     @Test
     public void Employee_02_Page_Navigator() {
         //Từ personal  qua Contact
-        contactDetailPage = personalDetailPage.openContactDetailPage();
+        contactDetailPage = (ContactDetailPO) personalDetailPage.openEditNavigatorByPageName("Contact Details");
 
         //Từ Contact qua Job
-        jobPage = contactDetailPage.openJobPage();
+        jobPage = (JobPO) contactDetailPage.openEditNavigatorByPageName("Job");
 
         //Từ Job qua Dependent
-        dependentsPage = jobPage.openDependentsPage();
+        dependentsPage = (DependentsPO) jobPage.openEditNavigatorByPageName("Dependents");
 
         //Từ Dependent qua Personal
-        personalDetailPage = dependentsPage.openPersonalPage();
+        personalDetailPage = (PersonalDetailPO) dependentsPage.openEditNavigatorByPageName("Personal Details");
 
-        //Từ Personal qua Job
-        jobPage = personalDetailPage.openJobPage();
     }
 
 
@@ -98,6 +93,7 @@ public class Level_11_By_Locator extends BaseTest {
     private AddEmployeePO addEmployeePage;
     private PersonalDetailPO personalDetailPage;
     private ContactDetailPO contactDetailPage;
+    private EditNavigatorPO editNavigatorPage;
     private JobPO jobPage;
     private DependentsPO dependentsPage;
     private String employeeID, adminUsername, adminPassword, employeeFirstname, employeeLastname;

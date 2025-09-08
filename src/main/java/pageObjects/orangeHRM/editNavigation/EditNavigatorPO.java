@@ -3,6 +3,7 @@ package pageObjects.orangeHRM.editNavigation;
 import core.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageObjects.PageGenerator;
+import pageObjects.orangeHRM.PageGeneratorManager;
 import pageUIs.orangeHRM.editNavigation.EditNavigatorPageUI;
 
 public class EditNavigatorPO extends BasePage {
@@ -37,5 +38,27 @@ public class EditNavigatorPO extends BasePage {
         return PageGenerator.getPage(DependentsPO.class, driver);
     }
 
+    public EditNavigatorPO openEditNavigatorByPageName(String pageName){
+        waitElementClickable(driver, EditNavigatorPageUI.DYNAMIC_LINK_BY_PAGE_NAME, pageName);
+        clickToElement(driver, EditNavigatorPageUI.DYNAMIC_LINK_BY_PAGE_NAME, pageName);
+        System.out.println("Open Page: " + pageName);
 
+        switch (pageName){
+            case "Job":
+                return PageGenerator.getPage(JobPO.class, driver);
+
+            case "Contact Details":
+                return PageGenerator.getPage(ContactDetailPO.class, driver);
+
+            case "Dependents":
+                return PageGenerator.getPage(DependentsPO.class, driver);
+
+            case "Personal Details":
+                return PageGenerator.getPage(PersonalDetailPO.class, driver);
+
+            default:
+                throw new IllegalArgumentException("Page name is not valid " + pageName);
+
+        }
+    }
 }
