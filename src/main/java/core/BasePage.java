@@ -177,14 +177,14 @@ public class BasePage {
         getWebElement(driver, castParameters(locator, restvalues)).click();
     }
 
-    public void sendkeyToElement(WebDriver driver, String locator, String keysToSend) {
+    public void sendkeyToElement(WebDriver driver, String locator, CharSequence keysToSend) {
         waitElementVisible(driver, locator);
         getWebElement(driver, locator).clear();
         getWebElement(driver, locator).sendKeys(keysToSend);
     }
-    public void sendkeyToElement(WebDriver driver, String locator, String keysToSend, String... restvalues) {
+    public void sendkeyToElement(WebDriver driver, String locator, CharSequence keysToSend, String... restvalues) {
         waitElementVisible(driver, castParameters(locator, restvalues));
-        getWebElement(driver, castParameters(locator, restvalues)).clear();
+        //getWebElement(driver, castParameters(locator, restvalues)).clear();
         getWebElement(driver, castParameters(locator, restvalues)).sendKeys(keysToSend);
     }
 

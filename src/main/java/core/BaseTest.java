@@ -33,7 +33,7 @@ public class BaseTest {
         }
         driver.get(appUrl);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         System.out.println("Driver in BaseTest" + driver.toString());
         return driver;
     }

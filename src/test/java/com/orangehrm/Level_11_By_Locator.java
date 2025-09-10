@@ -18,8 +18,6 @@ import pageObjects.orangeHRM.editNavigation.*;
 
 public class Level_11_By_Locator extends BaseTest {
 
-    private static final Logger log = LoggerFactory.getLogger(Level_11_By_Locator.class);
-
     @Parameters({"browser", "appUrl"})
     @BeforeClass
     public void beforeClass(String browserName, String appURL){
