@@ -163,8 +163,11 @@ public class BasePage {
         return driver.findElement(getByLocator(locator));
     }
 
-    public List<WebElement> getListElement(WebDriver driver, String locator) {
+    protected List<WebElement> getListElement(WebDriver driver, String locator) {
         return driver.findElements(getByLocator(locator));
+    }
+    protected List<WebElement> getListElement(WebDriver driver, String locator, String... restvalues) {
+        return driver.findElements(getByLocator(castParameters(locator, restvalues)));
     }
 
     public void clickToElement(WebDriver driver, String locator) {
@@ -184,7 +187,7 @@ public class BasePage {
     }
     public void sendkeyToElement(WebDriver driver, String locator, CharSequence keysToSend, String... restvalues) {
         waitElementVisible(driver, castParameters(locator, restvalues));
-        //getWebElement(driver, castParameters(locator, restvalues)).clear();
+        getWebElement(driver, castParameters(locator, restvalues)).clear();
         getWebElement(driver, castParameters(locator, restvalues)).sendKeys(keysToSend);
     }
 
