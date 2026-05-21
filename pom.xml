@@ -104,8 +104,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
-                <testFailureIgnore>true</testFailureIgnore>
                 <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <!-- Run TestNG xml file -->
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/orangehrm.xml</suiteXmlFile>
