@@ -1,0 +1,3429 @@
+santera@c3svlab8-81% 
+santera@c3svlab8-81% tail -f msg
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:17.183
+Cat:  CCSP                      Primitive: CCSP_EPT_IDLE_REQ [12]
+Src:  CS_SP_ID (81)             Tid: 00000000   Load Factor (0)
+Dest: CS_FM_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 11 81 1 1 0x00000000 0x00000000 CAT: 11 ID: 21 TS: 1704965957 183267 SEG: 0 0
+IE_SPM_LOADING_FACTOR  1 5
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:28.726
+Cat:  ECCP                      Primitive: ECCP_CC_SIP_MAINT_MSG [588]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00000000 0x00000000 CAT: 12 ID: 65 TS: 1704965968 726387 SEG: 0 101
+                     LOC: SgwSipUtilTxn.cc:561 - idleInit()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.50.145:7002 (522)
+ID_TEXT_MSG_TRACE  
+
+OPTIONS sip:host5ipv4.traffic.com SIP/2.0
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-495
+To: "SIPT_NES2_TRAFF" <sip:1002-1@172.20.50.145>
+From: "SIPT_NES2_TRAFF" <sip:1002-1@ribbon.com>;tag=OPTIONS-12345
+Call-ID: 1704958942-479@84
+CSeq: 1 OPTIONS
+Max-Forwards: 70
+Contact: <sip:1002-1@ribbon.com:5060>
+Supported: timer,100rel,histinfo,precondition
+Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, INFO, PRACK, REFER, SUBSCRIBE, NOTIFY, UPDATE, REGISTER
+Accept: application/sdp
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:28.726
+Cat:  ECCP                      Primitive: ECCP_CC_SIP_MAINT_MSG [588]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00000000 0x00000000 CAT: 12 ID: 65 TS: 1704965968 726488 SEG: 0 101
+                     LOC: SgwSipUtilTxn.cc:561 - idleInit()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.50.145:7003 (522)
+ID_TEXT_MSG_TRACE  
+
+OPTIONS sip:host6ipv4.traffic.com SIP/2.0
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-496
+To: "SIPT_NES2_TRAFF" <sip:1003-1@172.20.50.145>
+From: "SIPT_NES2_TRAFF" <sip:1003-1@ribbon.com>;tag=OPTIONS-12345
+Call-ID: 1704958942-480@84
+CSeq: 1 OPTIONS
+Max-Forwards: 70
+Contact: <sip:1003-1@ribbon.com:5060>
+Supported: timer,100rel,histinfo,precondition
+Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, INFO, PRACK, REFER, SUBSCRIBE, NOTIFY, UPDATE, REGISTER
+Accept: application/sdp
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:28.739
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_FREE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 20 TS: 1704965968 739581 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 131840 (0x00020300)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:28.739
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 19 TS: 1704965968 739607 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 132352 (0x00020500)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:28.739
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_FREE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 20 TS: 1704965968 739617 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 132096 (0x00020400)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:28.739
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 19 TS: 1704965968 739626 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 132608 (0x00020600)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.248
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [616]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001600 0x00000000 CAT: 12 ID: 23 TS: 1704965978 248463 SEG: 0 101
+                     LOC: SgwSipRcvdMsgHandler.cc:1154 - processSipRequestMsg()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG IN src=172.20.248.141:5050 (554)
+ID_TEXT_MSG_TRACE  
+
+INVITE sip:1669@172.21.34.141:5060 SIP/2.0
+Via: SIP/2.0/UDP 172.20.248.141:5050;branch=z9hG4bK-2344-1-0
+From: 9198000002 <sip:9198000002@172.20.248.141:5050>;tag=2344SIPpTag001
+To: sut <sip:1669@172.21.34.141:5060>
+Call-ID: 1-2344@172.20.248.141
+CSeq: 1 INVITE
+Contact: sip:9198000002@172.20.248.141:5050
+Max-Forwards: 70
+Subject: Performance Test
+Content-Type: application/sdp
+Content-Length:   139
+
+v=0
+o=user1 53655765 2353687637 IN IP4 172.20.248.141
+s=-
+c=IN IP4 172.20.248.141
+t=0 0
+m=audio 6008 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.248
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [320]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001600 0x00000000 CAT: 12 ID: 23 TS: 1704965978 248518 SEG: 0 101
+                     LOC: SgwSipSvrTxn.cc:520 - idleEvent()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.248.141:5050 (254)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 172.20.248.141:5050;branch=z9hG4bK-2344-1-0
+To: sut <sip:1669@172.21.34.141>
+From: 9198000002 <sip:9198000002@172.20.248.141>;tag=2344SIPpTag001
+Call-ID: 1-2344@172.20.248.141
+CSeq: 1 INVITE
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.249
+Cat:  CCSP                      Primitive: CCSP_ORIGINATION_ATTEMPT [124]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_FM_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 11 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 26 TS: 1704965978 249936 SEG: 0 101
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_EXTENDED_CHAN_ID  SIP_DAL 0 5050 0 FALSE SGW_RGN: 2 CSFM_RGN: 0
+IE_MULTI_PARTY  FALSE
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_ORIG_BEARER_IP_ADDRESS  172.20.248.141
+IE_PDM_ROUTING_GROUP_ID  1
+IE_CCSP_OPTIONS  
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.252
+Cat:  CCSP                      Primitive: CCSP_CONTINUE [444]
+Src:  CS_FM_ID (81)             Tid: 00000000   Load Factor (0)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 11 DEST: 10 81 1 1 0x00000000 0x1300000d CAT: 11 ID: 10 TS: 1704965978 252856 SEG: 0 0
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 1 FALSE SGW_RGN: 2 CSFM_RGN: 1
+IE_SIP_DAL_PROFILE  OPTIONS: 0x0 EOPTIONS1: 0x80000 EOPTIONS2: 0x40000 3 0 0 46
+IE_CCSP_OPTIONS  
+IE_EXTENDED_TERMINATION_ID  115 VOIP_TRUNK_IF 1 0
+IE_TRUNK_GROUP_AND_CKT_ID  5050 13
+IE_TRUNK_GROUP_PROFILE  FIXEDLEN: 160 1 1 1 TWO_TO_TWO 0 GROUND 0 0000 0000 NOT-AT NOT-BV 2 2 NULL NULL NULL TEST_IND_OFF 0 0 1 1 32767 NULL NOT_PORTED DIRECT CT_NOTPRESENT 1 552 NULL NULL NULL 0 CONNECT_NO_IND NONE_ECHO_CANCEL NOT_PRESENT VMR_IND IXC NO-PRE-CONN-CUT-FWD-PATH NOT-NOAROUTING 1 SETUP_NO_IND 0 20 NULL NULL 13 0 NOT-VPN 0 2 5 0 0 0 0 0 0 0 0 CODEC_TYPE_NO_INDICATION 00 NULL 0000 PER_SIGNALING ACTION_INVALID 0 0 0 1 0 0 256 256
+IE_CODEC_INFO  NOT-MATCH
+IE_SUPPORTED_CODEC  CODEC_TYPE_G_711_64K_M_LAW 0
+IE_MAX_JITTER_BUFFER_SIZE  0140
+IE_ORGANIZATION_TYPE  ORG_TYPE_ITU_T
+IE_CODEC_NEGOTIABLE  FALSE
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_OTG  SIPDAL_5050 11
+IE_CLLI_NAME   0
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_CPS_ID  83
+IE_RGN  1
+IE_BILLING_IND  NONE
+IE_CS_FM_RGN  1
+IE_CS_LOADING_FACTOR  OVERLOAD_NO
+IE_MAX_MGW_RETRY_COUNT  2
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.253
+Cat:  CCSP                      Primitive: CCSP_CONTINUE [456]
+Src:  CS_SP_ID (81)             Tid: 00000000   Load Factor (5)
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 20 81 83 4 0x00000000 0x1300000d CAT: 11 ID: 10 TS: 1704965978 253014 SEG: 0 0
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 1 FALSE SGW_RGN: 2 CSFM_RGN: 1
+IE_SIP_DAL_PROFILE  OPTIONS: 0x0 EOPTIONS1: 0x80000 EOPTIONS2: 0x40000 3 0 0 46
+IE_CCSP_OPTIONS  
+IE_EXTENDED_TERMINATION_ID  115 VOIP_TRUNK_IF 1 0
+IE_TRUNK_GROUP_AND_CKT_ID  5050 13
+IE_TRUNK_GROUP_PROFILE  FIXEDLEN: 160 1 1 1 TWO_TO_TWO 0 GROUND 0 0000 0000 NOT-AT NOT-BV 2 2 NULL NULL NULL TEST_IND_OFF 0 0 1 1 32767 NULL NOT_PORTED DIRECT CT_NOTPRESENT 1 552 NULL NULL NULL 0 CONNECT_NO_IND NONE_ECHO_CANCEL NOT_PRESENT VMR_IND IXC NO-PRE-CONN-CUT-FWD-PATH NOT-NOAROUTING 1 SETUP_NO_IND 1 20 NULL NULL 13 0 NOT-VPN 0 2 5 0 0 0 0 0 0 0 0 CODEC_TYPE_NO_INDICATION 00 NULL 0000 PER_SIGNALING ACTION_INVALID 0 0 0 1 0 0 256 256
+IE_CODEC_INFO  NOT-MATCH
+IE_SUPPORTED_CODEC  CODEC_TYPE_G_711_64K_M_LAW 0
+IE_MAX_JITTER_BUFFER_SIZE  0140
+IE_ORGANIZATION_TYPE  ORG_TYPE_ITU_T
+IE_CODEC_NEGOTIABLE  FALSE
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_OTG  SIPDAL_5050 11
+IE_CLLI_NAME   0
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_CPS_ID  83
+IE_RGN  1
+IE_BILLING_IND  NONE
+IE_CS_FM_RGN  1
+IE_CS_LOADING_FACTOR  OVERLOAD_NO
+IE_MAX_MGW_RETRY_COUNT  2
+IE_TRIGGER_MAP  INFO_COLLECTED+O_DISCONNECT_NON_BLOCKING+T_DISCONNECT+PREFIX_TRANSLATED+MOBILE_NUM_PORTABILITY
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.248
+Cat:  ECCP                      Primitive: ECCP_CC_SETUP [456]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: CP_CALLM_ID (83)          Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001600 0x00000000 CAT: 12 ID: 1 TS: 1704965978 248702 SEG: 0 101
+                     LOC: SgwSipCall.cc:1784 - idleInvite()
+ID_CHANNEL_ID  SIP_DAL 5050 0 PREFER
+ID_TIMESTAMP  1704965978 248 Thu Jan 11 09:39:38 2024 (248 ms)
+ID_BNC_CHAR  BNC_CHAR_IP
+ID_ORGANIZATION_TYPE  ORG_TYPE_ITU_T
+ID_BEARER_CTRL_TUNNEL  BCT_TUNNEL_USED
+ID_BEARER_CTRL_INFO  139  "v=0
+o=user1 53655765 2353687637 IN IP4 172.20.248.141
+s=-
+c=IN IP4 172.20.248.141
+t=0 0
+m=audio 6008 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+"
+ID_LOCAL_IP_ADDRESS  (V1) 172.21.34.141:5060
+ID_REMOTE_PUB_IP_ADDRESS  (V1) 172.20.248.141:5050
+ID_REMOTE_PRI_IP_ADDRESS  (V1) 172.20.248.141:5050
+ID_REMOTE_USER_ID  9198000002
+ID_CALLED_PARTY_NUM  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+ID_CALLING_PARTY_NUM  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+ID_GENERIC_NAME  TYPE_NAME_CALLING NAME_AVAILABLE_UNKNOWN NAME_PRES_ALLOWED 10 9198000002
+ID_HOP_COUNTER  70
+ID_SIP_EXTENSION  [0x4 SDP]
+ID_SIP_CALLID  1-2344@172.20.248.141
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.254
+Cat:  ECCP                      Primitive: ECCP_CC_CALL_PROCEEDING [16]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00001600
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00001600 CAT: 12 ID: 2 TS: 1704965978 254363 SEG: 0 101
+ID_CHANNEL_ID  SIP_DAL 5050 1 PREFER
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.254
+Cat:  CCSP                      Primitive: CCSP_REQUESTED_EVENT [268]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 10 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 29 TS: 1704965978 254432 SEG: 0 101
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_ID  INFO_COLLECTED
+IE_CLLI_NAME   0
+IE_COLLECTED_DIGITS  1669
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_BEARER_CAPABILITY  ISUP_REQ TC_SPEECH CS_CCITT TR_64KBIT ITM_CIRCUIT UL1_G711ULAW URATE_64000
+IE_TRUNK_GROUP_AND_CKT_ID  5050 13
+IE_NETWORK_GROUP_ID  1
+IE_NUMBER_TRANSLATED  FALSE
+IE_JURISDICTION_INFO  474701
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 1 FALSE SGW_RGN: 2 CSFM_RGN: 1
+IE_CARRIER_ID  0000
+IE_PREFIX_DIGIT  1669
+IE_PREFIX_DIGIT_TYPE  4
+IE_DIGIT_TYPE  4
+IE_ORIG_DIGIT_TYPE  0
+IE_CALLING_PARTY_CATEGORY  256
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.257
+Cat:  CCSP                      Primitive: CCSP_CONTINUE [24]
+Src:  CS_SP_ID (81)             Tid: 00000000   Load Factor (0)
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 20 81 83 4 0x00000000 0x1300000d CAT: 11 ID: 10 TS: 1704965978 257424 SEG: 0 0
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_MAP  O_DISCONNECT_NON_BLOCKING+T_DISCONNECT+PREFIX_TRANSLATED+MOBILE_NUM_PORTABILITY
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.258
+Cat:  CCSP                      Primitive: CCSP_REQUESTED_EVENT [384]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 10 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 29 TS: 1704965978 258544 SEG: 0 101
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_ID  MOBILE_NUM_PORTABILITY
+IE_CLLI_NAME   0
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 13 FALSE SGW_RGN: 0 CSFM_RGN: 1
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 13 FALSE SGW_RGN: 0 CSFM_RGN: 1
+IE_COLLECTED_DIGITS  1669
+IE_ANALYZED_DIGITS  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_BEARER_CAPABILITY  ISUP_REQ TC_SPEECH CS_CCITT TR_64KBIT ITM_CIRCUIT UL1_G711ULAW URATE_64000
+IE_TRUNK_GROUP_AND_CKT_ID  5050 13
+IE_PREFIX_DIGIT  1669
+IE_DIGIT_TYPE  4
+IE_ORIG_DIGIT_TYPE  4
+IE_PREFIX_DIGIT_TYPE  4
+IE_ORIG_CALL_ID_SID  0x00000000 0
+IE_OTG  SIPDAL_5050 11
+IE_GMSC_ADDRESS  1234567890 INTERNATIONAL NPI_ISDN PRES_RSTR_ADDR_NOT_AVAIL SCR_USER_PROVIDED_NOT_VER GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_JURISDICTION_INFO  474701
+ID_SIP_EXTENSION  [0x4 SDP]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.262
+Cat:  CCSP                      Primitive: CCSP_CONTINUE [24]
+Src:  CS_SP_ID (81)             Tid: 00000000   Load Factor (0)
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 20 81 83 4 0x00000000 0x1300000d CAT: 11 ID: 10 TS: 1704965978 262327 SEG: 0 0
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_MAP  O_DISCONNECT_NON_BLOCKING+T_DISCONNECT+PREFIX_TRANSLATED
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.263
+Cat:  CCSP                      Primitive: CCSP_REQUESTED_EVENT [392]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 10 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 29 TS: 1704965978 263775 SEG: 0 101
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_ID  PREFIX_TRANSLATED
+IE_CLLI_NAME   0
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 13 FALSE SGW_RGN: 0 CSFM_RGN: 1
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 13 FALSE SGW_RGN: 0 CSFM_RGN: 1
+IE_COLLECTED_DIGITS  1669
+IE_ANALYZED_DIGITS  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_BEARER_CAPABILITY  ISUP_REQ TC_SPEECH CS_CCITT TR_64KBIT ITM_CIRCUIT UL1_G711ULAW URATE_64000
+IE_TRUNK_GROUP_AND_CKT_ID  5050 13
+IE_PREFIX_DIGIT  1669
+IE_DIGIT_TYPE  4
+IE_ORIG_DIGIT_TYPE  4
+IE_PREFIX_DIGIT_TYPE  4
+IE_ORIG_CALL_ID_SID  0x00000000 0
+IE_OTG  SIPDAL_5050 11
+IE_GMSC_ADDRESS  1234567890 INTERNATIONAL NPI_ISDN PRES_RSTR_ADDR_NOT_AVAIL SCR_USER_PROVIDED_NOT_VER GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_JURISDICTION_INFO  474701
+ID_SIP_EXTENSION  [0x4 SDP]
+IE_ORIGINATING_LATA  552
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.267
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [212]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x00000000 CAT: 12 ID: 15 TS: 1704965978 267840 SEG: 0 0
+ID_TCAP_ITU_DIALOGUE  TPT_BEGIN TCAP_PROTO_ITU92 0 DLG_RESULT_NOTPRESENT RESULT_SRC_SVC_NOTPRESENT DLG_NOTPRESENT ABORT_SRC_SVC_NOTPRESENT
+ID_TCAP_DIALOGUE_DATA  DATA_ACN_INFO 7 04 00 00 01 00 32 04 
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 12330
+ID_TCAP_COMPONENT  COMP_INVOKE 30 PO_CLASS_2 PARAM_SEQUENCE 0 1 TCAP_PROTO_ITU92
+ID_TCAP_COMP_INVOKE_ID  1 1 0 0 0 0 0 0
+ID_TCAP_COMP_OPERATION_CODE  OPCODE_LOCAL NOF_NOT_USED 0 1 00 
+ID_TCAP_COMPONENT_DATA   0  0 (84) 
+30 52 80 01 0c 82 04 03 10 61 96 83 07 03 13 19 
+89 00 00 20 bb 05 80 03 80 90 22 9c 01 02 9f 34 
+0d 80 03 00 cc cc 81 06 91 21 43 65 87 09 9f 35 
+04 80 02 00 01 9f 36 04 13 00 00 0d 9f 37 06 91 
+21 43 65 87 09 9f 38 01 03 9f 39 08 02 42 10 11 
+90 93 83 00 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.266
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 19 TS: 1704965978 266523 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 132864 (0x00020700)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.266
+Cat:  SGWP                      Primitive: SGWP_SIP_SIGID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 17 TS: 1704965978 266542 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5632 (0x00001600)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.269
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [216]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_M3UA_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 38 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 32 TS: 1704965978 269759 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:894 - santeraM3uaTsk()
+UNIVERSAL_PST_DATA  DATA:
+    89 00 16 00 89 00 1E 00 00 04 18 00 00 02 00 00
+    00 89 00 16 89 00 1E 00 00 04 18 00 00 02 00 00
+BUFFER_DATA  DATA:
+    00 A8 00 01 00 00 08 09 00 00 00 00 00 00 30 2A
+    83 BB 00 09 80 03 07 0B 04 C3 2A 30 92 04 C3 09
+    08 92 87 62 81 84 48 04 00 0D EE 62 6B 1E 28 1C
+    06 07 00 11 86 05 01 01 01 A0 11 60 0F 80 02 07
+    80 A1 09 06 07 04 00 00 01 00 32 04 6C 5C A1 5A
+    02 01 01 02 01 00 30 52 80 01 0C 82 04 03 10 61
+    96 83 07 03 13 19 89 00 00 20 BB 05 80 03 80 90
+    22 9C 01 02 9F 34 0D 80 03 00 CC CC 81 06 91 21
+    43 65 87 09 9F 35 04 80 02 00 01 9F 36 04 13 00
+    00 0D 9F 37 06 91 21 43 65 87 09 9F 38 01 03 9F
+    39 08 02 42 10 11 90 93 83 00 01 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.269
+Cat:  SGWP                      Primitive: SGWP_TCAP_LAYER [224]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_TCAP_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 34 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 2 TS: 1704965978 269797 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:415 - santeraSPstTsk()
+UNIVERSAL_PST_DATA  DATA:
+    03 00 04 00 17 00 17 00 00 07 10 00 00 00 00 00
+    00 03 00 04 17 00 17 00 00 07 10 00 00 00 00 00
+BUFFER_DATA  DATA:
+    00 B1 02 00 01 00 00 00 00 00 01 00 66 00 00 00
+    04 01 00 04 00 12 00 00 08 02 00 02 00 62 EE 0D
+    00 00 00 00 00 00 01 01 00 00 02 01 01 01 01 92
+    00 2A 30 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 01 01 00 00 02 01 01 01 01 92 00 09 08 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 01 66 00
+    00 06 01 00 04 00 62 EE 0D 00 01 00 1E 00 00 00
+    6B 02 FF 6F
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.270
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 270877 SEG: 0 0
+                     LOC: ../su/SgwM3uaServiceUserThread.cc:482 - processTransferRequest()
+ID_SGWTRACE_PARM  
+Sent Message: TCAP/SCCP To M3UA
+SI: 3
+DPC: 6-5-2 (12330)
+OPC: 1-1-1 (2057)
+SLS: 11
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 150
+PDU: 
+
+80 03 07 0b 04 c3 2a 30 92 04 c3 09 08 92 87 62 
+81 84 48 04 00 0d ee 62 6b 1e 28 1c 06 07 00 11 
+86 05 01 01 01 a0 11 60 0f 80 02 07 80 a1 09 06 
+07 04 00 00 01 00 32 04 6c 5c a1 5a 02 01 01 02 
+01 00 30 52 80 01 0c 82 04 03 10 61 96 83 07 03 
+13 19 89 00 00 20 bb 05 80 03 80 90 22 9c 01 02 
+9f 34 0d 80 03 00 cc cc 81 06 91 21 43 65 87 09 
+9f 35 04 80 02 00 01 9f 36 04 13 00 00 0d 9f 37 
+06 91 21 43 65 87 09 9f 38 01 03 9f 39 08 02 42 
+10 11 90 93 83 00 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 6-5-2
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+62 81 84 48 04 00 0d ee 62 6b 1e 28 1c 06 07 00 
+11 86 05 01 01 01 a0 11 60 0f 80 02 07 80 a1 09 
+06 07 04 00 00 01 00 32 04 6c 5c a1 5a 02 01 01 
+02 01 00 30 52 80 01 0c 82 04 03 10 61 96 83 07 
+03 13 19 89 00 00 20 bb 05 80 03 80 90 22 9c 01 
+02 9f 34 0d 80 03 00 cc cc 81 06 91 21 43 65 87 
+09 9f 35 04 80 02 00 01 9f 36 04 13 00 00 0d 9f 
+37 06 91 21 43 65 87 09 9f 38 01 03 9f 39 08 02 
+42 10 11 90 93 83 00 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Begin package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = 00 0d ee 62 
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Dialogue Portion Identifiers = Dialogue portion identifier (ITU)
+TCAP Dialogue Portion:
+  TCAP dialogue portion length = 30
+  External Tag Identifier
+  External Tag length = 28
+    Object Identifier Identifier
+    Object Identifier length = 7
+      content: 00 11 86 05 01 01 01 
+    Single ASN.1 Type Identifier
+    Single ASN.1 Type length = 17
+      Dialogue request identifier
+      Dialogue request length = 15
+        Protocol version identifier
+        Protocol version length = 2
+          content: 07 80 
+          Protocol version supported
+        Application Context Name identifier
+          Application Context Name length = 9
+          Object identifier ID
+          Object identifier ID length = 7
+             content:04 00 00 01 00 32 04 
+TCAP Component Portion:
+  TCAP component portion length = 92
+  Invoke component
+  Component length = 90
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 1
+  Operation code identifier
+  Operation code length = 1
+    opcode =0
+
+InitialDP:
+   ServiceKey: 12
+   INAPCldPtyNum: 1669 nature= 3 plan= 1 screen= 0 pres= 0
+   INAPClgPtyNum: 9198000002 nature= 3 plan= 1 screen= 3 pres= 0
+   INAPBearerCapability: { 80 90 22 }
+   EventTypeBCSM: collectedInfo(2)
+   CallReferenceNum: 318767117
+   CAMELMSCAddress: 1234567890 nature= 1 plan= 1
+   CAMELTimeAndTimeZone: 2024-01-11 09:39:38-+0000{ 02 42 10 11 90 93 83 00 }
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.419
+Cat:  SGWP                      Primitive: SGWP_M3UA_SCCP_MSG_INDICATION [148]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_M3UA_ID (83)          Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 38 83 83 4 0x00000000 0x00000000 CAT: 16 ID: 44 TS: 1704965978 419691 SEG: 0 101
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:1744 - m3ua_su_transfer_ind()
+BUFFER_DATA  DATA:
+    09 80 03 07 09 04 43 09 08 92 02 42 92 60 65 81
+    5D 48 04 EC 07 00 80 49 04 00 0D EE 62 6B 26 28
+    24 06 07 00 11 86 05 01 01 01 A0 19 61 17 A1 09
+    06 07 04 00 00 01 00 32 04 A2 03 02 01 00 A3 05
+    A1 03 02 01 00 6C 81 26 A1 24 02 01 01 02 01 17
+    30 1C A0 1A 30 0B 80 01 0A 81 01 01 A2 03 80 01
+    01 30 0B 80 01 09 81 01 01 A2 03 80 01 01 BB 05
+SGWP_SCCP_DATA_IND  DPC: 2057 OPC: 12330 USER_DATA_LERNGTH: 110 NW_APPR: 1 AS_ID: 0 REM_SGP_ID: 0 SLS: 7 PRIORITY: 0 SIO: 131 ROUTING_SLS: 127
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.419
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 419803 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:2738 - m3ua_su_transfer_ind_sccp_process()
+ID_SGWTRACE_PARM  
+Sent Message: M3UA To TCAP/SCCP
+SI: 3
+DPC: 1-1-1 (2057)
+OPC: 6-5-2 (12330)
+SLS: 7
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 109
+PDU: 
+
+80 03 07 09 04 43 09 08 92 02 42 92 60 65 81 5d 
+48 04 ec 07 00 80 49 04 00 0d ee 62 6b 26 28 24 
+06 07 00 11 86 05 01 01 01 a0 19 61 17 a1 09 06 
+07 04 00 00 01 00 32 04 a2 03 02 01 00 a3 05 a1 
+03 02 01 00 6c 81 26 a1 24 02 01 01 02 01 17 30 
+1c a0 1a 30 0b 80 01 0a 81 01 01 a2 03 80 01 01 
+30 0b 80 01 09 81 01 01 a2 03 80 01 01 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = No
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 81 5d 48 04 ec 07 00 80 49 04 00 0d ee 62 6b 
+26 28 24 06 07 00 11 86 05 01 01 01 a0 19 61 17 
+a1 09 06 07 04 00 00 01 00 32 04 a2 03 02 01 00 
+a3 05 a1 03 02 01 00 6c 81 26 a1 24 02 01 01 02 
+01 17 30 1c a0 1a 30 0b 80 01 0a 81 01 01 a2 03 
+80 01 01 30 0b 80 01 09 81 01 01 a2 03 80 01 01 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = ec 07 00 80 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = 00 0d ee 62 
+TCAP Dialogue Portion:
+  TCAP dialogue portion length = 38
+  External Tag Identifier
+  External Tag length = 36
+    Object Identifier Identifier
+    Object Identifier length = 7
+      content: 00 11 86 05 01 01 01 
+    Single ASN.1 Type Identifier
+    Single ASN.1 Type length = 25
+      Dialogue response identifier
+      Dialogue response length = 23
+        Application Context Name identifier
+          Application Context Name length = 9
+          Object identifier ID
+          Object identifier ID length = 7
+             content:04 00 00 01 00 32 04 
+        Result identifier
+        Result length = 3
+          INTEGER ID
+          INTEGER length = 1
+             content: 00 
+        Result Source Diagnostic identifier
+        Result Source Diagnostic length = 5
+          Dialogue Service User ID
+          Dialogue Service User length = 3
+            INTEGER ID
+            INTEGER length = 1
+               content: 00 
+TCAP Component Portion:
+  TCAP component portion length = 38
+  Invoke component
+  Component length = 36
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 1
+  Operation code identifier
+  Operation code length = 1
+    opcode =23
+
+InapReqRptBCSMEvt:
+   INAPBCSMEventSeq:
+      INAPBCSMEvent:
+         EventTypeBCSM: oAbandon(10)
+         MonitorMode: notifyAndContinue(1)
+         LegID:
+            SendingSideID: 1
+      INAPBCSMEvent:
+         EventTypeBCSM: oDisconnect(9)
+         MonitorMode: notifyAndContinue(1)
+         LegID:
+            SendingSideID: 1
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.422
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [188]
+Src:  SGW_TCAP_ID (84)          Tid: 000dee62   Load Factor (5)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 08000012
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 10 84 1 1 0x000dee62 0x08000012 CAT: 12 ID: 15 TS: 1704965978 422661 SEG: 0 101
+                     LOC: ../SgwSs7TcapRcvPrimitives.c:520 - tcapRcvComponentInd()
+ID_TCAP_ITU_DIALOGUE  TPT_CONTINUE ?unknown?(4) 1 DLG_RESULT_ACCEPTED RESULT_SRC_SVC_USER DLG_RSD_NULL ABORT_SRC_SVC_USER
+ID_TCAP_DIALOGUE_DATA  DATA_ACN_INFO 7 04 00 00 01 00 32 04 
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 0 SUB_SVC_SPARE NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 1 SUB_SVC_NATIONAL INTERNATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 12330
+ID_TCAP_COMPONENT  COMP_INVOKE 0 PO_NOTPRESENT PARAM_NO_SET_SEQ 0 1 ?unknown?(146)
+ID_TCAP_COMP_INVOKE_ID  1 1 0 0 0 0 0 0
+ID_TCAP_COMP_OPERATION_CODE  OPCODE_LOCAL NOF_NOT_USED 0 1 17 
+ID_TCAP_COMPONENT_DATA   0  9 (30) 
+30 1c a0 1a 30 0b 80 01 0a 81 01 01 a2 03 80 01 
+01 30 0b 80 01 09 81 01 01 a2 03 80 01 01 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.422
+Cat:  SGWP                      Primitive: SGWP_TCAP_LAYER [208]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_TCAP_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 34 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 2 TS: 1704965978 422692 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:415 - santeraSPstTsk()
+UNIVERSAL_PST_DATA  DATA:
+    03 00 04 00 17 00 17 00 00 07 10 00 00 00 00 00
+    00 03 00 04 17 00 17 00 00 07 10 00 00 00 00 00
+BUFFER_DATA  DATA:
+    00 A0 02 00 01 00 00 00 00 00 01 00 67 00 00 00
+    04 02 00 04 00 12 00 00 08 02 00 02 00 62 EE 0D
+    00 80 00 07 EC 00 01 01 00 01 02 00 01 01 01 92
+    00 2A 30 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 01 01 00 00 02 01 01 01 01 92 00 09 08 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 03 68 00
+    00 FF 01 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.419
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [588]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 34 83 2 1 0x00000000 0x00000000 CAT: 16 ID: 32 TS: 1704965978 419832 SEG: 0 0
+                     LOC: ../su/SgwM3uaMtp3UserRouting.cc:222 - transferToUserPart()
+BUFFER_DATA  DATA:
+    00 7C 00 03 00 00 30 2A 00 00 08 09 83 07 09 80
+    03 07 09 04 43 09 08 92 02 42 92 60 65 81 5D 48
+    04 EC 07 00 80 49 04 00 0D EE 62 6B 26 28 24 06
+    07 00 11 86 05 01 01 01 A0 19 61 17 A1 09 06 07
+    04 00 00 01 00 32 04 A2 03 02 01 00 A3 05 A1 03
+    02 01 00 6C 81 26 A1 24 02 01 01 02 01 17 30 1C
+    A0 1A 30 0B 80 01 0A 81 01 01 A2 03 80 01 01 30
+    0B 80 01 09 81 01 01 A2 03 80 01 01 00 00 00 00
+    01 00 00 00 00 00 00 00 07 00 83 7F 02 00 01 9F
+    36 04 13 00 00 0D 9F 37 06 91 21 43 65 87 09 9F
+    38 01 03 9F 39 08 02 42 10 11 90 93 83 00 00 00
+    00 00 00 00 00 00 00 00 FA 0F 04 00 69 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 09 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 01 00 20 00
+UNIVERSAL_PST_DATA  DATA:
+    04 00 89 00 1E 00 89 00 00 00 1A 00 00 03 00 00
+    00 04 00 89 1E 00 89 00 00 00 1A 00 00 03 00 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.469
+Cat:  SGWP                      Primitive: SGWP_M3UA_SCCP_MSG_INDICATION [148]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_M3UA_ID (83)          Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 38 83 83 4 0x00000000 0x00000000 CAT: 16 ID: 44 TS: 1704965978 469973 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:1744 - m3ua_su_transfer_ind()
+BUFFER_DATA  DATA:
+    09 80 03 07 09 04 43 09 08 92 02 42 92 5F 65 81
+    5C 48 04 EC 07 00 80 49 04 00 0D EE 62 6C 81 4D
+    A1 4B 02 01 02 02 01 17 30 43 A0 41 30 0B 80 01
+    07 81 01 01 A2 03 80 01 02 30 0B 80 01 09 81 01
+    00 A2 03 80 01 02 30 0B 80 01 06 81 01 00 A2 03
+    80 01 02 30 0B 80 01 05 81 01 00 A2 03 80 01 02
+    30 0B 80 01 04 81 01 00 A2 03 80 01 02 01 01 30
+SGWP_SCCP_DATA_IND  DPC: 2057 OPC: 12330 USER_DATA_LERNGTH: 109 NW_APPR: 1 AS_ID: 0 REM_SGP_ID: 2 SLS: 10 PRIORITY: 0 SIO: 131 ROUTING_SLS: 127
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.470
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 470046 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:2738 - m3ua_su_transfer_ind_sccp_process()
+ID_SGWTRACE_PARM  
+Sent Message: M3UA To TCAP/SCCP
+SI: 3
+DPC: 1-1-1 (2057)
+OPC: 6-5-2 (12330)
+SLS: 10
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 108
+PDU: 
+
+80 03 07 09 04 43 09 08 92 02 42 92 5f 65 81 5c 
+48 04 ec 07 00 80 49 04 00 0d ee 62 6c 81 4d a1 
+4b 02 01 02 02 01 17 30 43 a0 41 30 0b 80 01 07 
+81 01 01 a2 03 80 01 02 30 0b 80 01 09 81 01 00 
+a2 03 80 01 02 30 0b 80 01 06 81 01 00 a2 03 80 
+01 02 30 0b 80 01 05 81 01 00 a2 03 80 01 02 30 
+0b 80 01 04 81 01 00 a2 03 80 01 02 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = No
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 81 5c 48 04 ec 07 00 80 49 04 00 0d ee 62 6c 
+81 4d a1 4b 02 01 02 02 01 17 30 43 a0 41 30 0b 
+80 01 07 81 01 01 a2 03 80 01 02 30 0b 80 01 09 
+81 01 00 a2 03 80 01 02 30 0b 80 01 06 81 01 00 
+a2 03 80 01 02 30 0b 80 01 05 81 01 00 a2 03 80 
+01 02 30 0b 80 01 04 81 01 00 a2 03 80 01 02 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = ec 07 00 80 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = 00 0d ee 62 
+TCAP Component Portion:
+  TCAP component portion length = 77
+  Invoke component
+  Component length = 75
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 2
+  Operation code identifier
+  Operation code length = 1
+    opcode =23
+
+InapReqRptBCSMEvt:
+   INAPBCSMEventSeq:
+      INAPBCSMEvent:
+         EventTypeBCSM: oAnswer(7)
+         MonitorMode: notifyAndContinue(1)
+         LegID:
+            SendingSideID: 2
+      INAPBCSMEvent:
+         EventTypeBCSM: oDisconnect(9)
+         MonitorMode: interrupted(0)
+         LegID:
+            SendingSideID: 2
+      INAPBCSMEvent:
+         EventTypeBCSM: oNoAnswer(6)
+         MonitorMode: interrupted(0)
+         LegID:
+            SendingSideID: 2
+      INAPBCSMEvent:
+         EventTypeBCSM: oCalledPartyBusy(5)
+         MonitorMode: interrupted(0)
+         LegID:
+            SendingSideID: 2
+      INAPBCSMEvent:
+         EventTypeBCSM: routeSelectFailure(4)
+         MonitorMode: interrupted(0)
+         LegID:
+            SendingSideID: 2
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.474
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [208]
+Src:  SGW_TCAP_ID (84)          Tid: 000dee62   Load Factor (5)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 08000012
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 10 84 1 1 0x000dee62 0x08000012 CAT: 12 ID: 15 TS: 1704965978 474293 SEG: 0 101
+                     LOC: ../SgwSs7TcapRcvPrimitives.c:520 - tcapRcvComponentInd()
+ID_TCAP_ITU_DIALOGUE  TPT_CONTINUE ?unknown?(4) 0 ?unknown?(23) ?unknown?(0) ?unknown?(23) ABORT_SRC_SVC_USER
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 0 SUB_SVC_INTERNATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 1 SUB_SVC_NATIONAL INTERNATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 12330
+ID_TCAP_COMPONENT  COMP_INVOKE 0 PO_NOTPRESENT PARAM_NO_SET_SEQ 0 1 ?unknown?(13)
+ID_TCAP_COMP_INVOKE_ID  1 2 0 1 0 1 2 0
+ID_TCAP_COMP_OPERATION_CODE  OPCODE_LOCAL ?unknown?(42) 48 1 17 
+ID_TCAP_COMPONENT_DATA   0  0 (69) 
+30 43 a0 41 30 0b 80 01 07 81 01 01 a2 03 80 01 
+02 30 0b 80 01 09 81 01 00 a2 03 80 01 02 30 0b 
+80 01 06 81 01 00 a2 03 80 01 02 30 0b 80 01 05 
+81 01 00 a2 03 80 01 02 30 0b 80 01 04 81 01 00 
+a2 03 80 01 02 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.470
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [588]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 34 83 2 1 0x00000000 0x00000000 CAT: 16 ID: 32 TS: 1704965978 470058 SEG: 0 0
+                     LOC: ../su/SgwM3uaMtp3UserRouting.cc:222 - transferToUserPart()
+BUFFER_DATA  DATA:
+    00 7C 00 03 00 00 30 2A 00 00 08 09 83 0A 09 80
+    03 07 09 04 43 09 08 92 02 42 92 5F 65 81 5C 48
+    04 EC 07 00 80 49 04 00 0D EE 62 6C 81 4D A1 4B
+    02 01 02 02 01 17 30 43 A0 41 30 0B 80 01 07 81
+    01 01 A2 03 80 01 02 30 0B 80 01 09 81 01 00 A2
+    03 80 01 02 30 0B 80 01 06 81 01 00 A2 03 80 01
+    02 30 0B 80 01 05 81 01 00 A2 03 80 01 02 30 0B
+    80 01 04 81 01 00 A2 03 80 01 02 00 00 00 00 00
+    01 00 00 00 00 00 02 00 0A 00 83 7F 02 00 01 9F
+    36 04 13 00 00 0D 9F 37 06 91 21 43 65 87 09 9F
+    38 01 03 9F 39 08 02 42 10 11 90 93 83 00 00 00
+    00 00 00 00 00 00 00 00 FA 0F 04 00 69 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 09 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 01 00 20 00
+UNIVERSAL_PST_DATA  DATA:
+    04 00 89 00 1E 00 89 00 00 00 1A 00 00 03 00 00
+    00 04 00 89 1E 00 89 00 00 00 1A 00 00 03 00 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.519
+Cat:  SGWP                      Primitive: SGWP_M3UA_SCCP_MSG_INDICATION [100]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_M3UA_ID (83)          Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 38 83 83 4 0x00000000 0x00000000 CAT: 16 ID: 44 TS: 1704965978 519756 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:1744 - m3ua_su_transfer_ind()
+BUFFER_DATA  DATA:
+    09 80 03 07 09 04 43 09 08 92 02 42 92 30 65 81
+    2D 48 04 EC 07 00 80 49 04 00 0D EE 62 6C 81 1E
+    A1 1C 02 01 03 02 01 23 30 14 A0 0D A0 0B 80 03
+    0D 2F 00 81 01 FF 83 01 00 A2 03 80 01 02 07 81
+SGWP_SCCP_DATA_IND  DPC: 2057 OPC: 12330 USER_DATA_LERNGTH: 62 NW_APPR: 1 AS_ID: 0 REM_SGP_ID: 0 SLS: 15 PRIORITY: 0 SIO: 131 ROUTING_SLS: 127
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.519
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 519812 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:2738 - m3ua_su_transfer_ind_sccp_process()
+ID_SGWTRACE_PARM  
+Sent Message: M3UA To TCAP/SCCP
+SI: 3
+DPC: 1-1-1 (2057)
+OPC: 6-5-2 (12330)
+SLS: 15
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 61
+PDU: 
+
+80 03 07 09 04 43 09 08 92 02 42 92 30 65 81 2d 
+48 04 ec 07 00 80 49 04 00 0d ee 62 6c 81 1e a1 
+1c 02 01 03 02 01 23 30 14 a0 0d a0 0b 80 03 0d 
+2f 00 81 01 ff 83 01 00 a2 03 80 01 02 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = No
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 81 2d 48 04 ec 07 00 80 49 04 00 0d ee 62 6c 
+81 1e a1 1c 02 01 03 02 01 23 30 14 a0 0d a0 0b 
+80 03 0d 2f 00 81 01 ff 83 01 00 a2 03 80 01 02 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = ec 07 00 80 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = 00 0d ee 62 
+TCAP Component Portion:
+  TCAP component portion length = 30
+  Invoke component
+  Component length = 28
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 3
+  Operation code identifier
+  Operation code length = 1
+    opcode =35
+
+InapApplyCharging:
+   CAMELACHBillingChgChar:
+   CAMELTimeDurationCharging:
+         CAMELMaxCallPeriodDuration: 864000
+   LegID:
+            SendingSideID: 2
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.524
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [164]
+Src:  SGW_TCAP_ID (84)          Tid: 000dee62   Load Factor (5)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 08000012
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 10 84 1 1 0x000dee62 0x08000012 CAT: 12 ID: 15 TS: 1704965978 524976 SEG: 0 101
+                     LOC: ../SgwSs7TcapRcvPrimitives.c:520 - tcapRcvComponentInd()
+ID_TCAP_ITU_DIALOGUE  TPT_CONTINUE ?unknown?(4) 0 ?unknown?(23) ?unknown?(0) ?unknown?(23) ABORT_SRC_SVC_USER
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 0 SUB_SVC_INTERNATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 1 SUB_SVC_NATIONAL INTERNATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 12330
+ID_TCAP_COMPONENT  COMP_INVOKE 0 PO_NOTPRESENT PARAM_NO_SET_SEQ 0 1 ?unknown?(13)
+ID_TCAP_COMP_INVOKE_ID  1 3 0 1 0 1 2 0
+ID_TCAP_COMP_OPERATION_CODE  OPCODE_LOCAL ?unknown?(42) 48 1 23 
+ID_TCAP_COMPONENT_DATA   0  0 (22) 
+30 14 a0 0d a0 0b 80 03 0d 2f 00 81 01 ff 83 01 
+00 a2 03 80 01 02 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.528
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [100]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 000dee62
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x000dee62 CAT: 12 ID: 15 TS: 1704965978 528090 SEG: 0 101
+ID_TCAP_ITU_DIALOGUE  TPT_CONTINUE TCAP_PROTO_ITU92 0 DLG_RESULT_NOTPRESENT RESULT_SRC_SVC_NOTPRESENT DLG_NOTPRESENT ABORT_SRC_SVC_NOTPRESENT
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 4 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 12330
+ID_TCAP_COMPONENT  COMP_REJECT 0 PO_NOTPRESENT PARAM_SEQUENCE 0 1 TCAP_PROTO_ITU92
+ID_TCAP_COMP_INVOKE_ID  1 3 0 0 0 0 0 0
+ID_TCAP_COMP_PROBLEM_CODE  PFLAG_INVOKE REJECT_TYPE_NOT_SET 0 1 02 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.519
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [588]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 34 83 2 1 0x00000000 0x00000000 CAT: 16 ID: 32 TS: 1704965978 519823 SEG: 0 0
+                     LOC: ../su/SgwM3uaMtp3UserRouting.cc:222 - transferToUserPart()
+BUFFER_DATA  DATA:
+    00 4C 00 03 00 00 30 2A 00 00 08 09 83 0F 09 80
+    03 07 09 04 43 09 08 92 02 42 92 30 65 81 2D 48
+    04 EC 07 00 80 49 04 00 0D EE 62 6C 81 1E A1 1C
+    02 01 03 02 01 23 30 14 A0 0D A0 0B 80 03 0D 2F
+    00 81 01 FF 83 01 00 A2 03 80 01 02 00 00 00 00
+    01 00 00 00 00 00 00 00 0F 00 83 7F A2 03 80 01
+    02 30 0B 80 01 05 81 01 00 A2 03 80 01 02 30 0B
+    80 01 04 81 01 00 A2 03 80 01 02 00 00 00 00 00
+    01 00 00 00 00 00 02 00 0A 00 83 7F 02 00 01 9F
+    36 04 13 00 00 0D 9F 37 06 91 21 43 65 87 09 9F
+    38 01 03 9F 39 08 02 42 10 11 90 93 83 00 00 00
+    00 00 00 00 00 00 00 00 FA 0F 04 00 69 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 09 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 01 00 20 00
+UNIVERSAL_PST_DATA  DATA:
+    04 00 89 00 1E 00 89 00 00 00 1A 00 00 03 00 00
+    00 04 00 89 1E 00 89 00 00 00 1A 00 00 03 00 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.531
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [104]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_M3UA_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 38 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 32 TS: 1704965978 531427 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:894 - santeraM3uaTsk()
+UNIVERSAL_PST_DATA  DATA:
+    89 00 16 00 89 00 1E 00 00 04 18 00 00 02 00 00
+    00 89 00 16 89 00 1E 00 00 04 18 00 00 02 00 00
+BUFFER_DATA  DATA:
+    00 39 00 01 00 00 08 09 00 00 00 00 00 00 30 2A
+    83 CC 00 09 80 03 07 0B 04 C3 2A 30 92 04 C3 09
+    08 92 18 65 16 48 04 00 0D EE 62 49 04 EC 07 00
+    80 6C 08 A4 06 02 01 03 81 01 02 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.533
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 533686 SEG: 0 0
+                     LOC: ../su/SgwM3uaServiceUserThread.cc:482 - processTransferRequest()
+ID_SGWTRACE_PARM  
+Sent Message: TCAP/SCCP To M3UA
+SI: 3
+DPC: 6-5-2 (12330)
+OPC: 1-1-1 (2057)
+SLS: 12
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 39
+PDU: 
+
+80 03 07 0b 04 c3 2a 30 92 04 c3 09 08 92 18 65 
+16 48 04 00 0d ee 62 49 04 ec 07 00 80 6c 08 a4 
+06 02 01 03 81 01 02 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 6-5-2
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 16 48 04 00 0d ee 62 49 04 ec 07 00 80 6c 08 
+a4 06 02 01 03 81 01 02 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = 00 0d ee 62 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = ec 07 00 80 
+TCAP Component Portion:
+  TCAP component portion length = 8
+  Reject component
+  Component length = 6
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 3
+  Problem code identifier
+  Problem code length = 1
+    Problem Type = Invoke (0x81), Problem Code = 2
+
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.579
+Cat:  SGWP                      Primitive: SGWP_M3UA_SCCP_MSG_INDICATION [132]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_M3UA_ID (83)          Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 38 83 83 4 0x00000000 0x00000000 CAT: 16 ID: 44 TS: 1704965978 579649 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:1744 - m3ua_su_transfer_ind()
+BUFFER_DATA  DATA:
+    09 80 03 07 09 04 43 09 08 92 02 42 92 52 65 4E
+    48 04 EC 07 00 80 49 04 00 0D EE 62 6C 40 A1 3E
+    02 01 04 02 01 22 04 36 A0 80 80 2A 21 FF FF FF
+    FF FF FF FF FF FF FF FF FF FF 55 F0 FF FF FF FF
+    FF FF FF FF FF FF FF FF 81 00 10 72 50 FF FF FF
+    FF FF FF FF FF FF A1 03 80 01 02 82 01 00 00 00
+SGWP_SCCP_DATA_IND  DPC: 2057 OPC: 12330 USER_DATA_LERNGTH: 96 NW_APPR: 1 AS_ID: 0 REM_SGP_ID: 0 SLS: 11 PRIORITY: 0 SIO: 131 ROUTING_SLS: 127
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.579
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 579712 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:2738 - m3ua_su_transfer_ind_sccp_process()
+ID_SGWTRACE_PARM  
+Sent Message: M3UA To TCAP/SCCP
+SI: 3
+DPC: 1-1-1 (2057)
+OPC: 6-5-2 (12330)
+SLS: 11
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 95
+PDU: 
+
+80 03 07 09 04 43 09 08 92 02 42 92 52 65 4e 48 
+04 ec 07 00 80 49 04 00 0d ee 62 6c 40 a1 3e 02 
+01 04 02 01 22 04 36 a0 80 80 2a 21 ff ff ff ff 
+ff ff ff ff ff ff ff ff ff 55 f0 ff ff ff ff ff 
+ff ff ff ff ff ff ff 81 00 10 72 50 ff ff ff ff 
+ff ff ff ff ff a1 03 80 01 02 82 01 00 00 00 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = No
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 4e 48 04 ec 07 00 80 49 04 00 0d ee 62 6c 40 
+a1 3e 02 01 04 02 01 22 04 36 a0 80 80 2a 21 ff 
+ff ff ff ff ff ff ff ff ff ff ff ff 55 f0 ff ff 
+ff ff ff ff ff ff ff ff ff ff 81 00 10 72 50 ff 
+ff ff ff ff ff ff ff ff a1 03 80 01 02 82 01 00 
+00 00 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = ec 07 00 80 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = 00 0d ee 62 
+TCAP Component Portion:
+  TCAP component portion length = 64
+  Invoke component
+  Component length = 62
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 4
+  Operation code identifier
+  Operation code length = 1
+    opcode =34
+
+InapFurnChargingInfo: 
+    FCIBillingChgChar: { A0 80 80 2A 21 FF FF FF FF FF FF FF FF FF FF FF FF FF 55 F0 FF FF FF FF FF FF FF FF FF FF FF FF 81 00 10 72 50 FF FF FF FF FF FF FF FF FF A1 03 80 01 02 82 01 00 }
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.579
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [588]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 34 83 2 1 0x00000000 0x00000000 CAT: 16 ID: 32 TS: 1704965978 579724 SEG: 0 0
+                     LOC: ../su/SgwM3uaMtp3UserRouting.cc:222 - transferToUserPart()
+BUFFER_DATA  DATA:
+    00 6C 00 03 00 00 30 2A 00 00 08 09 83 0B 09 80
+    03 07 09 04 43 09 08 92 02 42 92 52 65 4E 48 04
+    EC 07 00 80 49 04 00 0D EE 62 6C 40 A1 3E 02 01
+    04 02 01 22 04 36 A0 80 80 2A 21 FF FF FF FF FF
+    FF FF FF FF FF FF FF FF 55 F0 FF FF FF FF FF FF
+    FF FF FF FF FF FF 81 00 10 72 50 FF FF FF FF FF
+    FF FF FF FF A1 03 80 01 02 82 01 00 00 00 00 00
+    01 00 00 00 00 00 00 00 0B 00 83 7F 00 00 00 00
+    01 00 00 00 00 00 02 00 0A 00 83 7F 02 00 01 9F
+    36 04 13 00 00 0D 9F 37 06 91 21 43 65 87 09 9F
+    38 01 03 9F 39 08 02 42 10 11 90 93 83 00 00 00
+    00 00 00 00 00 00 00 00 FA 0F 04 00 69 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 09 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 01 00 20 00
+UNIVERSAL_PST_DATA  DATA:
+    04 00 89 00 1E 00 89 00 00 00 1A 00 00 03 00 00
+    00 04 00 89 1E 00 89 00 00 00 1A 00 00 03 00 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.620
+Cat:  SGWP                      Primitive: SGWP_M3UA_SCCP_MSG_INDICATION [100]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_M3UA_ID (83)          Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 38 83 83 4 0x00000000 0x00000000 CAT: 16 ID: 44 TS: 1704965978 620000 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:1744 - m3ua_su_transfer_ind()
+BUFFER_DATA  DATA:
+    09 80 03 07 09 04 43 09 08 92 02 42 92 31 65 81
+    2E 48 04 EC 07 00 80 49 04 00 0D EE 62 6C 81 1F
+    A1 1D 02 01 05 02 01 14 30 15 A0 0C 04 0A 81 10
+    60 08 18 21 43 65 87 09 AE 05 04 03 01 01 10 FF
+SGWP_SCCP_DATA_IND  DPC: 2057 OPC: 12330 USER_DATA_LERNGTH: 63 NW_APPR: 1 AS_ID: 0 REM_SGP_ID: 2 SLS: 1 PRIORITY: 0 SIO: 131 ROUTING_SLS: 127
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.620
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 620057 SEG: 0 0
+                     LOC: ../stack/SgwM3uaStackSuIndications.cc:2738 - m3ua_su_transfer_ind_sccp_process()
+ID_SGWTRACE_PARM  
+Sent Message: M3UA To TCAP/SCCP
+SI: 3
+DPC: 1-1-1 (2057)
+OPC: 6-5-2 (12330)
+SLS: 1
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 62
+PDU: 
+
+80 03 07 09 04 43 09 08 92 02 42 92 31 65 81 2e 
+48 04 ec 07 00 80 49 04 00 0d ee 62 6c 81 1f a1 
+1d 02 01 05 02 01 14 30 15 a0 0c 04 0a 81 10 60 
+08 18 21 43 65 87 09 ae 05 04 03 01 01 10 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = No
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 81 2e 48 04 ec 07 00 80 49 04 00 0d ee 62 6c 
+81 1f a1 1d 02 01 05 02 01 14 30 15 a0 0c 04 0a 
+81 10 60 08 18 21 43 65 87 09 ae 05 04 03 01 01 
+10 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = ec 07 00 80 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = 00 0d ee 62 
+TCAP Component Portion:
+  TCAP component portion length = 31
+  Invoke component
+  Component length = 29
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 5
+  Operation code identifier
+  Operation code length = 1
+    opcode =20
+
+InapConnect:
+   DestRtgAddr:
+      INAPCldPtyNum: 068081123456789 nature= 1 plan= 1 screen= 0 pres= 0
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.623
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [164]
+Src:  SGW_TCAP_ID (84)          Tid: 000dee62   Load Factor (5)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 08000012
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 10 84 1 1 0x000dee62 0x08000012 CAT: 12 ID: 15 TS: 1704965978 623171 SEG: 0 101
+                     LOC: ../SgwSs7TcapRcvPrimitives.c:520 - tcapRcvComponentInd()
+ID_TCAP_ITU_DIALOGUE  TPT_CONTINUE ?unknown?(22) 0 ?unknown?(137) ?unknown?(0) ?unknown?(30) ABORT_SRC_SVC_USER
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 0 SUB_SVC_INTERNATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 0 SUB_SVC_INTERNATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 0 12330
+ID_TCAP_COMPONENT  COMP_INVOKE 0 PO_NOTPRESENT PARAM_NO_SET_SEQ 0 1 ?unknown?(9)
+ID_TCAP_COMP_INVOKE_ID  1 5 0 0 13 238 98 73
+ID_TCAP_COMP_OPERATION_CODE  OPCODE_LOCAL POF_FURNISH_AMA_INFO 8 1 14 
+ID_TCAP_COMPONENT_DATA   0  0 (23) 
+30 15 a0 0c 04 0a 81 10 60 08 18 21 43 65 87 09 
+ae 05 04 03 01 01 10 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.626
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_CANCEL [16]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 000dee62
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x000dee62 CAT: 12 ID: 25 TS: 1704965978 626237 SEG: 0 101
+ID_TCAP_COMP_INVOKE_ID  1 1 0 0 0 0 0 0
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.626
+Cat:  CCSP                      Primitive: CCSP_ANALYZE_DIGITS [116]
+Src:  CS_SP_ID (81)             Tid: 00000000   Load Factor (0)
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 20 81 83 4 0x00000000 0x1300000d CAT: 11 ID: 65 TS: 1704965978 626353 SEG: 0 0
+IE_COLLECTED_DIGITS  068081123456789
+IE_ANALYZED_DIGITS  068081123456789 SUBSCRIBER NPI_ISDN PRES_RSTR_ALLOWED SCR_USER_PROVIDED_NOT_VER GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 15 
+IE_SERVICE_KEY  12
+IE_KEEP_SETUP_AFTER_ANSWER  TRUE
+IE_TCAP_RGN  2
+IE_QUERY_STATUS  QUERY_SUCCESSFUL
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_ID  PREFIX_TRANSLATED
+IE_TRIGGER_MAP  O_CALLED_PARTY_BUSY+O_NO_ANSWER+O_ANSWER+O_DISCONNECT_NON_BLOCKING+T_DISCONNECT+O_ROUTE_FAILURE+ORIG_MATE_DISC
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.620
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [588]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 34 83 2 1 0x00000000 0x00000000 CAT: 16 ID: 32 TS: 1704965978 620069 SEG: 0 0
+                     LOC: ../su/SgwM3uaMtp3UserRouting.cc:222 - transferToUserPart()
+BUFFER_DATA  DATA:
+    00 4C 00 03 00 00 30 2A 00 00 08 09 83 01 09 80
+    03 07 09 04 43 09 08 92 02 42 92 31 65 81 2E 48
+    04 EC 07 00 80 49 04 00 0D EE 62 6C 81 1F A1 1D
+    02 01 05 02 01 14 30 15 A0 0C 04 0A 81 10 60 08
+    18 21 43 65 87 09 AE 05 04 03 01 01 10 00 00 00
+    01 00 00 00 00 00 02 00 01 00 83 7F FF FF FF FF
+    FF FF FF FF A1 03 80 01 02 82 01 00 00 00 00 00
+    01 00 00 00 00 00 00 00 0B 00 83 7F 00 00 00 00
+    01 00 00 00 00 00 02 00 0A 00 83 7F 02 00 01 9F
+    36 04 13 00 00 0D 9F 37 06 91 21 43 65 87 09 9F
+    38 01 03 9F 39 08 02 42 10 11 90 93 83 00 00 00
+    00 00 00 00 00 00 00 00 FA 0F 04 00 69 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 09 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 01 00 20 00
+UNIVERSAL_PST_DATA  DATA:
+    04 00 89 00 1E 00 89 00 00 00 1A 00 00 03 00 00
+    00 04 00 89 1E 00 89 00 00 00 1A 00 00 03 00 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.629
+Cat:  CCSP                      Primitive: CCSP_TERMINATION_ATTEMPT [232]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_FM_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 11 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 37 TS: 1704965978 629100 SEG: 0 101
+IE_CCSP_OPTIONS  
+IE_PDM_ROUTING_GROUP_ID  1
+IE_ACCESS_TYPE  INVALID
+IE_PARTY_ID  TERM_PARTY_ID
+IE_MSF_NUMBER  115
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 1 FALSE SGW_RGN: 2 CSFM_RGN: 1
+IE_EXTENDED_TERMINATION_ID  115 VOIP_TRUNK_IF 1 0
+IE_ROUTE_INDEX  680 255 FALSE
+IE_ORIG_CALLED_PARTY_NUMBER  068081123456789 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 15 
+IE_CALLED_PARTY_NUMBER  068081123456789 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 15 
+IE_BEARER_CAPABILITY  ISUP_NOT_REQ TC_SPEECH CS_CCITT TR_64KBIT ITM_CIRCUIT UL1_G711ULAW URATE_64000
+IE_TRK_GRP_COS  1
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_ACC_INDICATOR  FALSE
+IE_ORIG_TRUNK_GROUP_AND_CKT_ID  5050 0
+IE_RGN  1
+IE_ORIG_DIALED_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_USER_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.633
+Cat:  CCSP                      Primitive: CCSP_AUTHORIZE_TERMINATION [500]
+Src:  CS_FM_ID (81)             Tid: 00000000   Load Factor (0)
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 11 DEST: 20 81 83 4 0x00000000 0x1300000d CAT: 11 ID: 7 TS: 1704965978 633101 SEG: 0 0
+IE_CPS_ID  83
+IE_PARTY_ID  TERM_PARTY_ID
+IE_MSF_NUMBER  115
+IE_CCSP_OPTIONS  
+IE_EXTENDED_TERMINATION_ID  115 VOIP_TRUNK_IF 1 0
+IE_CODEC_INFO  NOT-MATCH
+IE_SUPPORTED_CODEC  CODEC_TYPE_G_711_64K_M_LAW 0
+IE_MAX_JITTER_BUFFER_SIZE  0140
+IE_ORGANIZATION_TYPE  ORG_TYPE_ITU_T
+IE_CODEC_NEGOTIABLE  FALSE
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5052 1 TRUE SGW_RGN: 2 CSFM_RGN: 1
+IE_TRUNK_GROUP_AND_CKT_ID  5052 10
+IE_TRUNK_GROUP_PROFILE  FIXEDLEN: 160 1 1 1 TWO_TO_TWO 0 GROUND 0 0000 0000 NOT-AT NOT-BV 2 2 NULL NULL NULL TEST_IND_OFF 0 0 1 1 32767 NULL NOT_PORTED DIRECT CT_NOTPRESENT 1 552 NULL NULL NULL 0 CONNECT_NO_IND NONE_ECHO_CANCEL NOT_PRESENT VMR_IND IXC NO-PRE-CONN-CUT-FWD-PATH NOT-NOAROUTING 1 SETUP_NO_IND 0 0 NULL NULL 13 0 NOT-VPN 0 2 5 0 0 0 0 0 0 0 0 CODEC_TYPE_NO_INDICATION 00 NULL 0000 PER_SIGNALING ACTION_INVALID 0 0 0 1 0 0 256 256
+IE_SIP_DAL_PROFILE  OPTIONS: 0x0 EOPTIONS1: 0x80000 EOPTIONS2: 0x40000 3 0 0 0
+IE_ALLOCATION_RESPONSE  SUCCESS
+IE_REQUIRE_COT  FALSE
+IE_ROUTE_INDEX  680 0 FALSE
+IE_CLLI_NAME   0
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_CALLED_PARTY_NUMBER  068081123456789 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 15 
+IE_TRK_GRP_COS  1
+IE_ORIG_DIALED_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_USER_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 4 
+IE_ORIG_CALLED_PARTY_NUMBER  068081123456789 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 15 
+IE_ORIG_TRUNK_GROUP_AND_CKT_ID  5050 0
+IE_ACC_INDICATOR  FALSE
+IE_OTG  SIPDAL_5052 11
+IE_CS_FM_RGN  1
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.634
+Cat:  EGCP                      Primitive: EGCP_REQUEST [260]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: MSF_CRM_ID (115)          Tid: ffffffff
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 165 83 115 4 0x1300000d 0xffffffff CAT: 13 ID: 1 TS: 1704965978 634363 SEG: 0 101
+ADD_CMD   VOIP_TRUNK_IF 1 4294967295
+          STRM_DESCR [ 1 ]
+          LOCAL_DESCR [ ACTIVE CONF_BRIDGE_NO WIRE_TAP_NO ORIG ESSENTIAL_LINE_OFF NO_T38 NO_UPSPEED TRACE_OFF DISABLE_RTCP_NO ]
+          AVD_RX_DESCR [ EC_128 EC_NO GC_NO SUPRESSION_IGNORE NOT_PRESENT NOT_PRESENT 0 CODEC_U_LAW 40 OUTBOUND(TONE_NEEDED) INBOUND(TONE_NOT_NEEDED) NO_BNC_ID NO_ATM_ADDR ESTABLISH_BNC (1) BNC_IP (3) NO_TUNNELING_INDICATION (0) NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA OPTIMIZE_CODEC NO_VPKT_TERM_DATA NO_RFC3267_DATA SELECTED_CODEC { CODEC_TYPE_NO_INDICATION 0 } CODEC_LIST { CODEC_TYPE_G_711_64K_M_LAW 0 } NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          AVD_TX_DESCR [ NO_BNC_ID NO_ATM_ADDR BNC_IP (3) NO_VPKT_TERM_DATA NO_BEARER_CTRL_ACTION "v=0
+o=user1 53655765 2353687637 IN IP4 172.20.248.141
+s=-
+c=IN IP4 172.20.248.141
+t=0 0
+m=audio 6008 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+" ]
+          TERMINATION_CLASS_DESCR [ VMG_ID: 0 MGC_TYPE_C3 (1) MGC_VERSION: 1 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.651
+Cat:  EGCP                      Primitive: EGCP_ACCEPT [280]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1300000d CAT: 13 ID: 2 TS: 1704965978 651306 SEG: 0 0
+ADD_CMD   VOIP_TRUNK_IF 1 1
+          AVD_RX_DESCR [ NO_RX_DATA NO_BNC_ID NO_ATM_ADDR NEED_NOTIFY (3) NO_BNC_CHAR NO_TUNNELING_OPTION NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC "v=0
+o=genband 268556288 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5420 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+" NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA SELECTED_CODEC { CODEC_TYPE_G_711_64K_M_LAW 0 } CODEC_LIST { CODEC_TYPE_G_711_64K_M_LAW 0 } NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+RESOURCE_RESULT   VOIP_TRUNK_IF 1 1
+          INT_RESC_DESCR [ IP_STATE [ STREAM_MODE: ACTIVE LOCAL_SDP: SEND_RECV REMOTE_SDP: SEND_RECV PORT: INACTIVE ] ]
+          VS4_RESC_DESCR [ VS_SLOT: 13 2 1 15 255 5 340 5 340 1 5131 DTMF: 1 CLEARMODE: 0 T38: 0 T140: 0 VIDEO: 0 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.651
+Cat:  ECCP                      Primitive: ECCP_CC_SIPAPM [244]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00001600
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00001600 CAT: 12 ID: 26 TS: 1704965978 651374 SEG: 0 101
+ID_ACTION_IND  ACTIND_CONNECT_FWD_NOTIFY
+ID_BNC_CHAR  BNC_CHAR_IP
+ID_BEARER_CTRL_INFO  196  "v=0
+o=genband 268556288 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5420 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+"
+ID_CHANNEL_ID  SIP_DAL 5050 0 PREFER
+ID_SOURCE_PROTOCOL  SIP_DAL TC_NOTPRESENT
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.651
+Cat:  EGCP                      Primitive: EGCP_REQUEST [104]
+Src:  CP_CALLM_ID (83)          Tid: 1310000d   Load Factor (0)
+Dest: MSF_CRM_ID (115)          Tid: 1001dbff
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 165 83 115 4 0x1310000d 0x1001dbff CAT: 13 ID: 1 TS: 1704965978 651406 SEG: 0 101
+ADD_CMD   VOIP_TRUNK_IF 1 4294967295
+          STRM_DESCR [ 1 ]
+          LOCAL_DESCR [ ACTIVE CONF_BRIDGE_NO WIRE_TAP_NO TERM ESSENTIAL_LINE_OFF NO_T38 NO_UPSPEED TRACE_OFF DISABLE_RTCP_NO ]
+          AVD_RX_DESCR [ EC_NO EC_NO GC_NO SUPRESSION_IGNORE NOT_PRESENT NOT_PRESENT 0 CODEC_U_LAW 40 OUTBOUND(TONE_NEEDED) INBOUND(TONE_NOT_NEEDED) NO_BNC_ID NO_ATM_ADDR ESTABLISH_BNC (1) BNC_IP (3) NO_TUNNELING_INDICATION (0) NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA OPTIMIZE_CODEC NO_VPKT_TERM_DATA NO_RFC3267_DATA SELECTED_CODEC { CODEC_TYPE_NO_INDICATION 0 } CODEC_LIST { CODEC_TYPE_G_711_64K_M_LAW 0 } NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          TERMINATION_CLASS_DESCR [ VMG_ID: 0 MGC_TYPE_C3 (1) MGC_VERSION: 1 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.653
+Cat:  ECCP                      Primitive: ECCP_CC_SIPAPM [52]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001600 0x1300000d CAT: 12 ID: 26 TS: 1704965978 653699 SEG: 0 101
+                     LOC: SgwSipCall.cc:7509 - initiatedApm()
+ID_CHANNEL_ID  SIP_DAL 5050 1 PREFER
+ID_TIMESTAMP  1704965978 653 Thu Jan 11 09:39:38 2024 (653 ms)
+ID_BNC_CHAR  BNC_CHAR_IP
+ID_ORGANIZATION_TYPE  ORG_TYPE_ITU_T
+ID_ACTION_IND  ACTIND_CONNECTED
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.700
+Cat:  EGCP                      Primitive: EGCP_ACCEPT [264]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1310000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1310000d CAT: 13 ID: 2 TS: 1704965978 700909 SEG: 0 0
+ADD_CMD   VOIP_TRUNK_IF 1 2
+          AVD_RX_DESCR [ NO_RX_DATA NO_BNC_ID NO_ATM_ADDR NEED_NOTIFY (3) NO_BNC_CHAR NO_TUNNELING_OPTION NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC "v=0
+o=genband 268556289 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5422 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+" NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA SELECTED_CODEC { CODEC_TYPE_G_711_64K_M_LAW 0 } CODEC_LIST { CODEC_TYPE_G_711_64K_M_LAW 0 } NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+RESOURCE_RESULT   VOIP_TRUNK_IF 1 2
+          INT_RESC_DESCR [ IP_STATE [ STREAM_MODE: ACTIVE LOCAL_SDP: SEND_RECV REMOTE_SDP: SEND_RECV PORT: INACTIVE ] ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.701
+Cat:  ECCP                      Primitive: ECCP_CC_SETUP [572]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00000000 CAT: 12 ID: 1 TS: 1704965978 701038 SEG: 0 101
+ID_CHANNEL_ID  SIP_DAL 5052 1 EXCLUSIVE
+ID_SOURCE_PROTOCOL  SIP_DAL TC_NOTPRESENT
+ID_CALLED_PARTY_NUM  068081123456789 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 15 
+ID_CALLING_PARTY_NUM  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+ID_ACTION_IND  ACTIND_CONNECT_FWD
+ID_BNC_CHAR  BNC_CHAR_IP
+ID_BEARER_CTRL_TUNNEL  BCT_TUNNEL_USED
+ID_BEARER_CTRL_INFO  196  "v=0
+o=genband 268556289 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5422 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+"
+ID_INTERNAL_BEARER_CAP  CS_CCITT TC_SPEECH ITM_CIRCUIT TR_64KBIT UL1_G711ULAW URATE_64000 USI_NOTPRESENT 0
+ID_FORWARD_CALL_IND  NI_CALL_NAT E2ENDMTH_NO_METHOD IWIND_NO_INTERWORKING E2EINFO_NO_INFO ISUPIND_USED IPREF_PREFERED_ATW ISDNACCIND_NONISDN SCCP_NO_INDICATION TCI_NUM_TRANSLATED
+ID_LOCAL_IP_ADDRESS  (V1) 172.21.34.141:5060
+ID_REMOTE_PUB_IP_ADDRESS  (V1) 172.20.248.141:5050
+ID_REMOTE_PRI_IP_ADDRESS  (V1) 172.20.248.141:5050
+ID_REMOTE_USER_ID  9198000002
+ID_HOP_COUNTER  70
+ID_SIP_CALLID  1-2344@172.20.248.141
+ID_CALLING_PARTY_CAT  CGPCAT_NOTPRESENT
+ID_SIP_EXTENSION  [0x404 SDP CALLED_NUM_MODIFIED]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.705
+Cat:  ECCP                      Primitive: ECCP_CC_CALL_PROCEEDING [56]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001700 0x1300000d CAT: 12 ID: 2 TS: 1704965978 705623 SEG: 0 101
+                     LOC: SgwSipCall.cc:1874 - idleSetup()
+ID_CHANNEL_ID  SIP_DAL 5052 1 PREFER
+ID_TIMESTAMP  1704965978 705 Thu Jan 11 09:39:38 2024 (705 ms)
+ID_SIP_CALLID  1704958942-481@84
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.705
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [792]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001700 0x00000000 CAT: 12 ID: 23 TS: 1704965978 705710 SEG: 0 101
+                     LOC: SgwSipCltTxn.cc:755 - idleInit()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.248.141:5052 (727)
+ID_TEXT_MSG_TRACE  
+
+INVITE sip:068081123456789@172.20.248.141:5052 SIP/2.0
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-497
+To: <sip:068081123456789@172.20.248.141>
+From: <sip:9198000002@172.21.34.141>;tag=5888
+Call-ID: 1704958942-481@84
+CSeq: 1 INVITE
+Max-Forwards: 69
+Contact: <sip:9198000002@172.21.34.141:5060>
+Supported: 100rel,timer
+Expires: 330
+Allow: INVITE, ACK, BYE, CANCEL, INFO, PRACK, REFER, SUBSCRIBE, NOTIFY, UPDATE
+Accept: application/sdp
+Min-SE: 1800
+Content-Type: application/sdp
+Content-Length: 194
+
+v=0
+o=genband 268556289 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5422 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.706
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [304]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001700 0x00000000 CAT: 12 ID: 23 TS: 1704965978 706254 SEG: 0 101
+                     LOC: SgwSipRcvdMsgHandler.cc:1533 - processResponseMsg()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG IN src=172.20.248.141:5052 (244)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-497
+To: <sip:068081123456789@172.20.248.141>
+From: <sip:9198000002@172.21.34.141>;tag=5888
+Call-ID: 1704958942-481@84
+CSeq: 1 INVITE
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 4, 0
+Time: 01/11/2024 09:39:38.706
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [364]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001700 0x00000000 CAT: 12 ID: 23 TS: 1704965978 706413 SEG: 0 101
+                     LOC: SgwSipRcvdMsgHandler.cc:1533 - processResponseMsg()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG IN src=172.20.248.141:5052 (302)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 180 Ringing
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-497
+From: <sip:9198000002@172.21.34.141>;tag=5888
+To: <sip:068081123456789@172.20.248.141>;tag=10
+Call-ID: 1704958942-481@84
+CSeq: 1 INVITE
+Contact: <sip:172.20.248.141:5052;transport=UDP>
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 3, 0
+Time: 01/11/2024 09:39:38.706
+Cat:  ECCP                      Primitive: ECCP_CC_ALERT [44]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001700 0x1300000d CAT: 12 ID: 4 TS: 1704965978 706466 SEG: 0 101
+                     LOC: SgwSipCallDal.cc:4792 - processInitiated1xxInvite()
+ID_CHANNEL_ID  SIP_DAL 5052 1 PREFER
+ID_TIMESTAMP  1704965978 706 Thu Jan 11 09:39:38 2024 (706 ms)
+ID_BACKWARD_CALL_IND  CDCAT_NOTPRESENT CDSTAT_SUBFREE CHARG_CHRG INCOMING_NOTPRESENT E2EINFO_NOTPRESENT ESENDMTH_NOTPRESENT HLD_NOTPRESENT IWIND_NO_INTERWORKING ISDNACCIND_NOTPRESENT ISUPIND_NOTPRESENT SCCP_NOTPRESENT
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.706
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [532]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001700 0x00000000 CAT: 12 ID: 23 TS: 1704965978 706607 SEG: 0 101
+                     LOC: SgwSipRcvdMsgHandler.cc:1533 - processResponseMsg()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG IN src=172.20.248.141:5052 (471)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-497
+From: <sip:9198000002@172.21.34.141>;tag=5888
+To: <sip:068081123456789@172.20.248.141>;tag=10
+Call-ID: 1704958942-481@84
+CSeq: 1 INVITE
+Contact: <sip:172.20.248.141:5052;transport=UDP>
+Content-Type: application/sdp
+Content-Length:   141
+
+v=0
+o=user1 53655765 2353687637 IN IP4 172.20.248.141
+s=-
+c=IN IP4 172.20.248.141
+t=0 0
+m=audio 7000 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.706
+Cat:  ECCP                      Primitive: ECCP_CC_SIPAPM [216]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001700 0x1300000d CAT: 12 ID: 26 TS: 1704965978 706675 SEG: 0 101
+                     LOC: SgwSipCallDal.cc:4839 - processInitiated2xx()
+ID_CHANNEL_ID  SIP_DAL 5052 1 PREFER
+ID_TIMESTAMP  1704965978 706 Thu Jan 11 09:39:38 2024 (706 ms)
+ID_BNC_CHAR  BNC_CHAR_IP
+ID_ORGANIZATION_TYPE  ORG_TYPE_ITU_T
+ID_ACTION_IND  ACTIND_CF_BEARER_SEL_CODEC_NOTIFY
+ID_BEARER_CTRL_TUNNEL  BCT_TUNNEL_USED
+ID_BEARER_CTRL_INFO  139  "v=0
+o=user1 53655765 2353687637 IN IP4 172.20.248.141
+s=-
+c=IN IP4 172.20.248.141
+t=0 0
+m=audio 7000 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+"
+ID_SDP_DESCRIPTOR  SND_RCV
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.706
+Cat:  ECCP                      Primitive: ECCP_CC_CONNECT [28]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001700 0x1300000d CAT: 12 ID: 5 TS: 1704965978 706727 SEG: 0 101
+                     LOC: SgwSipCall.cc:5124 - initiated2xx()
+ID_CHANNEL_ID  SIP_DAL 5052 1 PREFER
+ID_TIMESTAMP  1704965978 706 Thu Jan 11 09:39:38 2024 (706 ms)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.707
+Cat:  EGCP                      Primitive: EGCP_REQUEST [232]
+Src:  CP_CALLM_ID (83)          Tid: 1320000d   Load Factor (0)
+Dest: MSF_CRM_ID (115)          Tid: 1001dbff
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 165 83 115 4 0x1320000d 0x1001dbff CAT: 13 ID: 1 TS: 1704965978 707922 SEG: 0 101
+MODIFY_CMD   VOIP_TRUNK_IF 1 2
+          STRM_DESCR [ 1 ]
+          LOCAL_DESCR [ ACTIVE CONF_BRIDGE_NO WIRE_TAP_NO TERM ESSENTIAL_LINE_OFF NO_T38 NO_UPSPEED TRACE_OFF DISABLE_RTCP_NO ]
+          AVD_RX_DESCR [ EC_NO EC_NO GC_NO SUPRESSION_IGNORE NOT_PRESENT NOT_PRESENT 0 CODEC_U_LAW 40 OUTBOUND(TONE_NEEDED) INBOUND(TONE_NOT_NEEDED) NO_BNC_ID NO_ATM_ADDR NO_BNC (0) NO_BNC_CHAR NO_TUNNELING_INDICATION (0) NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          AVD_TX_DESCR [ NO_BNC_ID NO_ATM_ADDR BNC_IP (3) NO_VPKT_TERM_DATA NO_BEARER_CTRL_ACTION "v=0
+o=user1 53655765 2353687637 IN IP4 172.20.248.141
+s=-
+c=IN IP4 172.20.248.141
+t=0 0
+m=audio 7000 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+" ]
+          TERMINATION_CLASS_DESCR [ VMG_ID: 0 MGC_TYPE_C3 (1) MGC_VERSION: 1 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.707
+Cat:  ECCP                      Primitive: ECCP_CC_ALERT [48]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00001600
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00001600 CAT: 12 ID: 4 TS: 1704965978 707980 SEG: 0 101
+ID_CHANNEL_ID  SIP_DAL 5050 13 PREFER
+ID_BACKWARD_CALL_IND  CDCAT_NOTPRESENT CDSTAT_SUBFREE CHARG_CHRG INCOMING_NOTPRESENT E2EINFO_NOTPRESENT ESENDMTH_NOTPRESENT HLD_NOTPRESENT IWIND_NO_INTERWORKING ISDNACCIND_NOTPRESENT ISUPIND_NOTPRESENT SCCP_NOTPRESENT
+ID_SOURCE_PROTOCOL  SIP_DAL TC_SPEECH
+ID_EVENT_INFORMATION  EVI_ALERT EVTPR_NOTPRESENT BCK_1ST_BACKWARD_MSG_NOT_SENT
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.706
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [408]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001700 0x00000000 CAT: 12 ID: 23 TS: 1704965978 706789 SEG: 0 101
+                     LOC: SgwSipCltTxn.cc:2443 - forwardAck()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.248.141:5052 (341)
+ID_TEXT_MSG_TRACE  
+
+ACK sip:172.20.248.141:5052;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-498
+To: <sip:068081123456789@172.20.248.141>;tag=10
+From: <sip:9198000002@172.21.34.141>;tag=5888
+Call-ID: 1704958942-481@84
+CSeq: 1 ACK
+Max-Forwards: 70
+Contact: <sip:9198000002@172.21.34.141:5060>
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.710
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [676]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001600 0x00000000 CAT: 12 ID: 23 TS: 1704965978 710788 SEG: 0 101
+                     LOC: SgwSipSvrTxn.cc:789 - proceedingEvent()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.248.141:5050 (609)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 180 Ringing
+Via: SIP/2.0/UDP 172.20.248.141:5050;branch=z9hG4bK-2344-1-0
+To: sut <sip:1669@172.21.34.141>;tag=5632
+From: 9198000002 <sip:9198000002@172.20.248.141>;tag=2344SIPpTag001
+Call-ID: 1-2344@172.20.248.141
+CSeq: 1 INVITE
+Contact: sip:1669@172.21.34.141:5060
+Allow: INVITE, ACK, BYE, CANCEL, INFO, PRACK, REFER, SUBSCRIBE, NOTIFY, UPDATE
+Content-Type: application/sdp
+Content-Length: 194
+
+v=0
+o=genband 268556288 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5420 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.717
+Cat:  SGWP                      Primitive: SGWP_SIP_SIGID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 17 TS: 1704965978 717345 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5888 (0x00001700)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.717
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 19 TS: 1704965978 717365 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 133120 (0x00020800)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.717
+Cat:  SGWP                      Primitive: SGWP_SIP_PEER_CREATE [760]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 11 TS: 1704965978 717407 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:2081 - encodeCall_5_0()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5888 (0x00001700)
+SIP_PEER_INT_DATA  TAG_ID: SIP_DIALOG_TYPE_ID (4) VALUE: 4 (0x00000004)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_CALL_ID (5) LENGTH: 17 VALUE: "1704958942-481@84"
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_NODE_ID (6) VALUE: 83 (0x00000053)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_CALL_ID (7) VALUE: 318767117 (0x1300000d)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_NAT_ADDR_ID (8) LENGTH: 7 VALUE: "0.0.0.0"
+SIP_PEER_INT_DATA  TAG_ID: SIP_NAT_PORT_ID (9) VALUE: 0 (0x00000000)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_ADDR_ID (10) LENGTH: 39 VALUE: "sip:068081123456789@172.20.248.141:5052"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_ADDR_ID (11) LENGTH: 28 VALUE: "sip:9198000002@172.21.34.141"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_CONTACT_ID (12) LENGTH: 37 VALUE: "sip:172.20.248.141:5052;transport=UDP"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_CONTACT_ID (13) LENGTH: 33 VALUE: "sip:9198000002@172.21.34.141:5060"
+SIP_PEER_INT_DATA  TAG_ID: SIP_REMOTE_SEQ_NUM_ID (14) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_LOCAL_SEQ_NUM_ID (15) VALUE: 1 (0x00000001)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_TAG_ID (16) LENGTH: 2 VALUE: "10"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_TAG_ID (17) LENGTH: 4 VALUE: "5888"
+SIP_PEER_INT_DATA  TAG_ID: SIP_CALL_STATE_ID (19) VALUE: 4 (0x00000004)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CHAN_TYPE_ID (20) VALUE: 19 (0x00000013)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SYSGRP_ID (21) VALUE: 5052 (0x000013bc)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CKT_ID (22) VALUE: 1 (0x00000001)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_SDP_ID (23) LENGTH: 194 VALUE: "v=0
+o=genband 268556289 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5422 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+"
+SIP_PEER_INT_DATA  TAG_ID: SIP_INC_CALL_FLAG_ID (24) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CALL_ALERTED_ID (30) VALUE: 1 (0x00000001)
+SIP_PEER_INT_DATA  TAG_ID: SIP_DLG_TRANSPORT_TYPE_ID (53) VALUE: 1 (0x00000001)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_HOST_ADDR_IP_ID (56) LENGTH: 14 VALUE: "172.20.248.141"
+SIP_PEER_INT_DATA  TAG_ID: SIP_REMOTE_HOST_ADDR_PORT_ID (57) VALUE: 5052 (0x000013bc)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SESSION_REFRESHER_ROLE_ID (58) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CURRENT_SE_ID (59) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_RCVD_MIN_SE_ID (60) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_MAX_RCVD_MIN_SE_ID (61) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_REFRESH_MSG_TYPE_ID (62) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_TRANSCODING_FLAG_ID (66) VALUE: 0 (0x00000000)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.717
+Cat:  SGWP                      Primitive: SGWP_SIP_PEER_MODIFY [424]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 13 TS: 1704965978 717431 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:2081 - encodeCall_5_0()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5888 (0x00001700)
+SIP_PEER_INT_DATA  TAG_ID: SIP_DIALOG_TYPE_ID (4) VALUE: 4 (0x00000004)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_NODE_ID (6) VALUE: 83 (0x00000053)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_CALL_ID (7) VALUE: 318767117 (0x1300000d)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_CONTACT_ID (12) LENGTH: 37 VALUE: "sip:172.20.248.141:5052;transport=UDP"
+SIP_PEER_INT_DATA  TAG_ID: SIP_REMOTE_SEQ_NUM_ID (14) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_LOCAL_SEQ_NUM_ID (15) VALUE: 1 (0x00000001)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CALL_STATE_ID (19) VALUE: 4 (0x00000004)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_SDP_ID (23) LENGTH: 194 VALUE: "v=0
+o=genband 268556289 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5422 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+"
+SIP_PEER_INT_DATA  TAG_ID: SIP_SESSION_REFRESHER_ROLE_ID (58) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CURRENT_SE_ID (59) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_RCVD_MIN_SE_ID (60) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_MAX_RCVD_MIN_SE_ID (61) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_REFRESH_MSG_TYPE_ID (62) VALUE: 0 (0x00000000)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.751
+Cat:  EGCP                      Primitive: EGCP_ACCEPT [60]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1320000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1320000d CAT: 13 ID: 2 TS: 1704965978 751576 SEG: 0 0
+MODIFY_CMD   VOIP_TRUNK_IF 1 2
+          AVD_RX_DESCR [ NO_RX_DATA NO_BNC_ID NO_ATM_ADDR NO_BNC_ACTION NO_BNC_CHAR NO_TUNNELING_OPTION NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+RESOURCE_RESULT   VOIP_TRUNK_IF 1 2
+          INT_RESC_DESCR [ IP_STATE [ STREAM_MODE: ACTIVE LOCAL_SDP: SEND_RECV REMOTE_SDP: SEND_RECV PORT: INACTIVE ] ]
+          VS4_RESC_DESCR [ VS_SLOT: 2 2 1 15 255 6 340 6 340 1 12 DTMF: 1 CLEARMODE: 0 T38: 0 T140: 0 VIDEO: 0 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 3, 0
+Time: 01/11/2024 09:39:38.751
+Cat:  EGCP                      Primitive: EGCP_NOTIFY [20]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1320000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1320000d CAT: 13 ID: 4 TS: 1704965978 751593 SEG: 0 0
+NOTIFY_CMD   VOIP_TRUNK_IF 1 2
+          EVENT_DESCR [ 1 BNC_SETUP_SUCCESS (99) ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.751
+Cat:  ECCP                      Primitive: ECCP_CC_SIPAPM [32]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00001700
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00001700 CAT: 12 ID: 26 TS: 1704965978 751614 SEG: 0 101
+ID_ACTION_IND  ACTIND_CONNECTED
+ID_CHANNEL_ID  SIP_DAL 5052 0 EXCLUSIVE
+ID_SOURCE_PROTOCOL  SIP_DAL TC_NOTPRESENT
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.751
+Cat:  EGCP                      Primitive: EGCP_REQUEST [164]
+Src:  CP_CALLM_ID (83)          Tid: 1330000d   Load Factor (0)
+Dest: MSF_CRM_ID (115)          Tid: 1001dbff
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 165 83 115 4 0x1330000d 0x1001dbff CAT: 13 ID: 1 TS: 1704965978 751669 SEG: 0 101
+MODIFY_CMD   VOIP_TRUNK_IF 1 2
+          STRM_DESCR [ 1 ]
+          LOCAL_DESCR [ SND_ONLY CONF_BRIDGE_NO WIRE_TAP_NO TERM ESSENTIAL_LINE_OFF NO_T38 NO_UPSPEED TRACE_OFF DISABLE_RTCP_NO ]
+          AVD_RX_DESCR [ EC_NO EC_NO GC_NO SUPRESSION_IGNORE NOT_PRESENT NOT_PRESENT 0 CODEC_U_LAW 40 OUTBOUND(TONE_NEEDED) INBOUND(TONE_NOT_NEEDED) NO_BNC_ID NO_ATM_ADDR NO_BNC (0) BNC_IP (3) NO_TUNNELING_INDICATION (0) NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          TERMINATION_CLASS_DESCR [ VMG_ID: 0 MGC_TYPE_C3 (1) MGC_VERSION: 1 ]
+MODIFY_CMD   VOIP_TRUNK_IF 1 1
+          STRM_DESCR [ 1 ]
+          LOCAL_DESCR [ SND_REC CONF_BRIDGE_NO WIRE_TAP_NO ORIG ESSENTIAL_LINE_OFF NO_T38 NO_UPSPEED TRACE_OFF DISABLE_RTCP_NO ]
+          AVD_RX_DESCR [ EC_128 EC_NO GC_NO SUPRESSION_IGNORE NOT_PRESENT NOT_PRESENT 0 CODEC_U_LAW 40 OUTBOUND(TONE_NEEDED) INBOUND(TONE_NOT_NEEDED) NO_BNC_ID NO_ATM_ADDR NO_BNC (0) BNC_IP (3) NO_TUNNELING_INDICATION (0) NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          TERMINATION_CLASS_DESCR [ VMG_ID: 0 MGC_TYPE_C3 (1) MGC_VERSION: 1 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.751
+Cat:  ECCP                      Primitive: ECCP_CC_CONNECT [32]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00001600
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00001600 CAT: 12 ID: 5 TS: 1704965978 751758 SEG: 0 0
+ID_CHANNEL_ID  SIP_DAL 5050 13 PREFER
+ID_SOURCE_PROTOCOL  SIP_DAL TC_SPEECH
+ID_EVENT_INFORMATION  EVI_NOTPRESENT EVTPR_NOTPRESENT BCK_1ST_BACKWARD_MSG_SENT
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.757
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [688]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001600 0x00000000 CAT: 12 ID: 23 TS: 1704965978 757216 SEG: 0 101
+                     LOC: SgwSipSvrTxn.cc:823 - proceedingEvent()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.248.141:5050 (623)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 172.20.248.141:5050;branch=z9hG4bK-2344-1-0
+To: sut <sip:1669@172.21.34.141>;tag=5632
+From: 9198000002 <sip:9198000002@172.20.248.141>;tag=2344SIPpTag001
+Call-ID: 1-2344@172.20.248.141
+CSeq: 1 INVITE
+Contact: sip:1669@172.21.34.141:5060
+Supported: 100rel
+Allow: INVITE, ACK, BYE, CANCEL, INFO, PRACK, REFER, SUBSCRIBE, NOTIFY, UPDATE
+Content-Type: application/sdp
+Content-Length: 194
+
+v=0
+o=genband 268556288 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5420 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.751
+Cat:  CCSP                      Primitive: CCSP_REQUESTED_EVENT [128]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 10 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 29 TS: 1704965978 751776 SEG: 0 0
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_ID  O_ANSWER
+IE_CLLI_NAME   0
+IE_ORIG_CALL_ID_SID  0x00000000 0
+IE_CALLING_PARTY_NUMBER  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.761
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [128]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 000dee62
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x000dee62 CAT: 12 ID: 15 TS: 1704965978 761983 SEG: 0 0
+ID_TCAP_ITU_DIALOGUE  TPT_CONTINUE TCAP_PROTO_ITU92 0 DLG_RESULT_NOTPRESENT RESULT_SRC_SVC_NOTPRESENT DLG_NOTPRESENT ABORT_SRC_SVC_NOTPRESENT
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 15 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 4 12330
+ID_TCAP_COMPONENT  COMP_INVOKE 30 PO_CLASS_4 PARAM_SEQUENCE 0 1 TCAP_PROTO_ITU92
+ID_TCAP_COMP_INVOKE_ID  1 6 0 0 0 0 0 0
+ID_TCAP_COMP_OPERATION_CODE  OPCODE_LOCAL NOF_NOT_USED 0 1 18 
+ID_TCAP_COMPONENT_DATA   0  0 (15) 
+30 0d 80 01 07 a3 03 80 01 02 a4 03 80 01 01 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.762
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_CANCEL [16]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 000dee62
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x000dee62 CAT: 12 ID: 25 TS: 1704965978 762003 SEG: 0 0
+ID_TCAP_COMP_INVOKE_ID  1 6 0 0 0 0 0 0
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:38.757
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [444]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001600 0x00000000 CAT: 12 ID: 23 TS: 1704965978 757719 SEG: 0 101
+                     LOC: SgwSipRcvdMsgHandler.cc:1154 - processSipRequestMsg()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG IN src=172.20.248.141:5050 (383)
+ID_TEXT_MSG_TRACE  
+
+ACK sip:1669@172.21.34.141:5060 SIP/2.0
+Via: SIP/2.0/UDP 172.20.248.141:5050;branch=z9hG4bK-2344-1-5
+From: 9198000002 <sip:9198000002@172.20.248.141:5050>;tag=2344SIPpTag001
+To: sut <sip:1669@172.21.34.141:5060>;tag=5632
+Call-ID: 1-2344@172.20.248.141
+CSeq: 1 ACK
+Contact: sip:9198000002@172.20.248.141:5050
+Max-Forwards: 70
+Subject: Performance Test
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.763
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [120]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_M3UA_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 38 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 32 TS: 1704965978 763574 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:894 - santeraM3uaTsk()
+UNIVERSAL_PST_DATA  DATA:
+    89 00 16 00 89 00 1E 00 00 04 18 00 00 02 00 00
+    00 89 00 16 89 00 1E 00 00 04 18 00 00 02 00 00
+BUFFER_DATA  DATA:
+    00 48 00 01 00 00 08 09 00 00 00 00 00 00 30 2A
+    83 DD 00 09 80 03 07 0B 04 C3 2A 30 92 04 C3 09
+    08 92 27 65 25 48 04 00 0D EE 62 49 04 EC 07 00
+    80 6C 17 A1 15 02 01 06 02 01 18 30 0D 80 01 07
+    A3 03 80 01 02 A4 03 80 01 01 00 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.763
+Cat:  SGWP                      Primitive: SGWP_TCAP_LAYER [92]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_TCAP_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 34 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 2 TS: 1704965978 763590 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:415 - santeraSPstTsk()
+UNIVERSAL_PST_DATA  DATA:
+    03 00 04 00 17 00 17 00 00 07 10 00 00 00 00 00
+    00 03 00 04 17 00 17 00 00 07 10 00 00 00 00 00
+BUFFER_DATA  DATA:
+    00 2D 02 00 01 00 00 00 00 00 01 00 68 00 00 00
+    07 04 00 00 00 62 EE 0D 00 01 7F 00 00 06 01 00
+    04 00 62 EE 0D 00 06 00 1E 00 00 00 6D 04 FF 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.764
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965978 764849 SEG: 0 0
+                     LOC: ../su/SgwM3uaServiceUserThread.cc:482 - processTransferRequest()
+ID_SGWTRACE_PARM  
+Sent Message: TCAP/SCCP To M3UA
+SI: 3
+DPC: 6-5-2 (12330)
+OPC: 1-1-1 (2057)
+SLS: 13
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 54
+PDU: 
+
+80 03 07 0b 04 c3 2a 30 92 04 c3 09 08 92 27 65 
+25 48 04 00 0d ee 62 49 04 ec 07 00 80 6c 17 a1 
+15 02 01 06 02 01 18 30 0d 80 01 07 a3 03 80 01 
+02 a4 03 80 01 01 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 6-5-2
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 25 48 04 00 0d ee 62 49 04 ec 07 00 80 6c 17 
+a1 15 02 01 06 02 01 18 30 0d 80 01 07 a3 03 80 
+01 02 a4 03 80 01 01 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = 00 0d ee 62 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = ec 07 00 80 
+TCAP Component Portion:
+  TCAP component portion length = 23
+  Invoke component
+  Component length = 21
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 6
+  Operation code identifier
+  Operation code length = 1
+    opcode =24
+
+InapEvtRptBCSM:
+   EventTypeBCSM: oAnswer(7)
+   LegID:
+            SendingSideID: 2
+   MiscCallInfo:
+      INAPMessageType: Notification(1)
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.777
+Cat:  SGWP                      Primitive: SGWP_SIP_PEER_MODIFY [424]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 13 TS: 1704965978 777560 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:2081 - encodeCall_5_0()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5888 (0x00001700)
+SIP_PEER_INT_DATA  TAG_ID: SIP_DIALOG_TYPE_ID (4) VALUE: 4 (0x00000004)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_NODE_ID (6) VALUE: 83 (0x00000053)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_CALL_ID (7) VALUE: 318767117 (0x1300000d)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_CONTACT_ID (12) LENGTH: 37 VALUE: "sip:172.20.248.141:5052;transport=UDP"
+SIP_PEER_INT_DATA  TAG_ID: SIP_REMOTE_SEQ_NUM_ID (14) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_LOCAL_SEQ_NUM_ID (15) VALUE: 1 (0x00000001)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CALL_STATE_ID (19) VALUE: 4 (0x00000004)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_SDP_ID (23) LENGTH: 194 VALUE: "v=0
+o=genband 268556289 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5422 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+"
+SIP_PEER_INT_DATA  TAG_ID: SIP_SESSION_REFRESHER_ROLE_ID (58) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CURRENT_SE_ID (59) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_RCVD_MIN_SE_ID (60) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_MAX_RCVD_MIN_SE_ID (61) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_REFRESH_MSG_TYPE_ID (62) VALUE: 0 (0x00000000)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.777
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 19 TS: 1704965978 777574 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 133376 (0x00020900)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.777
+Cat:  SGWP                      Primitive: SGWP_SIP_PEER_CREATE [752]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 11 TS: 1704965978 777599 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:2081 - encodeCall_5_0()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5632 (0x00001600)
+SIP_PEER_INT_DATA  TAG_ID: SIP_DIALOG_TYPE_ID (4) VALUE: 4 (0x00000004)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_CALL_ID (5) LENGTH: 21 VALUE: "1-2344@172.20.248.141"
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_NODE_ID (6) VALUE: 83 (0x00000053)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CMGR_CALL_ID (7) VALUE: 318767117 (0x1300000d)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_NAT_ADDR_ID (8) LENGTH: 14 VALUE: "172.20.248.141"
+SIP_PEER_INT_DATA  TAG_ID: SIP_NAT_PORT_ID (9) VALUE: 5050 (0x000013ba)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_ADDR_ID (10) LENGTH: 34 VALUE: "sip:9198000002@172.20.248.141:5050"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_ADDR_ID (11) LENGTH: 27 VALUE: "sip:1669@172.21.34.141:5060"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_CONTACT_ID (12) LENGTH: 34 VALUE: "sip:9198000002@172.20.248.141:5050"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_CONTACT_ID (13) LENGTH: 27 VALUE: "sip:1669@172.21.34.141:5060"
+SIP_PEER_INT_DATA  TAG_ID: SIP_REMOTE_SEQ_NUM_ID (14) VALUE: 1 (0x00000001)
+SIP_PEER_INT_DATA  TAG_ID: SIP_LOCAL_SEQ_NUM_ID (15) VALUE: 0 (0x00000000)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_TAG_ID (16) LENGTH: 14 VALUE: "2344SIPpTag001"
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_TAG_ID (17) LENGTH: 4 VALUE: "5632"
+SIP_PEER_INT_DATA  TAG_ID: SIP_CALL_STATE_ID (19) VALUE: 4 (0x00000004)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CHAN_TYPE_ID (20) VALUE: 19 (0x00000013)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SYSGRP_ID (21) VALUE: 5050 (0x000013ba)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CKT_ID (22) VALUE: 1 (0x00000001)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_LOCAL_SDP_ID (23) LENGTH: 194 VALUE: "v=0
+o=genband 268556288 1704965979 IN IP4 172.20.50.242
+s=-
+c=IN IP4 172.20.50.242
+t=0 0
+m=audio 5420 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=silenceSupp:off - - - -
+a=ptime:20
+a=maxptime:30
+"
+SIP_PEER_INT_DATA  TAG_ID: SIP_INC_CALL_FLAG_ID (24) VALUE: 1 (0x00000001)
+SIP_PEER_INT_DATA  TAG_ID: SIP_DLG_TRANSPORT_TYPE_ID (53) VALUE: 1 (0x00000001)
+SIP_PEER_STRING_DATA  TAG_ID: SIP_REMOTE_HOST_ADDR_IP_ID (56) LENGTH: 14 VALUE: "172.20.248.141"
+SIP_PEER_INT_DATA  TAG_ID: SIP_REMOTE_HOST_ADDR_PORT_ID (57) VALUE: 5050 (0x000013ba)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SESSION_REFRESHER_ROLE_ID (58) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_CURRENT_SE_ID (59) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_RCVD_MIN_SE_ID (60) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_MAX_RCVD_MIN_SE_ID (61) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_REFRESH_MSG_TYPE_ID (62) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_TRANSCODING_FLAG_ID (66) VALUE: 0 (0x00000000)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.801
+Cat:  EGCP                      Primitive: EGCP_ACCEPT [116]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1330000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1330000d CAT: 13 ID: 2 TS: 1704965978 801178 SEG: 0 0
+MODIFY_CMD   VOIP_TRUNK_IF 1 2
+          AVD_RX_DESCR [ NO_RX_DATA NO_BNC_ID NO_ATM_ADDR NO_BNC_ACTION NO_BNC_CHAR NO_TUNNELING_OPTION NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+MODIFY_CMD   VOIP_TRUNK_IF 1 1
+          AVD_RX_DESCR [ NO_RX_DATA NO_BNC_ID NO_ATM_ADDR NO_BNC_ACTION NO_BNC_CHAR NO_TUNNELING_OPTION NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+RESOURCE_RESULT   VOIP_TRUNK_IF 1 1
+          INT_RESC_DESCR [ IP_STATE [ STREAM_MODE: SND_REC LOCAL_SDP: SEND_RECV REMOTE_SDP: SEND_RECV PORT: SEND_RECV ] ]
+          VS4_RESC_DESCR [ VS_SLOT: 13 2 1 15 255 5 340 5 340 1 5131 DTMF: 1 CLEARMODE: 0 T38: 0 T140: 0 VIDEO: 0 ]
+RESOURCE_RESULT   VOIP_TRUNK_IF 1 2
+          INT_RESC_DESCR [ IP_STATE [ STREAM_MODE: SND_ONLY LOCAL_SDP: SEND_RECV REMOTE_SDP: SEND_RECV PORT: RECV_ONLY ] ]
+          VS4_RESC_DESCR [ VS_SLOT: 2 2 1 15 255 6 340 6 340 1 12 DTMF: 1 CLEARMODE: 0 T38: 0 T140: 0 VIDEO: 0 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 4, 0
+Time: 01/11/2024 09:39:38.801
+Cat:  CCSP                      Primitive: CCSP_CREATE_PDB [3196]
+Src:  CP_CALLM_ID (83)          Tid: 1310000d   Load Factor (0)
+Dest: CS_PD_ID (1 RGN-BOTH)     Tid: 1310000d
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 13 83 1 3 0x1310000d 0x1310000d CAT: 11 ID: 16 TS: 1704965978 801263 SEG: 0 0
+IE_PDB_ID  Current page - 1 Total page - 1 
+IE_PDB_RESPONSE  TAKEOVER
+IE_PDB_DATA         CALEA_TERM_IE  Size:  32 V0 Continue: 0 600404000000 .... 0000c80b0000
+IE_PDB_DATA               THCP_IE  Size: 320 V5 Continue: 0 26040000f703 .... 000000000000
+IE_PDB_DATA             THCP_DATA  Size: 112 V6 Continue: 0 0c0017000000 .... 000000000000
+IE_PDB_DATA         CALEA_ORIG_IE  Size:  32 V0 Continue: 0 60040400000a .... 0000c80b0000
+IE_PDB_DATA               OHCP_IE  Size: 522 V4 Continue: 0 ec070000f803 .... 0000ff0b0000
+IE_PDB_DATA             OHCP_DATA  Size: 125 V5 Continue: 0 000000000000 .... 208000000000
+IE_PDB_DATA                CCP_IE  Size:  36 V1 Continue: 0 110c0000110c .... 0000110c0000
+IE_PDB_DATA              CCP_DATA  Size: 215 V5 Continue: 0 010016000002 .... 000000000000
+IE_PDB_DATA     CCP_CDR_CALLPDATA  Size:  80 V0 Continue: 0 300000000000 .... 000000000000
+IE_PDB_DATA              CCP_CDR1  Size: 548 V0 Continue: 0 840301110d00 .... 000000000000
+IE_PDB_DATA           CCP_CDR_IE1  Size: 492 V0 Continue: 0 cc040000cb04 .... 00008f050000
+IE_PDB_DATA               CCP_MSG  Size: 456 V0 Continue: 0 0100c401dd07 .... 6e74656e742d
+IE_PDB_DATA             CAP_CALLP  Size:  96 V0 Continue: 0 ceab5c00a501 .... 00ff5a000000
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.801
+Cat:  CCSP                      Primitive: CCSP_UPDATE_PDB [1848]
+Src:  CP_CALLM_ID (83)          Tid: 1310000d   Load Factor (0)
+Dest: CS_PD_ID (1 RGN-BOTH)     Tid: 1310000d
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 13 83 1 3 0x1310000d 0x1310000d CAT: 11 ID: 38 TS: 1704965978 801369 SEG: 0 101
+IE_PDB_ID  Current page - 1 Total page - 1 
+IE_PDB_RESPONSE  TAKEOVER
+IE_PDB_DATA         CALEA_TERM_IE  Size:  32 V0 Continue: 0 600404000000 .... 0000c80b0000
+IE_PDB_DATA               THCP_IE  Size:  56 V5 Continue: 0 26040000f703 .... 000030040000
+IE_PDB_DATA             THCP_DATA  Size: 112 V6 Continue: 0 0c0017000000 .... 000000000000
+IE_PDB_DATA         CALEA_ORIG_IE  Size:  32 V0 Continue: 0 600404000000 .... 0000c80b0000
+IE_PDB_DATA               OHCP_IE  Size: 120 V4 Continue: 0 ec070000f803 .... 0000ff0b0000
+IE_PDB_DATA             OHCP_DATA  Size: 125 V5 Continue: 0 000000000000 .... 208000000000
+IE_PDB_DATA                CCP_IE  Size:  36 V1 Continue: 0 110c0000110c .... 0000110c0000
+IE_PDB_DATA              CCP_DATA  Size: 215 V5 Continue: 0 010016000002 .... 000000000000
+IE_PDB_DATA     CCP_CDR_CALLPDATA  Size:  80 V0 Continue: 0 300000000000 .... 000000000000
+IE_PDB_DATA              CCP_CDR1  Size: 548 V0 Continue: 0 840301110d00 .... 000000000000
+IE_PDB_DATA           CCP_CDR_IE1  Size: 268 V0 Continue: 0 cc040000cb04 .... 00008f050000
+IE_PDB_DATA               CCP_MSG  Size:   0 V0 Continue: 0 
+IE_PDB_DATA             CAP_CALLP  Size:  96 V0 Continue: 0 ceab5c00a501 .... 00ff5a000000
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.801
+Cat:  EGCP                      Primitive: EGCP_REQUEST [164]
+Src:  CP_CALLM_ID (83)          Tid: 1340000d   Load Factor (0)
+Dest: MSF_CRM_ID (115)          Tid: 1001dbff
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 165 83 115 4 0x1340000d 0x1001dbff CAT: 13 ID: 1 TS: 1704965978 801431 SEG: 0 101
+MODIFY_CMD   VOIP_TRUNK_IF 1 2
+          STRM_DESCR [ 1 ]
+          LOCAL_DESCR [ SND_REC CONF_BRIDGE_NO WIRE_TAP_NO TERM ESSENTIAL_LINE_OFF NO_T38 NO_UPSPEED TRACE_OFF DISABLE_RTCP_NO ]
+          AVD_RX_DESCR [ EC_NO EC_NO GC_NO SUPRESSION_IGNORE NOT_PRESENT NOT_PRESENT 0 CODEC_U_LAW 40 OUTBOUND(TONE_NEEDED) INBOUND(TONE_NOT_NEEDED) NO_BNC_ID NO_ATM_ADDR NO_BNC (0) BNC_IP (3) NO_TUNNELING_INDICATION (0) NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          TERMINATION_CLASS_DESCR [ VMG_ID: 0 MGC_TYPE_C3 (1) MGC_VERSION: 1 ]
+MODIFY_CMD   VOIP_TRUNK_IF 1 1
+          STRM_DESCR [ 1 ]
+          LOCAL_DESCR [ SND_REC CONF_BRIDGE_NO WIRE_TAP_NO ORIG ESSENTIAL_LINE_OFF NO_T38 NO_UPSPEED TRACE_OFF DISABLE_RTCP_NO ]
+          AVD_RX_DESCR [ EC_NO EC_NO GC_NO SUPRESSION_IGNORE NOT_PRESENT NOT_PRESENT 0 CODEC_U_LAW 40 OUTBOUND(TONE_NEEDED) INBOUND(TONE_NOT_NEEDED) NO_BNC_ID NO_ATM_ADDR NO_BNC (0) BNC_IP (3) NO_TUNNELING_INDICATION (0) NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          TERMINATION_CLASS_DESCR [ VMG_ID: 0 MGC_TYPE_C3 (1) MGC_VERSION: 1 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:38.850
+Cat:  EGCP                      Primitive: EGCP_ACCEPT [116]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1340000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1340000d CAT: 13 ID: 2 TS: 1704965978 850798 SEG: 0 101
+MODIFY_CMD   VOIP_TRUNK_IF 1 2
+          AVD_RX_DESCR [ NO_RX_DATA NO_BNC_ID NO_ATM_ADDR NO_BNC_ACTION NO_BNC_CHAR NO_TUNNELING_OPTION NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+MODIFY_CMD   VOIP_TRUNK_IF 1 1
+          AVD_RX_DESCR [ NO_RX_DATA NO_BNC_ID NO_ATM_ADDR NO_BNC_ACTION NO_BNC_CHAR NO_TUNNELING_OPTION NO_NET_ADDR_TRANSLATION NO_TRANSPARENT_TRAFFIC NO_TUNNELING_DATA NO_VQE_DATA NO_CODEC_ACTION NO_VPKT_TERM_DATA NO_RFC3267_DATA NO_CODEC_LIST NO_IP_REALM_DATA NO_IF_SPEC_DATA NO_SESSION_REMOTE_FILTER NO_EXPLICIT_ADDR_AND_PORT NO_DIFF_SERV_DATA NO_LI_X3_DATA NO_TREATMENT_INDICATION NO_CODEC_DISCRIMINATOR NO_MULTI_MEDIA_DATA ]
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+RESOURCE_RESULT   VOIP_TRUNK_IF 1 1
+          INT_RESC_DESCR [ IP_STATE [ STREAM_MODE: SND_REC LOCAL_SDP: SEND_RECV REMOTE_SDP: SEND_RECV PORT: SEND_RECV ] ]
+          VS4_RESC_DESCR [ VS_SLOT: 13 2 1 15 255 5 340 5 340 1 5131 DTMF: 1 CLEARMODE: 0 T38: 0 T140: 0 VIDEO: 0 ]
+RESOURCE_RESULT   VOIP_TRUNK_IF 1 2
+          INT_RESC_DESCR [ IP_STATE [ STREAM_MODE: SND_REC LOCAL_SDP: SEND_RECV REMOTE_SDP: SEND_RECV PORT: SEND_RECV ] ]
+          VS4_RESC_DESCR [ VS_SLOT: 2 2 1 15 255 6 340 6 340 1 12 DTMF: 1 CLEARMODE: 0 T38: 0 T140: 0 VIDEO: 0 ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:38.850
+Cat:  CCSP                      Primitive: CCSP_UPDATE_PDB [1900]
+Src:  CP_CALLM_ID (83)          Tid: 1310000d   Load Factor (0)
+Dest: CS_PD_ID (1 RGN-BOTH)     Tid: 1310000d
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 13 83 1 3 0x1310000d 0x1310000d CAT: 11 ID: 38 TS: 1704965978 850859 SEG: 0 101
+IE_PDB_ID  Current page - 1 Total page - 1 
+IE_PDB_RESPONSE  TAKEOVER
+IE_PDB_DATA         CALEA_TERM_IE  Size:  32 V0 Continue: 0 600404000000 .... 0000c80b0000
+IE_PDB_DATA               THCP_IE  Size:  56 V5 Continue: 0 26040000f703 .... 000030040000
+IE_PDB_DATA             THCP_DATA  Size: 112 V6 Continue: 0 020017000000 .... 000000000000
+IE_PDB_DATA         CALEA_ORIG_IE  Size:  32 V0 Continue: 0 6004040000cc .... 0000c80b0000
+IE_PDB_DATA               OHCP_IE  Size: 124 V4 Continue: 0 ec070000f803 .... 0000ff0b0000
+IE_PDB_DATA             OHCP_DATA  Size: 125 V5 Continue: 0 000000000000 .... 008000000000
+IE_PDB_DATA                CCP_IE  Size:  36 V1 Continue: 0 110c0000110c .... 0000110c0000
+IE_PDB_DATA              CCP_DATA  Size: 215 V5 Continue: 0 010016000002 .... 000000000000
+IE_PDB_DATA     CCP_CDR_CALLPDATA  Size:  80 V0 Continue: 0 300000000000 .... 000000000000
+IE_PDB_DATA              CCP_CDR1  Size: 548 V0 Continue: 0 840301110d00 .... 000000000000
+IE_PDB_DATA           CCP_CDR_IE1  Size: 324 V0 Continue: 0 cc040000cb04 .... 00008f050000
+IE_PDB_DATA             CAP_CALLP  Size:  96 V0 Continue: 0 ceab5c00a501 .... 00ff5a000000
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.758
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [444]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001600 0x00000000 CAT: 12 ID: 23 TS: 1704965981 758163 SEG: 0 101
+                     LOC: SgwSipRcvdMsgHandler.cc:1154 - processSipRequestMsg()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG IN src=172.20.248.141:5050 (383)
+ID_TEXT_MSG_TRACE  
+
+BYE sip:1669@172.21.34.141:5060 SIP/2.0
+Via: SIP/2.0/UDP 172.20.248.141:5050;branch=z9hG4bK-2344-1-7
+From: 9198000002 <sip:9198000002@172.20.248.141:5050>;tag=2344SIPpTag001
+To: sut <sip:1669@172.21.34.141:5060>;tag=5632
+Call-ID: 1-2344@172.20.248.141
+CSeq: 2 BYE
+Contact: sip:9198000002@172.20.248.141:5050
+Max-Forwards: 70
+Subject: Performance Test
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.758
+Cat:  ECCP                      Primitive: ECCP_CC_RELEASE [220]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001600 0x1300000d CAT: 12 ID: 8 TS: 1704965981 758199 SEG: 0 101
+                     LOC: SgwSipCall.cc:12149 - byeOnEstablishedCall()
+ID_CHANNEL_ID  SIP_DAL 5050 1 PREFER
+ID_TIMESTAMP  1704965981 758 Thu Jan 11 09:39:41 2024 (758 ms)
+ID_LOCAL_IP_ADDRESS  (V1) 172.21.34.141:5060
+ID_REMOTE_PUB_IP_ADDRESS  (V1) 172.20.248.141:5050
+ID_REMOTE_PRI_IP_ADDRESS  (V1) 172.20.248.141:5050
+ID_REMOTE_USER_ID  9198000002
+ID_CAUSE_DIAGNOSTIC  CV_NORMAL_CALL_CLEARING (16) CS_CCITT LOC_NOTPRESENT RECOMMEND_NOTPRESENT 1 (0) 
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.759
+Cat:  ECCP                      Primitive: ECCP_CC_RELEASE [76]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00001700
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00001700 CAT: 12 ID: 8 TS: 1704965981 759805 SEG: 0 101
+ID_CAUSE_DIAGNOSTIC  CV_NORMAL_CALL_CLEARING (16) CS_CCITT LOC_USER RECOMMEND_Q931 1 (0) 
+
+ID_CHANNEL_ID  SIP_DAL 5052 1 EXCLUSIVE
+ID_SOURCE_PROTOCOL  SIP_DAL TC_NOTPRESENT
+ID_SYSTEM_LOADING_FACTOR  OVERLOAD_NO
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.759
+Cat:  EGCP                      Primitive: EGCP_REQUEST [12]
+Src:  CP_CALLM_ID (83)          Tid: 1350000d   Load Factor (0)
+Dest: MSF_CRM_ID (115)          Tid: 1001dbff
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 165 83 115 4 0x1350000d 0x1001dbff CAT: 13 ID: 1 TS: 1704965981 759843 SEG: 0 101
+SUBTRACT_CMD   VOIP_TRUNK_IF 1 1
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.762
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [360]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001700 0x00000000 CAT: 12 ID: 23 TS: 1704965981 762039 SEG: 0 101
+                     LOC: SgwSipCltTxn.cc:755 - idleInit()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.248.141:5052 (295)
+ID_TEXT_MSG_TRACE  
+
+BYE sip:172.20.248.141:5052;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-499
+To: <sip:068081123456789@172.20.248.141>;tag=10
+From: <sip:9198000002@172.21.34.141>;tag=5888
+Call-ID: 1704958942-481@84
+CSeq: 2 BYE
+Max-Forwards: 70
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.762
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [356]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001700 0x00000000 CAT: 12 ID: 23 TS: 1704965981 762510 SEG: 0 101
+                     LOC: SgwSipRcvdMsgHandler.cc:1533 - processResponseMsg()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG IN src=172.20.248.141:5052 (294)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 172.21.34.141:5060;branch=z9hG4bK-659f9bde-84-499
+From: <sip:9198000002@172.21.34.141>;tag=5888
+To: <sip:068081123456789@172.20.248.141>;tag=10
+Call-ID: 1704958942-481@84
+CSeq: 2 BYE
+Contact: <sip:172.20.248.141:5052;transport=UDP>
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.762
+Cat:  ECCP                      Primitive: ECCP_CC_RELCOMP [136]
+Src:  SGW_SIP_ID (84)           Tid: 00001700
+Dest: CP_CALLM_ID (83)          Tid: 1300000d
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 20 84 83 4 0x00001700 0x1300000d CAT: 12 ID: 9 TS: 1704965981 762560 SEG: 0 101
+                     LOC: SgwSipCall.cc:20454 - sendRelCompleteToCMOnResponse()
+ID_CHANNEL_ID  SIP_DAL 5052 1 PREFER
+ID_TIMESTAMP  1704965981 762 Thu Jan 11 09:39:41 2024 (762 ms)
+ID_LOCAL_IP_ADDRESS  (V1) 172.21.34.141:5060
+ID_REMOTE_PUB_IP_ADDRESS  (V1) 172.20.248.141:5052
+ID_REMOTE_PRI_IP_ADDRESS  (V1) 172.20.248.141:5052
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:41.782
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 19 TS: 1704965981 782867 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 133632 (0x00020a00)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:41.782
+Cat:  SGWP                      Primitive: SGWP_SIP_PEER_DELETE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 12 TS: 1704965981 782882 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:610 - processDelete()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5632 (0x00001600)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.782
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_ALLOCATE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 19 TS: 1704965981 782896 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 133888 (0x00020b00)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.782
+Cat:  SGWP                      Primitive: SGWP_SIP_PEER_DELETE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 12 TS: 1704965981 782907 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:610 - processDelete()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5888 (0x00001700)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  EGCP                      Primitive: EGCP_ACCEPT [20]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1350000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1350000d CAT: 13 ID: 2 TS: 1704965981 801176 SEG: 0 101
+SUBTRACT_CMD   VOIP_TRUNK_IF 1 1
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  EGCP                      Primitive: EGCP_REQUEST [12]
+Src:  CP_CALLM_ID (83)          Tid: 1360000d   Load Factor (0)
+Dest: MSF_CRM_ID (115)          Tid: 1001dbff
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 165 83 115 4 0x1360000d 0x1001dbff CAT: 13 ID: 1 TS: 1704965981 801216 SEG: 0 101
+SUBTRACT_CMD   VOIP_TRUNK_IF 1 2
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  ECCP                      Primitive: ECCP_CC_RELCOMP [24]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: SGW_SIP_ID (2 RGN-ACTIVE) Tid: 00001600
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 36 83 2 1 0x1300000d 0x00001600 CAT: 12 ID: 9 TS: 1704965981 801243 SEG: 0 101
+ID_CHANNEL_ID  SIP_DAL 5050 13 PREFER
+ID_SOURCE_PROTOCOL  SIP_DAL TC_SPEECH
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  CCSP                      Primitive: CCSP_REQUESTED_EVENT [228]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_SP_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 10 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 29 TS: 1704965981 801269 SEG: 0 101
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_TRIGGER_ID  O_DISCONNECT_NON_BLOCKING
+IE_CLLI_NAME   0
+IE_CONNECT_TIME  3 52
+IE_START_TIMESTAMP  1704965978 248
+IE_TIMESTAMP  1704965981 801
+IE_DISCONNECT_CAUSE  CV_NORMAL_CALL_CLEARING
+IE_TERMINATION_INDICATORS  ANSWERED NO_ERROR NO_NWM_LIST_OVERFLOW BUSY_NO_INDICATION NO_EXCEPTION_INDICATION NO_REROUTE NO_DISP
+IE_CALLED_PARTY_NUMBER  068081123456789 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 15 
+IE_COLLECTED_DIGITS  1669
+IE_BEARER_CAPABILITY  ISUP_REQ TC_SPEECH CS_CCITT TR_64KBIT ITM_CIRCUIT UL1_G711ULAW URATE_64000
+IE_TRUNK_GROUP_AND_CKT_ID  5050 13
+IE_ATTEMPT_TIME  0
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_DATA [136]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 000dee62
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x000dee62 CAT: 12 ID: 15 TS: 1704965981 801523 SEG: 0 0
+ID_TCAP_ITU_DIALOGUE  TPT_CONTINUE TCAP_PROTO_ITU92 0 DLG_RESULT_NOTPRESENT RESULT_SRC_SVC_NOTPRESENT DLG_NOTPRESENT ABORT_SRC_SVC_NOTPRESENT
+ID_TCAP_QOS  0 RO_RETURN_ON_ERROR SEQ_CLASS0
+ID_SCCP_ADDRESS  SCCP_ADDR_SOURCE 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 15 2057
+ID_SCCP_ADDRESS  SCCP_ADDR_DESTINATION 1 TSW_ITU 1 SUB_SVC_NATIONAL NATIONAL_IND RTE_SUB_SYSTEM_NBR 1 146 1 4 12330
+ID_TCAP_COMPONENT  COMP_INVOKE 30 PO_CLASS_4 PARAM_SEQUENCE 0 1 TCAP_PROTO_ITU92
+ID_TCAP_COMP_INVOKE_ID  1 7 0 0 0 0 0 0
+ID_TCAP_COMP_OPERATION_CODE  OPCODE_LOCAL NOF_NOT_USED 0 1 18 
+ID_TCAP_COMPONENT_DATA   0  0 (23) 
+30 15 80 01 09 a2 06 a7 04 80 02 80 90 a3 03 80 
+01 01 a4 03 80 01 01 
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_CANCEL [16]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 000dee62
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x000dee62 CAT: 12 ID: 25 TS: 1704965981 801562 SEG: 0 0
+ID_TCAP_COMP_INVOKE_ID  1 7 0 0 0 0 0 0
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  ECCP                      Primitive: ECCP_CC_TCAP_CANCEL [4]
+Src:  CS_SP_ID (81)             Tid: 08000012   Load Factor (0)
+Dest: SGW_TCAP_ID (2 RGN-ACTIVE)        Tid: 000dee62
+
+IE_MSG_TRACE_HEADER  SRC: 10 DEST: 34 81 2 1 0x08000012 0x000dee62 CAT: 12 ID: 25 TS: 1704965981 801592 SEG: 0 0
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:41.803
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [340]
+Src:  SGW_SIP_ID (84)           Tid: 00001600
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 45 84 81 4 0x00001600 0x00000000 CAT: 12 ID: 23 TS: 1704965981 803197 SEG: 0 101
+                     LOC: SgwSipSvrTxn.cc:613 - tryingEvent()
+ID_TEXT_MSG_TRACE  
+
+SIP MSG OUT dest=172.20.248.141:5050 (275)
+ID_TEXT_MSG_TRACE  
+
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 172.20.248.141:5050;branch=z9hG4bK-2344-1-7
+To: sut <sip:1669@172.21.34.141>;tag=5632
+From: 9198000002 <sip:9198000002@172.20.248.141>;tag=2344SIPpTag001
+Call-ID: 1-2344@172.20.248.141
+CSeq: 2 BYE
+Supported: 100rel
+Content-Length: 0
+
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.804
+Cat:  SGWP                      Primitive: SGWP_M3UA_LAYER [128]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_M3UA_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 38 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 32 TS: 1704965981 804641 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:894 - santeraM3uaTsk()
+UNIVERSAL_PST_DATA  DATA:
+    89 00 16 00 89 00 1E 00 00 04 18 00 00 02 00 00
+    00 89 00 16 89 00 1E 00 00 04 18 00 00 02 00 00
+BUFFER_DATA  DATA:
+    00 50 00 01 00 00 08 09 00 00 00 00 00 00 30 2A
+    83 EE 00 09 80 03 07 0B 04 C3 2A 30 92 04 C3 09
+    08 92 2F 65 2D 48 04 00 0D EE 62 49 04 EC 07 00
+    80 6C 1F A1 1D 02 01 07 02 01 18 30 15 80 01 09
+    A2 06 A7 04 80 02 80 90 A3 03 80 01 01 A4 03 80
+    01 01 00 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.804
+Cat:  SGWP                      Primitive: SGWP_TCAP_LAYER [92]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_TCAP_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 34 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 2 TS: 1704965981 804662 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:415 - santeraSPstTsk()
+UNIVERSAL_PST_DATA  DATA:
+    03 00 04 00 17 00 17 00 00 07 10 00 00 00 00 00
+    00 03 00 04 17 00 17 00 00 07 10 00 00 00 00 00
+BUFFER_DATA  DATA:
+    00 2D 02 00 01 00 00 00 00 00 01 00 69 00 00 00
+    07 04 00 00 00 62 EE 0D 00 06 7F 00 00 06 01 00
+    04 00 62 EE 0D 00 07 00 1E 00 00 00 6D 04 FF 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.801
+Cat:  CCSP                      Primitive: CCSP_EPT_IDLE_REQ [148]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_FM_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 11 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 21 TS: 1704965981 801291 SEG: 0 101
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5050 13 FALSE SGW_RGN: 0 CSFM_RGN: 1
+IE_PARTY_ID  ORIG_PARTY_ID
+IE_FACILITY_ACTION  NO_ACTION CALL_ANSWERED 0 SIP_DAL CV_NORMAL_CALL_CLEARING SIP_DAL
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_UNK PRES_RSTR_ALLOWED SCR_USER_PROVIDED_NOT_VER GEN_NAME_IND_OFF INN_ALLOWED NI_COMPLETE 4 
+IE_CONNECT_TIME  3 52
+IE_EXTENDED_TERMINATION_ID  115 VOIP_TRUNK_IF 1 0
+IE_SPM_LOADING_FACTOR  1 5
+IE_EPT_STATS  MGW ID: 115 Usage Time: 3 Cause Code: 16 Alerted: T Answered: T CCReceived: T CCSent: F RelFromOrig: T RelFromTerm: F RelByC3: F
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.806
+Cat:  ECCP                      Primitive: ECCP_CC_SGW_TRACE [288]
+Src:  SGW_M3UA_ID (83)          Tid: 00000000
+Dest: OAM_MT_ID (81)            Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 38 DEST: 45 83 81 4 0x00000000 0x00000000 CAT: 12 ID: 23 TS: 1704965981 806207 SEG: 0 0
+                     LOC: ../su/SgwM3uaServiceUserThread.cc:482 - processTransferRequest()
+ID_SGWTRACE_PARM  
+Sent Message: TCAP/SCCP To M3UA
+SI: 3
+DPC: 6-5-2 (12330)
+OPC: 1-1-1 (2057)
+SLS: 14
+PRIORITY: 0
+MSGTYPE: 9
+LENGTH: 62
+PDU: 
+
+80 03 07 0b 04 c3 2a 30 92 04 c3 09 08 92 2f 65 
+2d 48 04 00 0d ee 62 49 04 ec 07 00 80 6c 1f a1 
+1d 02 01 07 02 01 18 30 15 80 01 09 a2 06 a7 04 
+80 02 80 90 a3 03 80 01 01 a4 03 80 01 01 
+
+Unitdata - UDT
+  Protocol Class = Class 0
+  Message handling = Return message on error
+  Called Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 6-5-2
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  Calling Party Address:
+    Reserved for national use
+    Routing indicator = routing should be based on DPC and SSN
+    Point code indicator = Yes
+    Point code = 1-1-1
+    SSN indicator = Yes
+    SSN = 146
+    GTT indicator = 0
+      No GTT Information.
+  User Data:
+65 2d 48 04 00 0d ee 62 49 04 ec 07 00 80 6c 1f 
+a1 1d 02 01 07 02 01 18 30 15 80 01 09 a2 06 a7 
+04 80 02 80 90 a3 03 80 01 01 a4 03 80 01 01 
+
+TCAP Transaction Portion:
+  Identifier Class = International TCAP
+  Data Element = Constructor
+  Transaction Portion Identifiers = Continue package type identifier
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Originating Transaction ID identifier
+  Originating Transaction ID = 00 0d ee 62 
+  Identifier Class = International TCAP
+  Data Element = Primitive
+  Transaction Portion Identifiers = Destination Transaction ID identifier
+  Destination Transaction ID = ec 07 00 80 
+TCAP Component Portion:
+  TCAP component portion length = 31
+  Invoke component
+  Component length = 29
+  Invoke ID identifier
+  Invoke ID length = 1
+  Invoke ID = 7
+  Operation code identifier
+  Operation code length = 1
+    opcode =24
+
+InapEvtRptBCSM:
+   EventTypeBCSM: oDisconnect(9)
+   EventSpecificInfo:
+      INAPEventSpecInfoCause:
+         INAPCause: { 80 90 }
+      Cause Value: 16 Coding Std: 0 Location: 0   LegID:
+            SendingSideID: 1
+   MiscCallInfo:
+      INAPMessageType: Notification(1)
+
+End of data !!!!
+
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.804
+Cat:  SGWP                      Primitive: SGWP_TCAP_LAYER [72]
+Src:  SGW_TCAP_ID (84)          Tid: 00000567   Load Factor (0)
+Dest: SGW_TCAP_ID (83)          Tid: 00000123
+
+IE_MSG_TRACE_HEADER  SRC: 34 DEST: 34 84 83 4 0x00000567 0x00000123 CAT: 16 ID: 2 TS: 1704965981 804809 SEG: 0 101
+                     LOC: ../CmSsrvInt.c:415 - santeraSPstTsk()
+UNIVERSAL_PST_DATA  DATA:
+    03 00 04 00 17 00 17 00 00 07 10 00 00 00 00 00
+    00 03 00 04 17 00 17 00 00 07 10 00 00 00 00 00
+BUFFER_DATA  DATA:
+    00 18 02 00 01 00 00 00 00 00 01 00 6A 00 00 00
+    05 04 00 6F 05 62 EE 0D 00 FF 7F 00
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.807
+Cat:  SGWP                      Primitive: SGWP_SIP_SIGID_FREE [40]
+Src:  SGW_SIP_ID (83)           Tid: 00000000
+Dest: SGW_SIP_ID (84)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 83 84 4 0x00000000 0x00000000 CAT: 16 ID: 18 TS: 1704965981 807751 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5632 (0x00001600)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.807
+Cat:  SGWP                      Primitive: SGWP_SIP_SIGID_FREE [40]
+Src:  SGW_SIP_ID (83)           Tid: 00000000
+Dest: SGW_SIP_ID (84)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 83 84 4 0x00000000 0x00000000 CAT: 16 ID: 18 TS: 1704965981 807780 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 5888 (0x00001700)
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:41.850
+Cat:  EGCP                      Primitive: EGCP_ACCEPT [20]
+Src:  MSF_CRM_ID (115)          Tid: 1001dbff
+Dest: CP_CALLM_ID (83)          Tid: 1360000d
+
+IE_MSG_TRACE_HEADER  SRC: 165 DEST: 20 115 83 4 0x1001dbff 0x1360000d CAT: 13 ID: 2 TS: 1704965981 850792 SEG: 0 0
+SUBTRACT_CMD   VOIP_TRUNK_IF 1 2
+          RESULT_DESCR [ SUCCESS (200) NO_TGW_TERMINATION_INFO ]
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 2, 0
+Time: 01/11/2024 09:39:41.850
+Cat:  CCSP                      Primitive: CCSP_DELETE_PDB [4]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_PD_ID (1 RGN-BOTH)     Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 13 83 1 3 0x1300000d 0x00000000 CAT: 11 ID: 17 TS: 1704965981 850835 SEG: 0 101
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 1, 0
+Time: 01/11/2024 09:39:41.850
+Cat:  CCSP                      Primitive: CCSP_CDR_DATA [864]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_CD_ID (0 RGN-BOTH)     Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 12 83 0 3 0x1300000d 0x00000000 CAT: 11 ID: 8 TS: 1704965981 850886 SEG: 0 101
+IE_CDR_DATA  713 
+Cdr version major/minor   : 4 / 3
+Cdr record type           : 1 /  (1=Voice, 2=Audit, 3=AtmPvc, 4=AtmSvc)
+Cdr Category type         : 0 /  (0=Normal, 1=Usage Sensitive, 2=Time Change)
+cdrTotalPage / cdrPage    : 1 / 1
+Call_ID / smInstance      : 0x1300000d / 13
+Orig Incoming Signals     : SETUP, RELEASE, ANALYZE_DIGITS, CONTINUE, SIPAPM,  (20a0081)
+Orig Outgoing Signals     : CALL_PROCEEDING, ALERT, CONNECT, RELCOMP, IN_TRIGGER, SIPAPM, ORIG_ATTEMPT, EPT_IDLE, O_T_DISC,  (d200091a)
+Term Outgoing Signals     : SETUP, RELEASE, TERM_ATTEMPT, SIPAPM,  (2004081)
+Term Incoming Signals     : CALL_PROCEEDING, ALERT, CONNECT, RELCOMP, AUTH_TERM, SIPAPM,  (200811a)
+Orig internal Rel cause   : CV_NOTPRESENT (65535)
+Orig signal Rel cause/loc : CV_NORMAL_CALL_CLEARING (16) / LOC_NOTPRESENT (255) 
+Term internal Rel cause   : CV_NOTPRESENT (65535)
+Term signal Rel cause/loc : CV_NORMAL_CALL_CLEARING (16) / LOC_USER (0) 
+Time Guard Flag           : TIME_GUARD_DEFAULT (0)
+Short CalledParty OffHook : SHORT_CALLED_PARTY_DEFAULT (0)
+Long Duration Flag        : LONG_DURATION_DEFAULT (0)
+Originate Carrier Time    : Thu Jan 11 09:39:38 2024 (248 ms)
+Carrier Connect Time      : Thu Jan 11 09:39:38 2024 (701 ms)*
+Origination  Time         : Thu Jan 11 09:39:38 2024 (248 ms)
+Answer       Time         : Thu Jan 11 09:39:38 2024 (706 ms)
+Disconnect Party          : DP_ORIG (1)
+Orig  Disc Time           : Thu Jan 11 09:39:41 2024 (758 ms)
+Term  Disc Time           : Thu Jan 11 09:39:41 2024 (762 ms)
+Long Call Time            : NOT SET
+Last Long Call Time       : NOT SET
+Short on-hook duration    : 0 sec  0 mSec 
+Ama Slp Receive Time      : NOT SET
+Calling Party ID          : 9198000002  NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED
+Charge Number             : 
+Dialed Number             : 1669
+Called Party ID           : 068081123456789  NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED
+Routing Number            : 068081123456789  NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED
+Switch Id Routing         : N
+Digit Type                : DT_INTERLATA_NATIONAL (6)
+Orig physical circuit
+  line-trunk type / MSF   : SIP_DAL (115)
+  span / channel          : 1 / 0
+  TrunkGroup/CircuitID    : 5050 / 0
+Term physical circuit
+  line-trunk type / MSF   : SIP_DAL (115)
+  span / channel          : 1 / 0
+  TrunkGroup/CircuitID    : 5052 / 0
+Terminate Type Orig/Term  : TT_SUB (0) / TT_SUB (0) 
+Orig Carrier Network No   : 000000
+Orig Routing Indicator    : DIRECT (0)
+Orig Carrier Type / ID    : N/A (255) / 0000
+Term Carrier Network No   : 000000
+Term Routing Indicator    : DIRECT (0)
+Term Carrier Type / ID    : N/A (255) / 
+ANI/CPN Ind Orig / Term   : AN_CPN_ONLY (2) / AN_CPN_ONLY (2) 
+Orig screening class      : 1
+Sub Group Orig/Term       : 0 / 0
+Sub Group Type Orig/Term  : NOT_DEFINED (0) / NOT_DEFINED (0) 
+InterSwitch Centrex Group : No
+AMA test call ind         : 0
+Ama Translation index     : 3
+AMA Carrier idx Orig/Term : 1 / 1
+AMA Profile idx Orig/Term : 2 / 2
+Orig Line Info            : OLI_NOTPRESENT (255)
+Term Tandem trunk group   : 
+Free-phone number         : 
+Service Feature Code      : INVALID (0)
+SCP Feature ID            : 0
+Usage Sensitive Feature   : No
+Feature State             : FEATURE_NONE (0)
+Call Type (toll-free)     : 0
+Term Carrier Selection    : NO_INDICATION (0)
+Carrier Service Arrange   : 1
+O_LATA / T_CountryCode    : 552 / 
+Internal Bearer Cap       : TC_SPEECH CS_NOTPRESENT TR_NOTPRESENT ITM_NOTPRESENT UL1_NOTPRESENT 
+Ported Caller / Called    : NEITHER (0) / NEITHER (0) 
+Orig LRN / LRN_source     : 4747011234 / SWH_LRN (2) 
+Term LRN / LRN_source     : 1123456789 / LNP_LRN (3) 
+LNP Query / Last_Resort   : QUERY_SUCCESSFUL (1) / Y
+Orig Codec
+  Type/Rate               : CODEC_TYPE_G_711_64K_M_LAW / 0x0
+Term Codec
+  Type/Rate               : CODEC_TYPE_G_711_64K_M_LAW / 0x0
+EC Request Status         : no EC error
+Orig forward  Call Ind    : NOT PRESENT
+Orig backward Call Ind    : CDCAT_NOTPRESENT CDSTAT_SUBFREE CHARG_CHRG INCOMING_HALF_ECHO_INCL
+                          : E2EINFO_INFO E2ENDMTH_BOTH HLD_REQD IWIND_NO_INTERWORKING
+                          : ISDNACCIND_ISDN ISUPIND_USED
+Term forward Call Ind     : NI_CALL_NAT E2ENDMTH_NO_METHOD IWIND_NO_INTERWORKING E2EINFO_NO_INFO
+                          : ISUPIND_USED IPREF_PREFERED_ATW ISDNACCIND_NONISDN SCCP_NO_INDICATION
+                          : TCI_NUM_TRANSLATED
+Term backward Call Ind    : CDCAT_NOTPRESENT CDSTAT_SUBFREE CHARG_CHRG INCOMING_HALF_ECHO_INCL
+                          : E2EINFO_INFO E2ENDMTH_BOTH HLD_REQD IWIND_NO_INTERWORKING
+                          : ISDNACCIND_ISDN ISUPIND_USED
+Outpulsed Digits          : 068081123456789
+Prefix Digit (NOA)        : NO_PREFIX
+Calling Party Ind         : CPI_DELIVER
+Orig Country Code         : 0
+Final Switch ID           : 0
+Final Trunk Member        : N/A
+Complete Code             : COMCODE_NORM
+Route List                : 680
+Called Prefix Digit       : NO_PREFIX
+Answer Type               : ANS_HARDWARE
+QueuedFlag                : F
+Orig Carrier Selection    : NO_INDICATION (0)
+Final Trunk Group         : 0
+AccessNode Switch ID      : 1
+AccessNode Trunk Group    : 0
+ModemFaxTone Detected     : No
+ReOrigination Indicator   : REORIG_NO
+Orig Echo Canceller       : F
+Term Echo Canceller       : T
+Access Type               : INVALID
+Account Code              : 
+Auth Code                 : 
+Auth Code Prefix Len      : 0
+Billing Number            : 
+AIN Message Mapping       : 0x0 
+Pin Number                : 
+Universal Access Number   : 
+NOA of GAP                : NOA_NOTPRESENT
+Generic Address Param     : 
+Redirection Info          : No
+Redirecting Number        : 
+Original Called Number    : 
+Last Success Route List   : 680
+Release Info Map          : 0
+Public Telecom Application : 0
+Overtime Charge           : False
+Meter Pulse Type          : NO_CHARGE
+Number Of Pulses          : 0
+Pulse Interval            : 0
+Feature Bill Type         : 0
+Translation Bill Type     : 0
+Original Call Id          : 0x0 
+Original Switch Id        : 0
+Call Mode                 : 0 / (0=Voice, 1=Fax Pass-thru, 2=Fax Relay)
+T38 Fax Complete          : 0 / (0=No, 1=Yes)
+Calling Party Category    : 255
+Call Reference / ICID     : 0x1300000d / 3145741
+
+IE_CDR_CONTINUE  FALSE
+IE_CDR_TRACE_INFO  
+-- Orig VSM Information --
+   VSM Circuit ID: MSF/Slot/Group/Chip/Chan : 115/13/1/5/340
+      Slot Id                               : 13
+      Codec Group Id                        : 1
+      Codec Id In Group / Codec Chan Id     : 5 / 340
+      Sar Group Id / Sar Chan Id            : 15 / 255
+      EC Group Id / EC Chan Id              : 1 / 340
+      EC Id In Group                        : 5
+      TDM DS0 / RTP Payload Type            : 5131 / 0
+      CV Diag Data                          : 
+   -- Two B Channel/SIP Call Transfer Information --
+   Call Transfer Call Id                    : 0x00000000
+   Call Transfer Time                       : NOT SET
+-- Term VSM Information --
+   VSM Circuit ID: MSF/Slot/Group/Chip/Chan : 115/2/1/6/340
+      Slot Id                               : 2
+      Codec Group Id                        : 1
+      Codec Id In Group / Codec Chan Id     : 6 / 340
+      Sar Group Id / Sar Chan Id            : 15 / 255
+      EC Group Id / EC Chan Id              : 1 / 340
+      EC Id In Group                        : 6
+      TDM DS0 / RTP Payload Type            : 12 / 0
+      CV Diag Data                          : 
+      Internode Hop Count --                : 0
+
+IE_CDR_INAP   12; 
+IE_COMMON_CDR_DATA  
+  Incoming Customer Group : 20
+
+IE_CLLI_NAME   0
+IE_CDR_SIP_CALL_ID  ORIG 1-2344@172.20.248.141
+IE_CDR_SIP_CALL_ID  TERM 1704958942-481@84
+IE_GMSC_ADDRESS  1234567890 INTERNATIONAL NPI_ISDN PRES_RSTR_ADDR_NOT_AVAIL SCR_USER_PROVIDED_NOT_VER GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+ID_CALLING_PARTY_NUM  9198000002 NATIONAL NPI_ISDN PRES_RSTR_ALLOWED SCR_NETWORK_PROVIDED GEN_NAME_IND_NOTPRESENT INN_IND_NOTPRESENT NI_IND_NOTPRESENT 10 
+IE_CDR_RGN  In SP:1 Out SP:0 In FM:1 Out FM:1 In SGW:2 Out SGW:2 In M3UA:0 Out M3UA:0 PDM:1 In MGC:0 Out MGC:0 TCAP:2
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:41.850
+Cat:  CCSP                      Primitive: CCSP_EPT_IDLE_REQ [140]
+Src:  CP_CALLM_ID (83)          Tid: 1300000d   Load Factor (0)
+Dest: CS_FM_ID (1 RGN-ACTIVE)   Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 20 DEST: 11 83 1 1 0x1300000d 0x00000000 CAT: 11 ID: 21 TS: 1704965981 850921 SEG: 0 101
+IE_EXTENDED_CHAN_ID  SIP_DAL 115 5052 1 TRUE SGW_RGN: 2 CSFM_RGN: 1
+IE_FACILITY_ACTION  NO_ACTION CALL_ANSWERED 0 SIP_DAL CV_NORMAL_CALL_CLEARING SIP_DAL
+IE_PARTY_ID  TERM_PARTY_ID
+IE_CALLED_PARTY_NUMBER  1669 NATIONAL NPI_ISDN PRES_RSTR_NOTPRESENT SCR_USER_PROVIDED_NOT_VER GEN_NAME_IND_OFF INN_ALLOWED ?unknown?(115) 4 
+IE_CONNECT_TIME  3 52
+IE_EXTENDED_TERMINATION_ID  115 VOIP_TRUNK_IF 1 0
+IE_EPT_STATS  MGW ID: 115 Usage Time: 3 Cause Code: 16 Alerted: T Answered: T CCReceived: F CCSent: T RelFromOrig: T RelFromTerm: F RelByC3: F
+----------------------------------------------------------
+MQ waterlevel, number queued, rate: 0, 0, 0
+Time: 01/11/2024 09:39:43.766
+Cat:  SGWP                      Primitive: SGWP_SIP_TXNID_FREE [40]
+Src:  SGW_SIP_ID (84)           Tid: 00000000
+Dest: SGW_SIP_ID (83)           Tid: 00000000
+
+IE_MSG_TRACE_HEADER  SRC: 36 DEST: 36 84 83 4 0x00000000 0x00000000 CAT: 16 ID: 20 TS: 1704965983 766380 SEG: 0 101
+                     LOC: SgwSipSyncThread.cc:719 - processIdAllocateFree()
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MAJOR_ID (1) VALUE: 5 (0x00000005)
+SIP_PEER_INT_DATA  TAG_ID: SIP_VERSION_MINOR_ID (2) VALUE: 0 (0x00000000)
+SIP_PEER_INT_DATA  TAG_ID: SIP_SIG_ID (3) VALUE: 132864 (0x00020700)
+----------------------------------------------------------
+CpCallmFlow-03d10D0000130D0060400016000000170000BA130000BC130000130173000100000000000000930173000100000000000000149198000002FFFF1E068081123456781E068081123456789FB79F65E703000017F95300737300000000000000000000000000000000000000000000ADD23A1FBA06D33A1F5706D23A1F5707D33A9FE807D03A9F2C07D2DA9FD50ED3DA9FD50ED2DA9FD51BD1DA9F2C1BD3DA9F421BD3DA9F801BD3DA9F1B1BD3DA1FEA1BD0DA9F2C1BD2DA9F420ED2DA9F1B0ED25AA0D50ED35AA0D50ED25AA0D51BD15AA02C1BD35AA0EB1BD05AA02C1BD2FAA0D50ED3FAA0D50ED2FAA0D51BD1FAA02C1BD3FA20EB1BD0FAA02C1BD29ACED40ED39ACED40ED29ACED41BD19ACE2C1BD3BACE6D1BD2BACE6D0ED3BACE6A0ED3BA4E6D0ED2BACE6A04D3BA4EE904D0BACE3404D2BA4E6D0BD25A4FD512D35A4FD512D25A4FD510D15ACF3410D35ACF4210D35ACF1C10D05A4F3210D25ACF4212D05ACF1C12D27AD1B812D17AD11C12D37A518812D37AD11F12D27AD11C12D07AD11C12D27AD11F37D17AD12837D37AD12637D27AD12614D29AD7B812D19AD71C12D39A572012D29AD7C212D29A572014D19A573214D3BA578014D0BA573D14D27AD8BA12D37AD8BA12D27AD8BB12D37AD8BB12D27AD8BA1CD17A583D1CD07AD8321CD27AD8BB18D17A583D18D17AD83C18D17AD83218D17AD83A18D17A583B18D37A583518D37AD85218D07A583B18D07A583B18D27AD8C212D07AD81C12D27AD85237D37A588137D39A58683BD2FADDB812D1FADD1C12D3FA5D8812D3FADD1F12D3FADD6E12D2FA5DBC12D3FA5DBC12D2FA5D3512D0FADD1C12D2FADD1F2CD1FADD322CD2FADD6E2CD3FA5D4E2CD2FA5DBC2CD1FADD3C2CD1FADD3A2CD1FA5D3B2CD3FA5D522CD2FA5D4E3BD3FA5D6E3BD2FA5D523BD3FADD813BD1FADD293BD3FA5DF23BD3FA5D0A3FD23AE4B812D13AE41C12D23A646812D33AE40712D23AE4B912D23A646E12D33A640812D23A640A12D03AE41C12D25AEAB812D15AEA1C12D35A6A0812D05AEA1512EAFADEBC16EBFADEBC16EAFADEBC3FE9FADE2C3FEBFA5E4C3FEBFA5E613FE8FADE1F3FEAFA5E4C54E9FA5E3F54EBFA5E8254E8FA5E3F54EBFA5E6154E8FADE3154EAFA5E6116E9FADE1716E9FA5E1716E9FADE1516E8FADE1C16EA3AE4B816E93AE41C16EB3AE46016EA3A64611AE83AE41C1AEA3AE4603FE93AE41F3FEB3AE4823FEB3A64F43FEB3A64FC3FEE3A640007EA5AEAB81AE95AEA1C1AEB5AEA601AE85A6A141AEA5A6ABD22EB5A6ABD22E95A6A1422EB5AEA0822140000AEE8EB5AEA0922E95A6A1A22E85AEA1D22EA5AEA6054E95AEA3154EA5A6ABD08E95A6A3F08E95AEA3F08000000
+----------------------------------------------------------
+CpCallmFlow-00840D0000130D006040001600000017000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009FB79F65E50300000080000073730000000000000000000000000000000000000000000004E95A6A3E08EB5A6AFC08EE5A6A0004FA1AE41D1E000000
+----------------------------------------------------------
+^C
+santera@c3svlab8-81% 
