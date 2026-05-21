@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="OrangeHRM - UI automation Testing" verbose="1" >
+    <listeners>
+        <listener class-name="core.MethodListener"></listener>
+<!--        <listener class-name="reportConfig.ChainTestReport"></listener>-->
+        <listener class-name="reportConfig.AllureTestListener"></listener>
+<!--        <listener class-name="jiraConfigs.JiraListener"></listener>-->
+    </listeners>
+    
+    <parameter name="appUrl" value="http://localhost:90/orangehrm-5.7"></parameter>
+    
+    <test name="Run on Chrome browser" >
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <class name="com.orangehrm.Level_16_Allure" />
+        </classes>
+    </test>
+
+<!--    <test name="Run on Firefox browser" >-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.orangehrm.Level_15_ChainTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Run on Edge browser" >-->
+<!--        <parameter name="browser" value="Edge"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.orangehrm.Level_15_ChainTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>

@@ -12,8 +12,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium.version>4.32.0</selenium.version>
-        <testng.version>7.11.0</testng.version>
+        <selenium.version>LATEST</selenium.version>
+        <testng.version>LATEST</testng.version>
+        <aspectj.version>1.9.24</aspectj.version>
     </properties>
 
     <dependencies>
@@ -35,7 +36,53 @@
             <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.11.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>chaintest-core</artifactId>
+            <version>1.0.12</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>chaintest-testng</artifactId>
+            <version>1.0.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.33.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+<!--        Should not use this lib when using Alure report Libs-->
+<!--        <dependency>-->
+<!--            <groupId>net.rcarz</groupId>-->
+<!--            <artifactId>jira-client</artifactId>-->
+<!--            <version>0.5</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
     </dependencies>
+
 
     <!-- Compiler/ Run Test -->
     <build>
@@ -62,6 +109,9 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/orangehrm.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <argLine>
+                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                    </argLine>
                 </configuration>
             </plugin>
         </plugins>

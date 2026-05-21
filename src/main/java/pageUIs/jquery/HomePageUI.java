@@ -1,6 +1,7 @@
 package pageUIs.jquery;
 
 public class HomePageUI {
+    //JQuery Table
     public static final String DYNAMIC_PAGE_BY_PAGE_NUMBER = "xpath=//li[@class='qgrd-pagination-page']/a[text()='%s']";
     public static final String DYNAMIC_SELECTED_PAGE_BY_PAGE_NUMBER = "xpath=//li[@class='qgrd-pagination-page']/a[text()='%s' and contains(@class,'active')]";
     public static final String DYNAMIC_HEADER_TEXTBOX_BY_NAME= "xpath=//div[text()='%s']/parent::div/following-sibling::input";
@@ -19,4 +20,7 @@ public class HomePageUI {
     public static final String ALL_PAGES = "Css=li.qgrd-pagination-page a";
     public static final String DYNAMIC_INDEX_BY_COLUMN_NAME= "xpath=//div[text()='%s']/ancestor::th/preceding-sibling::th";
     public static final String DYNAMIC_COLUMN_INDEX= "xpath=//td[%s]";
+
+    //JQuery Upload
+    public static final String IS_FILE_LOADED = "Xpath=//p[@class='name' and text()='%s']";
 }

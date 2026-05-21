@@ -100,4 +100,17 @@ public class HomePageObject extends BasePage {
 
         return columnAllvalue;
     }
+
+    public boolean isFileLoaded(String fileName) {
+        waitElementVisible(driver, HomePageUI.IS_FILE_LOADED,fileName);
+        return isElementDisplayed(driver, HomePageUI.IS_FILE_LOADED,fileName);
+    }
+
+//    public void clickStartUpload() {
+//        waitElementClickable(driver, );
+//    }
+
+    public boolean isFileUploadedSuccess(String hanoi) {
+        return false;
+    }
 }
