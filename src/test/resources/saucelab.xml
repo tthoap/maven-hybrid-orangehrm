@@ -13,7 +13,7 @@
     <test name="Run on Chrome browser" >
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
-            <class name="com.orangehrm.Level_16_Allure" />
+            <class name="com.saucelab.Level_24_Sort_table" />
         </classes>
     </test>
 

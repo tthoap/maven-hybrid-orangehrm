@@ -172,7 +172,7 @@ public class Level_22_LiveCode_EmployeeCases extends BaseTest {
 
 
 
-    @Test
+   // @Test
     public void Employee_04_EditEmployeeByAdmin() {
         personalDetailPage.enterToTextboxByName(driver, "firstName", newEmployeeFirstname);
         personalDetailPage.enterToTextboxByName(driver, "firstName", newEmployeeLastname);

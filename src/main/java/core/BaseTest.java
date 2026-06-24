@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -12,8 +14,10 @@ import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.Random;
+import java.util.*;
 
 public class BaseTest {
     private WebDriver driver;
@@ -23,30 +27,70 @@ public class BaseTest {
 
     public WebDriver getBrowserDriver(String browserName, String appUrl){
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+        Path path = null;
+        File file = null;
         switch (browserList){
             case FIREFOX:
-                driver = new FirefoxDriver();
+                File file1 = new File(GlobalConstants.BROWSER_EXTENSION_PATH + "wappalyzerFirefox.xpi");
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+//                firefoxOptions.add
+                driver = new FirefoxDriver(firefoxOptions);
                 break;
             case CHROME:
-                ChromeOptions options = new ChromeOptions();
-                options.setAcceptInsecureCerts(true);
+//                File file = new File(GlobalConstants.BROWSER_EXTENSION_PATH + "WappalyzerChrome.crx");
+                ChromeOptions chormeOptions = new ChromeOptions();
+//                chormeOptions.addExtensions(file);
+//                 driver = new ChromeDriver(chormeOptions);
+//                chormeOptions.addArguments("--disable-geolocation");
+                Map<String, Object> prefs = new HashMap<>();
 
-                 driver = new ChromeDriver(options);
-//                driver = new ChromeDriver();
+                // Core preferences to completely disable password manager and autofill
+                prefs.put("credentials_enable_service", false);
+                prefs.put("profile.password_manager_enabled", false);
+                prefs.put("autofill.profile_enabled", false);
+                prefs.put("autofill.credit_card_enabled", false);
+
+                // Bind preferences to ChromeOptions
+                chormeOptions.setExperimentalOption("prefs", prefs);
+                chormeOptions.setExperimentalOption("useAutomationExtension", false);
+                chormeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+                driver = new ChromeDriver(chormeOptions);
                 break;
             case EDGE:
-                driver = new EdgeDriver();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                path = Paths.get(GlobalConstants.BROWSER_EXTENSION_PATH + "WappalyzerChrome.crx");
+                file = new File(path.toUri());
+                edgeOptions.addExtensions(file);
+                driver = new EdgeDriver(edgeOptions);
                 break;
-
             case SAFARI:
                 driver = new SafariDriver();
+                break;
+            case HEADLESS_CHROME:
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("window-size=1920,1080");
+                driver = new ChromeDriver(chromeOptions);
+                break;
+            case HEADLESS_FIREFOX:
+                FirefoxOptions FFheadOptions = new FirefoxOptions();
+                FFheadOptions.addArguments("-headless");
+                FFheadOptions.addArguments("window-size=1920,1080");
+                driver = new FirefoxDriver(FFheadOptions);
+                break;
+
+            case HEADLESS_EDGE:
+                EdgeOptions edgeHlOptions = new EdgeOptions();
+                edgeHlOptions.addArguments("--headless");
+                edgeHlOptions.addArguments("window-size=1920,1080");
+                driver = new EdgeDriver(edgeHlOptions);
                 break;
             default:
                 throw new RuntimeException("Browser is invalid!");
         }
         driver.get(appUrl);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         System.out.println("Driver in BaseTest" + driver.toString());
         return driver;
     }

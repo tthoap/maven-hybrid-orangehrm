@@ -8,26 +8,27 @@
 <!--        <listener class-name="jiraConfigs.JiraListener"></listener>-->
     </listeners>
     
-    <parameter name="appUrl" value="http://localhost:90/orangehrm-5.7"></parameter>
+    <parameter name="appUrl" value="https://rode.com/en-int/support/where-to-buy"></parameter>
     
     <test name="Run on Chrome browser" >
-        <parameter name="browser" value="Chrome"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="com.orangehrm.Level_22_LiveCode_EmployeeCases" />
-            <class name="com.orangehrm.Level_22_LiveCode_UploadCases" />
+<!--            <class name="com.orangehrm.Level_22_LiveCode_EmployeeCases" />-->
+<!--            <class name="com.orangehrm.Level_22_LiveCode_UploadCases" />-->
+            <class name="com.orangehrm.Level_23_Browser_Config" />
         </classes>
     </test>
 
-<!--    <test name="Run on Firefox browser" >-->
-<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--    <test name="Run on Firefox headless browser" >-->
+<!--        <parameter name="browser" value="headless_firefox"></parameter>-->
 <!--        <classes>-->
-<!--            <class name="com.orangehrm.Level_15_ChainTest" />-->
+<!--            <class name="com.orangehrm.Level_23_Browser_Config" />-->
 <!--        </classes>-->
 <!--    </test>-->
 <!--    <test name="Run on Edge browser" >-->
-<!--        <parameter name="browser" value="Edge"></parameter>-->
+<!--        <parameter name="browser" value="edge"></parameter>-->
 <!--        <classes>-->
-<!--            <class name="com.orangehrm.Level_15_ChainTest" />-->
+<!--            <class name="com.orangehrm.Level_23_Browser_Config" />-->
 <!--        </classes>-->
 <!--    </test>-->
 
