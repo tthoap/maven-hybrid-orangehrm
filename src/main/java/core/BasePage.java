@@ -205,8 +205,8 @@ public class BasePage {
         new Select(getWebElement(driver, castParameters(locator, restvalues))).selectByVisibleText(valueItem);
     }
 
-    public WebElement getSelectedItemInDropdown(WebDriver driver, String locator) {
-        return new Select(getWebElement(driver, locator)).getFirstSelectedOption();
+    public String getSelectedItemInDropdown(WebDriver driver, String locator) {
+        return new Select(getWebElement(driver, locator)).getFirstSelectedOption().getText();
     }
 
     public WebElement getSelectedItemInDropdown(WebDriver driver, String locator, String... restvalues) {

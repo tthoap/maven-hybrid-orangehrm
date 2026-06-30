@@ -27,41 +27,15 @@ public class BaseTest {
 
     public WebDriver getBrowserDriver(String browserName, String appUrl){
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
-        Path path = null;
-        File file = null;
         switch (browserList){
             case FIREFOX:
-                File file1 = new File(GlobalConstants.BROWSER_EXTENSION_PATH + "wappalyzerFirefox.xpi");
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-//                firefoxOptions.add
-                driver = new FirefoxDriver(firefoxOptions);
+                driver = new FirefoxDriver();
                 break;
             case CHROME:
-//                File file = new File(GlobalConstants.BROWSER_EXTENSION_PATH + "WappalyzerChrome.crx");
-                ChromeOptions chormeOptions = new ChromeOptions();
-//                chormeOptions.addExtensions(file);
-//                 driver = new ChromeDriver(chormeOptions);
-//                chormeOptions.addArguments("--disable-geolocation");
-                Map<String, Object> prefs = new HashMap<>();
-
-                // Core preferences to completely disable password manager and autofill
-                prefs.put("credentials_enable_service", false);
-                prefs.put("profile.password_manager_enabled", false);
-                prefs.put("autofill.profile_enabled", false);
-                prefs.put("autofill.credit_card_enabled", false);
-
-                // Bind preferences to ChromeOptions
-                chormeOptions.setExperimentalOption("prefs", prefs);
-                chormeOptions.setExperimentalOption("useAutomationExtension", false);
-                chormeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-                driver = new ChromeDriver(chormeOptions);
+                driver = new ChromeDriver();
                 break;
             case EDGE:
-                EdgeOptions edgeOptions = new EdgeOptions();
-                path = Paths.get(GlobalConstants.BROWSER_EXTENSION_PATH + "WappalyzerChrome.crx");
-                file = new File(path.toUri());
-                edgeOptions.addExtensions(file);
-                driver = new EdgeDriver(edgeOptions);
+                driver = new EdgeDriver();
                 break;
             case SAFARI:
                 driver = new SafariDriver();
