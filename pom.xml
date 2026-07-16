@@ -15,6 +15,8 @@
         <selenium.version>LATEST</selenium.version>
         <testng.version>LATEST</testng.version>
         <aspectj.version>1.9.24</aspectj.version>
+        <jackson.version>2.22.1</jackson.version>
+        <poi.version>5.5.1</poi.version>
     </properties>
 
     <dependencies>
@@ -72,6 +74,55 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>2.7.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-lite</artifactId>
+            <version>${poi.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+            <scope>compile</scope>
         </dependency>
 
 <!--        Should not use this lib when using Alure report Libs-->

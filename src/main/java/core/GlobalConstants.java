@@ -7,7 +7,8 @@ public class GlobalConstants {
     public static final String JAVA_VERSION = System.getProperty("java.version");
     public static final String SEPARATOR = System.getProperty("file.separator");
 
-    //JIRA info
+    //DATA TEST/ ENVIRONMENT /JIRA info
+    public static final String DATA_TEST_PATH = PROJECT_PATH + SEPARATOR + "dataFiles" + SEPARATOR ;
     public static final String JIRA_SITE_URL = "https://orange-hrm-auto.atlassian.net/";
     public static final String JIRA_USERNAME = "tthoaptit@gmail.com";
     public static final String JIRA_PROJECT_KEY= "SCRUM";
@@ -28,4 +29,7 @@ public class GlobalConstants {
     public static final String EXTENT_PATH = PROJECT_PATH + SEPARATOR + "htmlExtent" + SEPARATOR;
     public static final String ALLURE_PATH = PROJECT_PATH + SEPARATOR + "htmlAllure" + SEPARATOR;
 
+    //ORANGE HRM
+    public static final String ADMIN_ORANGE_USERNAME = "automationfc";
+    public static final String ADMIN_ORANGE_PASSWORD = "Beocon@123";
 }
