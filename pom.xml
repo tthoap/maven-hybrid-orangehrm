@@ -17,6 +17,7 @@
         <aspectj.version>1.9.24</aspectj.version>
         <jackson.version>2.22.1</jackson.version>
         <poi.version>5.5.1</poi.version>
+        <enviromentName>LIVE</enviromentName>
     </properties>
 
     <dependencies>
@@ -159,7 +160,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <!-- Run TestNG xml file -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/orangehrm.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/RunOrange${enviromentName}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar

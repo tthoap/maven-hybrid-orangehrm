@@ -25,7 +25,7 @@ public class BaseTest {
         return this.driver;
     }
 
-    public WebDriver getBrowserDriver(String browserName, String serverName){
+    public WebDriver getBrowserDriver(String browserName, String appUrl){
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList){
             case FIREFOX:
@@ -62,7 +62,7 @@ public class BaseTest {
             default:
                 throw new RuntimeException("Browser is invalid!");
         }
-        driver.get(getEnviromrentUrl(serverName));
+        driver.get(appUrl);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
         driver.manage().window().maximize();
         System.out.println("Driver in BaseTest" + driver.toString());

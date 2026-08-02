@@ -19,10 +19,10 @@ import utilities.ExcelConfig;
 @Slf4j
 public class Level_26_Enviroment extends BaseTest {
 
-    @Parameters({"browser", "server"})
+    @Parameters({"browser", "appUrl"})
     @BeforeClass
-    public void beforeClass(String browserName, String server) {
-        driver = getBrowserDriver(browserName, server);
+    public void beforeClass(String browserName, String appUrl) {
+        driver = getBrowserDriver(browserName, appUrl);
 
         loginPage = PageGenerator.getPage(LoginPO.class, driver);
         employeeData = Employee.getEmployee();
