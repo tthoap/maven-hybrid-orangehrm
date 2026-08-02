@@ -25,7 +25,7 @@ public class BaseTest {
         return this.driver;
     }
 
-    public WebDriver getBrowserDriver(String browserName, String appUrl){
+    public WebDriver getBrowserDriver(String browserName, String serverName){
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList){
             case FIREFOX:
@@ -62,11 +62,30 @@ public class BaseTest {
             default:
                 throw new RuntimeException("Browser is invalid!");
         }
-        driver.get(appUrl);
+        driver.get(getEnviromrentUrl(serverName));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
-//        driver.manage().window().maximize();
+        driver.manage().window().maximize();
         System.out.println("Driver in BaseTest" + driver.toString());
         return driver;
+    }
+
+    private String getEnviromrentUrl(String enviromentName){
+        String enviromrentUrl = null;
+        switch (enviromentName){
+            case "Dev":
+                enviromrentUrl = "http://localhost:90/orangehrm-5.7";
+                break;
+            case "test":
+                enviromrentUrl = "http://test.orangehrm-5.7";
+                break;
+            case "staging":
+                enviromrentUrl = "http://stagingorangehrm-5.7";
+                break;
+            case "live":
+                enviromrentUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
+                break;
+        }
+        return enviromrentUrl;
     }
 
     protected void closeBrowser(){

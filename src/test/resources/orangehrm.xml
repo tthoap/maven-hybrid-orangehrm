@@ -8,12 +8,13 @@
 <!--        <listener class-name="jiraConfigs.JiraListener"></listener>-->
     </listeners>
     
-    <parameter name="appUrl" value="http://localhost:90/orangehrm-5.7"></parameter>
-    
+<!--    <parameter name="appUrl" value="http://localhost:90/orangehrm-5.7"></parameter>-->
+    <parameter name="server" value="live"></parameter>
+
     <test name="Run on Chrome browser" >
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="com.orangehrm.Level_25_DataTest_VI_Excel" />
+            <class name="com.orangehrm.Level_26_Enviroment" />
         </classes>
     </test>
 </suite>
