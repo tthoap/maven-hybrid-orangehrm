@@ -9,6 +9,7 @@ public class GlobalConstants {
 
     //DATA TEST/ ENVIRONMENT /JIRA info
     public static final String DATA_TEST_PATH = PROJECT_PATH + SEPARATOR + "dataFiles" + SEPARATOR ;
+    public static final String ENVIRONMENT_CONFIG_PATH = PROJECT_PATH + SEPARATOR + "enviromentConfig" + SEPARATOR ;
     public static final String JIRA_SITE_URL = "https://orange-hrm-auto.atlassian.net/";
     public static final String JIRA_USERNAME = "tthoaptit@gmail.com";
     public static final String JIRA_PROJECT_KEY= "SCRUM";

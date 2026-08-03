@@ -15,22 +15,25 @@ import pageObjects.orangeHRM.EmployeeListPO;
 import pageObjects.orangeHRM.LoginPO;
 import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
 import utilities.ExcelConfig;
+import utilities.PropertiesConfig;
 
 @Slf4j
 public class Level_26_Enviroment extends BaseTest {
 
-    @Parameters({"browser", "appUrl"})
+    @Parameters({"browser", "server"})
     @BeforeClass
-    public void beforeClass(String browserName, String appUrl) {
-        driver = getBrowserDriver(browserName, appUrl);
+    public void beforeClass(String browserName, String serverName) {
+        propertiesConfig = PropertiesConfig.getProperties(serverName);
+
+        driver = getBrowserDriver(browserName, propertiesConfig.getApplicationUrl());
 
         loginPage = PageGenerator.getPage(LoginPO.class, driver);
         employeeData = Employee.getEmployee();
         excelConfig = ExcelConfig.getExcelData();
         excelConfig.switchToSheet("employees");
 
-        adminUsername = "automationfc";
-        adminPassword = "Beocon@123";
+//        adminUsername = "automationfc";
+//        adminPassword = "Beocon@123";
         employeeID = String.valueOf(getRandomNumber());
         employeeUsername = excelConfig.getCellData("UserName",1) + getRandomNumber();
 
@@ -38,8 +41,8 @@ public class Level_26_Enviroment extends BaseTest {
 
     @Test
     public void Employee_01_CreateNewEmployee() {
-        loginPage.enterToTextboxByLabel(driver, "Username", adminUsername);
-        loginPage.enterToTextboxByLabel(driver, "Password", adminPassword);
+        loginPage.enterToTextboxByLabel(driver, "Username", propertiesConfig.getApplicationUserName());
+        loginPage.enterToTextboxByLabel(driver, "Password", propertiesConfig.getApplicationPassword());
         loginPage.clickToButtonByText(driver, "Login");
         dashboardPage = PageGenerator.getPage(DashboardPO.class, driver);
 
@@ -93,6 +96,6 @@ public class Level_26_Enviroment extends BaseTest {
     private Employee employeeData;
     private ExcelConfig excelConfig;
     private String employeeID, adminUsername, adminPassword, employeeFirstname, employeeLastname,employeeUsername, employeePassword;
-
+    private PropertiesConfig propertiesConfig;
 
 }
