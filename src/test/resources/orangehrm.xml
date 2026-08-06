@@ -9,7 +9,9 @@
     </listeners>
     
 <!--    <parameter name="appUrl" value="http://localhost:90/orangehrm-5.7"></parameter>-->
-    <parameter name="server" value="live"></parameter>
+<!--    <parameter name="server" value="live"></parameter>-->
+<!--    <parameter name="Server" value="dev"></parameter>-->
+
 
     <test name="Run on Chrome browser" >
         <parameter name="browser" value="chrome"></parameter>

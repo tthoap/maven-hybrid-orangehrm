@@ -18,6 +18,7 @@
         <jackson.version>2.22.1</jackson.version>
         <poi.version>5.5.1</poi.version>
         <enviromentName>LIVE</enviromentName>
+        <env>dev</env>
     </properties>
 
     <dependencies>
@@ -123,6 +124,13 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>${poi.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>1.0.12</version>
             <scope>compile</scope>
         </dependency>
 

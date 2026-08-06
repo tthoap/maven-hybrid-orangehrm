@@ -3,6 +3,8 @@ package com.orangehrm;
 import core.BaseTest;
 import dataTest.model.Employee;
 import lombok.extern.slf4j.Slf4j;
+import org.aeonbits.owner.Config;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -15,17 +17,24 @@ import pageObjects.orangeHRM.EmployeeListPO;
 import pageObjects.orangeHRM.LoginPO;
 import pageObjects.orangeHRM.editNavigation.PersonalDetailPO;
 import utilities.ExcelConfig;
+import utilities.IEnviroment;
 import utilities.PropertiesConfig;
 
 @Slf4j
 public class Level_26_Enviroment extends BaseTest {
 
-    @Parameters({"browser", "server"})
+    IEnviroment enviroment;
+    @Parameters({"browser"})
     @BeforeClass
-    public void beforeClass(String browserName, String serverName) {
-        propertiesConfig = PropertiesConfig.getProperties(serverName);
+    public void beforeClass(String browserName) {
+        //Cách 3: java properties
+        String envName = System.getProperty("env");
+//        propertiesConfig = PropertiesConfig.getProperties(envName);
 
-        driver = getBrowserDriver(browserName, propertiesConfig.getApplicationUrl());
+        //Cách 4: thư viện owner
+        ConfigFactory.setProperty("enviroment", envName);
+        enviroment = ConfigFactory.create(IEnviroment.class);
+        driver = getBrowserDriver(browserName, enviroment.appUrl());
 
         loginPage = PageGenerator.getPage(LoginPO.class, driver);
         employeeData = Employee.getEmployee();
@@ -41,8 +50,8 @@ public class Level_26_Enviroment extends BaseTest {
 
     @Test
     public void Employee_01_CreateNewEmployee() {
-        loginPage.enterToTextboxByLabel(driver, "Username", propertiesConfig.getApplicationUserName());
-        loginPage.enterToTextboxByLabel(driver, "Password", propertiesConfig.getApplicationPassword());
+        loginPage.enterToTextboxByLabel(driver, "Username", enviroment.appUser());
+        loginPage.enterToTextboxByLabel(driver, "Password", enviroment.appPass());
         loginPage.clickToButtonByText(driver, "Login");
         dashboardPage = PageGenerator.getPage(DashboardPO.class, driver);
 

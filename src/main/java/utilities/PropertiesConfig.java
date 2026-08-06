@@ -16,7 +16,10 @@ public class PropertiesConfig {
         return new PropertiesConfig(serverName);
     }
 
-    public PropertiesConfig(String serverName) {
+    //Ngăn việc khởi tạo trực tiếp từ bên ngoài class
+    private PropertiesConfig() {}
+
+    private PropertiesConfig(String serverName) {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(String.format(propertyFilePath, serverName)));
