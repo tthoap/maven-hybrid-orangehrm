@@ -1,5 +1,7 @@
 package core;
 
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -7,13 +9,17 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
@@ -25,7 +31,8 @@ public class BaseTest {
         return this.driver;
     }
 
-    public WebDriver getBrowserDriver(String browserName, String appUrl){
+    //Run on local
+    protected WebDriver getBrowserDriver(String browserName, String appUrl){
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList){
             case FIREFOX:
@@ -61,6 +68,49 @@ public class BaseTest {
                 break;
             default:
                 throw new RuntimeException("Browser is invalid!");
+        }
+        driver.get(appUrl);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+        driver.manage().window().maximize();
+        System.out.println("Driver in BaseTest" + driver.toString());
+        return driver;
+    }
+
+    // GRID - Run Virtual machine or real machine
+    protected WebDriver getBrowserDriver(String browserName, String appUrl, String osName, String ipAddress, String port){
+        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+        Capabilities capability = null;
+        Platform  platform = null;
+        if (osName.toLowerCase().contains("windows")) {
+            platform = Platform.WINDOWS;
+        } else if (osName.toLowerCase().contains("mac")) {
+            platform = Platform.MAC;
+        } else if (osName.toLowerCase().contains("linux") || osName.toLowerCase().contains("ubuntu")) {
+            platform = Platform.LINUX;
+        } else {
+            platform = Platform.ANY;
+        }
+
+        switch (browserList){
+            case FIREFOX:
+                capability = new FirefoxOptions();
+                break;
+            case CHROME:
+                capability = new ChromeOptions();
+                break;
+            case EDGE:
+                capability = new EdgeOptions();
+                break;
+            case SAFARI:
+                capability = new SafariOptions();
+                break;
+            default:
+                throw new RuntimeException("Browser is invalid!");
+        }
+        try {
+            driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/", ipAddress, port)),capability);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
         }
         driver.get(appUrl);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));

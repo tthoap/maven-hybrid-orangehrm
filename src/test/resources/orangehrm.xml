@@ -10,13 +10,36 @@
     
 <!--    <parameter name="appUrl" value="http://localhost:90/orangehrm-5.7"></parameter>-->
 <!--    <parameter name="server" value="live"></parameter>-->
-<!--    <parameter name="Server" value="dev"></parameter>-->
-
+    <parameter name="environment" value="live"></parameter>
 
     <test name="Run on Chrome browser" >
         <parameter name="browser" value="chrome"></parameter>
+        <parameter name="osName" value="windows"></parameter>
+        <parameter name="ipAddress" value="192.168.1.143"></parameter> <!-- HUB's address-->
+        <parameter name="port" value="4444"></parameter>  <!-- HUB's port-->
         <classes>
-            <class name="com.orangehrm.Level_26_Enviroment" />
+            <class name="com.orangehrm.Level_27_GRID" />
         </classes>
     </test>
-</suite>
+
+    <test name="Run on Edge browser" >
+        <parameter name="browser" value="edge"></parameter>
+        <parameter name="osName" value="windows"></parameter>
+        <parameter name="ipAddress" value="192.168.1.143"></parameter> <!-- HUB's address-->
+        <parameter name="port" value="4444"></parameter>  <!-- HUB's port-->
+        <classes>
+            <class name="com.orangehrm.Level_27_GRID" />
+        </classes>
+    </test>
+
+    <test name="Run on Firefox browser" >
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="osName" value="windows"></parameter>
+        <parameter name="ipAddress" value="192.168.1.143"></parameter> <!-- HUB's address-->
+        <parameter name="port" value="4444"></parameter>  <!-- HUB's port-->
+        <classes>
+            <class name="com.orangehrm.Level_27_GRID" />
+        </classes>
+    </test>
+
+   </suite>
