@@ -1,6 +1,7 @@
 package core;
 
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -109,6 +110,32 @@ public class BaseTest {
         }
         try {
             driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/", ipAddress, port)),capability);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+        driver.get(appUrl);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+        driver.manage().window().maximize();
+        System.out.println("Driver in BaseTest" + driver.toString());
+        return driver;
+    }
+    // GRID - Run Cloud with BrowserStack
+    protected WebDriver getBrowserDriverBrowserStack(String appUrl, String osName, String osVer, String browserName, String browserVer){
+        MutableCapabilities capabilities = new MutableCapabilities();
+        HashMap<String, Object> bstackOptions = new HashMap<String, Object>();
+
+        capabilities.setCapability("browserName", browserName);
+        bstackOptions.put("os", osName);
+        bstackOptions.put("osVersion", osVer);
+        bstackOptions.put("browserVersion", browserVer);
+        bstackOptions.put("userName", GlobalConstants.BROWSERSTACK_USERNAME);
+        bstackOptions.put("accessKey", GlobalConstants.BROWSERSTACK_AUTOMATE_KEY);
+        bstackOptions.put("seleniumVersion", "4.45.0");
+        capabilities.setCapability("bstack:options", bstackOptions);
+
+
+        try {
+            driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSERSTACK_URL),capabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

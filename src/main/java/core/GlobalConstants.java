@@ -33,4 +33,10 @@ public class GlobalConstants {
     //ORANGE HRM
     public static final String ADMIN_ORANGE_USERNAME = "automationfc";
     public static final String ADMIN_ORANGE_PASSWORD = "Beocon@123";
+
+    // CLOUD - BrowserStack
+    public static final String BROWSERSTACK_USERNAME = "tranhoa_SLtIGo";
+    public static final String BROWSERSTACK_AUTOMATE_KEY = "WrDrvNuQLXYDyeoZvngW";
+    public static final String BROWSERSTACK_URL = "HTTPS://" + BROWSERSTACK_USERNAME +":" + BROWSERSTACK_AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+
 }
