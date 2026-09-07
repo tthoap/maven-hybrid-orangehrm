@@ -39,4 +39,9 @@ public class GlobalConstants {
     public static final String BROWSERSTACK_AUTOMATE_KEY = "WrDrvNuQLXYDyeoZvngW";
     public static final String BROWSERSTACK_URL = "HTTPS://" + BROWSERSTACK_USERNAME +":" + BROWSERSTACK_AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
+    // CLOUD - SauceLabs
+    public static final String SAUCE_USERNAME = "oauth-tthoaptit-d0277";
+    public static final String SAUCE_AUTOMATE_KEY = "8b4f0bd5-4f46-49e5-92cb-05efdf62ef6f" ;
+    public static final String SAUCE_DATA_CENTER_ENDPOINT = "us-west-1" ;
+    public static final String SAUCE_URL = "https://" + SAUCE_USERNAME + ":" + SAUCE_AUTOMATE_KEY + "@ondemand." + SAUCE_DATA_CENTER_ENDPOINT + ".saucelabs.com:443/wd/hub";
 }

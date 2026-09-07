@@ -146,6 +146,60 @@ public class BaseTest {
         return driver;
     }
 
+    // GRID - Run Cloud with SauceLabs
+    protected WebDriver getBrowserDriverSauceLabs(String appUrl, String platformName, String browserName, String browserVersion){
+        MutableCapabilities capability = null;
+        browserName = browserName.toLowerCase();
+
+        switch (browserName) {
+            case "firefox":
+                FirefoxOptions fOptions = new FirefoxOptions();
+                fOptions.setCapability("platformName", platformName);
+                fOptions.setCapability("browserVersion", browserVersion);
+                capability = fOptions;
+                break;
+            case "chrome":
+                ChromeOptions cOptions = new ChromeOptions();
+                cOptions.setCapability("platformName", platformName);
+                cOptions.setCapability("browserVersion", browserVersion);
+                capability = cOptions;
+                break;
+            case "edge":
+                EdgeOptions eOptions = new EdgeOptions();
+                eOptions.setCapability("platformName", platformName);
+                eOptions.setCapability("browserVersion", browserVersion);
+                capability = eOptions;
+                break;
+            case "safari":
+                SafariOptions sOptions = new SafariOptions();
+                sOptions.setCapability("platformName", platformName);
+                sOptions.setCapability("browserVersion", browserVersion);
+                capability = sOptions;
+                break;
+            default:
+                throw new RuntimeException("Browser is not valid!");
+        }
+
+        HashMap<String, String> sauceOptions = new HashMap<String, String>();
+        sauceOptions.put("username", GlobalConstants.SAUCE_USERNAME);
+        sauceOptions.put("accessKey", GlobalConstants.SAUCE_AUTOMATE_KEY);
+        sauceOptions.put("build", "automation-fc-build");
+        sauceOptions.put("name", "Run on " + platformName + " | " + browserName + " | " + browserVersion);
+
+        capability.setCapability("sauce:options", sauceOptions);
+
+        try {
+            driver = new RemoteWebDriver(new URL(GlobalConstants.SAUCE_URL), capability);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        driver.get(appUrl);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+        driver.manage().window().maximize();
+        System.out.println("Driver in BaseTest" + driver.toString());
+        return driver;
+    }
+
     private String getEnviromrentUrl(String enviromentName){
         String enviromrentUrl = null;
         switch (enviromentName){
