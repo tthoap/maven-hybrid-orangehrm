@@ -44,4 +44,10 @@ public class GlobalConstants {
     public static final String SAUCE_AUTOMATE_KEY = "8b4f0bd5-4f46-49e5-92cb-05efdf62ef6f" ;
     public static final String SAUCE_DATA_CENTER_ENDPOINT = "us-west-1" ;
     public static final String SAUCE_URL = "https://" + SAUCE_USERNAME + ":" + SAUCE_AUTOMATE_KEY + "@ondemand." + SAUCE_DATA_CENTER_ENDPOINT + ".saucelabs.com:443/wd/hub";
+
+    // CLOUD - Bitbar
+    public static final String BITBAR_AUTOMATE_KEY = "feZBgq2ngMpXoSk4tzMmH3cTT5tnKWCq";
+    public static final String BITBAR_EU_URL = "https://eu-desktop-hub.bitbar.com/wd/hub";
+    public static final String BITBAR_US_URL = "https://us-desktop-hub.bitbar.com/wd/hub";
+
 }

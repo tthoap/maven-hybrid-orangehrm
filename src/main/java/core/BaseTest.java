@@ -119,6 +119,7 @@ public class BaseTest {
         System.out.println("Driver in BaseTest" + driver.toString());
         return driver;
     }
+
     // GRID - Run Cloud with BrowserStack
     protected WebDriver getBrowserDriverBrowserStack(String appUrl, String osName, String osVer, String browserName, String browserVer){
         MutableCapabilities capabilities = new MutableCapabilities();
@@ -200,6 +201,34 @@ public class BaseTest {
         return driver;
     }
 
+    // GRID - Run Cloud with Bitbar
+    protected WebDriver getBrowserDriverBitbar(String appUrl, String platformName, String platformVersion, String browserName, String browserVer){
+        MutableCapabilities capabilities = new MutableCapabilities();
+        HashMap<String, String> bitbarOptions = new HashMap<String, String>();
+
+        capabilities.setCapability("platformName", platformName);
+        capabilities.setCapability("browserName", browserName);
+        capabilities.setCapability("browserVersion", browserVer);
+        bitbarOptions.put("project", "OrangeHRM");
+        bitbarOptions.put("apiKey", GlobalConstants.BITBAR_AUTOMATE_KEY);
+        bitbarOptions.put("testrun", "Run on " +  platformName + " | " + platformVersion +" | " + browserName + " | " + browserVer);
+        bitbarOptions.put("osVersion", platformVersion);
+        bitbarOptions.put("resolution", "1920x1080");
+        bitbarOptions.put("seleniumVersion", "4");
+        capabilities.setCapability("bitbar:options", bitbarOptions);
+
+
+        try {
+            driver = new RemoteWebDriver(new URL(GlobalConstants.BITBAR_EU_URL),capabilities);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+        driver.get(appUrl);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+        driver.manage().window().maximize();
+        System.out.println("Driver in BaseTest" + driver.toString());
+        return driver;
+    }
     private String getEnviromrentUrl(String enviromentName){
         String enviromrentUrl = null;
         switch (enviromentName){
