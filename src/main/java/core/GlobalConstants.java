@@ -50,4 +50,9 @@ public class GlobalConstants {
     public static final String BITBAR_EU_URL = "https://eu-desktop-hub.bitbar.com/wd/hub";
     public static final String BITBAR_US_URL = "https://us-desktop-hub.bitbar.com/wd/hub";
 
+    // CLOUD - LambdaTest
+    public static final String LAMBDA_USERNAME = "tthoaptit";
+    public static final String LAMBDA_AUTOMATE_KEY = "LT_Wu54Z3AJnWBqH6rdVnWaTl9Xmnd6Cu3FVXEYachh8Ns6Hc0" ;
+    public static final String LAMBDA_URL = "https://hub.lambdatest.com/wd/hub";
+
 }
