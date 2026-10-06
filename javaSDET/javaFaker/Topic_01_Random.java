@@ -19,6 +19,7 @@ public class Topic_01_Random {
         System.out.println(getRandomEmail());
         System.out.println(getRandomEmail());
         System.out.println(getRandomEmail());
+        System.out.println(System.getProperty("os.name"));
 
     }
     public static int getRandomNumber(int min, int max) {

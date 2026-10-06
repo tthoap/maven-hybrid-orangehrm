@@ -1,0 +1,5 @@
+package browserFactory;
+
+public enum BrowserList {
+    FIREFOX, CHROME, EDGE, SAFARI, OPERA, HEADLESS_FIREFOX, HEADLESS_CHROME, HEADLESS_EDGE, IE;
+}

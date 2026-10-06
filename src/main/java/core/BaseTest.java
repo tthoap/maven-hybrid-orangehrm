@@ -1,5 +1,7 @@
 package core;
 
+import browserFactory.*;
+import enviromentFactory.*;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.Platform;
@@ -21,8 +23,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.*;
 
@@ -37,35 +37,28 @@ public class BaseTest {
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList){
             case FIREFOX:
-                driver = new FirefoxDriver();
+                driver = new FirefoxBrowserManager().getDriver();
                 break;
             case CHROME:
-                driver = new ChromeDriver();
+                driver = new ChromeBrowserManager().getDriver();
                 break;
             case EDGE:
-                driver = new EdgeDriver();
+                driver = new EdgeBrowserManager().getDriver();
                 break;
             case SAFARI:
-                driver = new SafariDriver();
+                driver = new SafariBrowserManager().getDriver();
                 break;
             case HEADLESS_CHROME:
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless");
-                chromeOptions.addArguments("window-size=1920,1080");
-                driver = new ChromeDriver(chromeOptions);
+                driver = new ChromeHeadlessBrowserManager().getDriver();
                 break;
             case HEADLESS_FIREFOX:
-                FirefoxOptions FFheadOptions = new FirefoxOptions();
-                FFheadOptions.addArguments("-headless");
-                FFheadOptions.addArguments("window-size=1920,1080");
-                driver = new FirefoxDriver(FFheadOptions);
+                driver = new FirefoxHeadlessBrowserManager().getDriver();
                 break;
-
             case HEADLESS_EDGE:
-                EdgeOptions edgeHlOptions = new EdgeOptions();
-                edgeHlOptions.addArguments("--headless");
-                edgeHlOptions.addArguments("window-size=1920,1080");
-                driver = new EdgeDriver(edgeHlOptions);
+                driver = new EdgeHeadlessBrowserManager().getDriver();
+                break;
+            case IE:
+                driver = new IEBrowserManager().getDriver();
                 break;
             default:
                 throw new RuntimeException("Browser is invalid!");
@@ -287,6 +280,40 @@ public class BaseTest {
         return driver;
     }
 
+    // Factory Environment
+    protected WebDriver getBrowerDriver(String environmentName, String appUrl, String osName, String osVersion, String browserName, String browserVersion, String ipAddress, String port){
+        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+        EnvironmentList environmentList = EnvironmentList.valueOf(environmentName.toUpperCase());
+        switch (environmentList){
+            case LOCAL:
+                driver = new LocalEnvironmentManager(browserName).createDriver();
+                break;
+            case GRID:
+                driver = new GridEnvironmentManager(browserName, osName, ipAddress, port).createDriver();
+                break;
+            case BROWSERSTACK:
+                driver = new BrowserStackEnvironmentManager(osName, osVersion, browserName, browserVersion).createDriver();
+                break;
+            case BITBAR:
+                driver = new BitbarEnvironmentManager(osName, osVersion, browserName, browserVersion).createDriver();
+                break;
+            case SAUCELAB:
+                driver = new SauceLabEnvironmentManager(osName, osVersion, browserName, browserVersion).createDriver();
+                break;
+            case LAMBDA:
+                driver = new LambdaEnviromentManager(browserName, osName, browserVersion).createDriver();
+                break;
+            case DEVICEFARM:
+//                driver = new ChromeHeadlessBrowserManager().getDriver();
+//                break;
+            default:
+                throw new RuntimeException("Environment Name is support!");
+        }
+        driver.get(appUrl);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+        return driver;
+    }
 
     private String getEnviromrentUrl(String enviromentName){
         String enviromrentUrl = null;
