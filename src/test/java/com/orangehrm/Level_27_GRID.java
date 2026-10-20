@@ -43,6 +43,7 @@ public class Level_27_GRID extends BaseTest {
         loginPage.enterToTextboxByLabel(driver, "Password", propertiesConfig.getApplicationPassword());
         loginPage.clickToButtonByText(driver, "Login");
         dashboardPage = PageGenerator.getPage(DashboardPO.class, driver);
+        dashboardPage.sleepInSecond(5);
 
     }
 
